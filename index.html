@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter</title>
+</head>
+<body>
+    <h1>Animal Shelter</h1>
+
+    <h2>Animals</h2>
+    <ul id="animals-list"></ul>
+    
+    <h2>Foods</h2>
+    <ul id="foods-list"></ul>
+
+    <h2>Shelters</h2>
+    <ul id="shelters-list"></ul>
+
+    <script>
+        // Fetch and display animals
+        fetch('/animals')
+            .then(response => response.json())
+            .then(animals => {
+                const animalsList = document.getElementById('animals-list');
+                animals.forEach(animal => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${animal.name} - ${animal.species}`;
+                    animalsList.appendChild(listItem);
+                });
+            });
+
+        // Fetch and display foods
+        fetch('/foods')
+            .then(response => response.json())
+            .then(foods => {
+                const foodsList = document.getElementById('foods-list');
+                foods.forEach(food => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${food.name} - ${food.amount} units`;
+                    foodsList.appendChild(listItem);
+                });
+            });
+
+        // Fetch and display shelters
+        fetch('/shelters')
+            .then(response => response.json())
+            .then(shelters => {
+                const sheltersList = document.getElementById('shelters-list');
+                shelters.forEach(shelter => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${shelter.name} - Capacity: ${shelter.capacity}`;
+                    sheltersList.appendChild(listItem);
+                });
+            });
+    </script>
+</body>
+</html>
