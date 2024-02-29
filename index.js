@@ -1,20 +1,25 @@
+const profileButton1 = document.getElementById('FirstProf');
+const profileButton2 = document.getElementById('SecondProf');
+const profileButton3 = document.getElementById('ThirdProf');
+const profileButton4 = document.getElementById('FourthProf');
+const profileButton5 = document.getElementById('FifthProf');
+const profileButton6 = document.getElementById('SixthProf');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const buttonPets = document.querySelector('.Pets');
-  const buttonKawaiiSteak = document.querySelector('.KawaiiSteak');
-  const buttonPicture1 = document.querySelector('.Picture1');
-  const buttonPicture2 = document.querySelector('.Picture2');
-  const buttonPicture3 = document.querySelector('.Picture3');
-  const buttonPicture4 = document.querySelector('.Picture4');
-  const buttonPicture5 = document.querySelector('.Picture5');
-  const buttonPicture6 = document.querySelector('.Picture6');
-  const buttonSearch = document.querySelector('.Search');
-  const buttonLogOut = document.querySelector('.LogOut');
-  const buttonContact = document.querySelector('.Contact');
-  const buttonPets3 = document.querySelector('.Pets3');
-  const buttonSupport = document.querySelector('.Support');
-
-  buttonPets.addEventListener('click', () => {
-    console.log('Button clicked!');
-  });
+profileButton1.addEventListener('click', () => {
+  console.log('First Profile');
+});
+profileButton2.addEventListener('click', () => {
+  console.log('Second Profile');
+});
+profileButton3.addEventListener('click', () => {
+  console.log('Third Profile');
+});
+profileButton4.addEventListener('click', () => {
+  console.log('Fourth Profile');
+});
+profileButton5.addEventListener('click', () => {
+  console.log('Fifth Profile');
+});
+profileButton6.addEventListener('click', () => {
+  console.log('Sixth Profile');
 });

@@ -39,7 +39,7 @@
     position: absolute;
     text-align: center;
     color: black;
-    font-size: 19px;
+    font-size: 22px;
     font-family: DM Sans;
     font-weight: 800;
     word-wrap: break-word;
@@ -78,7 +78,7 @@
     position: absolute;
     text-align: center;
     color: black;
-    font-size: 19px;
+    font-size: 22px;
     font-family: DM Sans;
     font-weight: 800;
     word-wrap: break-word;
@@ -118,7 +118,7 @@
     position: relative;
     text-align: center;
     color: black;
-    font-size: 19px;
+    font-size: 22px;
     font-family: DM Sans;
     font-weight: 800;
     word-wrap: break-word;
@@ -338,7 +338,7 @@
     position: absolute;
     text-align: center;
     color: black;
-    font-size: 19px;
+    font-size: 22px;
     font-family: DM Sans;
     font-weight: 800;
     word-wrap: break-word;
@@ -352,21 +352,46 @@
     position: absolute;
 }
 
-.PictureProfile {
-    width: 981px;
-    height: 390px;
+.PictureProfile1 {
     left: 310px;
     top: 265px;
     position: absolute;
     border-radius: 22px;
 }
-
+.PictureProfile2 {
+    left: 760px;
+    top: 265px;
+    position: absolute;
+    border-radius: 22px;
+}
+.PictureProfile3 { 
+    left: 1210px;
+    top: 265px;
+    position: absolute;
+    border-radius: 22px;
+}
+.PictureProfile4 { 
+    left: 310px;
+    top: 565px;
+    position: absolute;
+    border-radius: 22px;
+}
+.PictureProfile5 {
+    left: 760px;
+    top: 565px;
+    position: absolute;
+    border-radius: 22px;
+}
+.PictureProfile6 { 
+    left: 1210px;
+    top: 565px;
+    position: absolute;
+    border-radius: 22px;
+}
 .Picture1 {
     width:400px;
     height: 250px;
-    left: 0px;
-    top: 0px;
-    background-image: url(/TestingDoggos/Images/Picture.png);
+    background-image: url(/Images/Picture.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90px 90px;
@@ -375,9 +400,45 @@
 .Picture2 {
     width:400px;
     height: 250px;
-    left: 50px;
+    background-image: url(/Images/Picture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    border-radius: 22px;
+}
+.Picture3 {
+    width:400px;
+    height: 250px;
+    left: 100px;
     top: 0px;
-    background-image: url(/TestingDoggos/Images/Picture.png);
+    background-image: url(/Images/Picture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    border-radius: 22px;
+}
+.Picture4 {
+    width:400px;
+    height: 250px;
+    background-image: url(/Images/Picture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    border-radius: 22px;
+}
+.Picture5 {
+    width:400px;
+    height: 250px;
+    background-image: url(/Images/Picture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    border-radius: 22px;
+}
+.Picture6 {
+    width:400px;
+    height: 250px;
+    background-image: url(/Images/Picture.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90px 90px;
