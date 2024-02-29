@@ -1,58 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Shelter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Animal Shelter</h1>
+<body style="margin: 0;">
+    <div class="MainframeAdmin">
+        <div class="MenuTop"></div>
+        <div class="Contact">
+            <div class="Rectangle3"></div>
+            <div class="Kontakt">KONTAKT</div>
+            <img class="Call" src="/TestingDoggos/Images/Call.png" />
+        </div>
+        <div class="Pets3">
+            <div class="Rectangle4"></div>
+            <div class="NaszeZwierzaki">NASZE ZWIERZAKI</div>
+            <img class="HeartWithDogPaw" src="/TestingDoggos/Images/Heart with dog paw.png" />
+        </div>
+        <div class="LogOut">
+            <div class="Rectangle2"></div>
+            <div class="WylogujSi">WYLOGUJ SIĘ</div>
+            <img class="Login" src="/TestingDoggos/Images/Login.png" />
+        </div>
+        <div class="Scroll">
+            <div class="Rectangle7"></div>
+        </div>
+        <div class="Account">
+            <div class="Account"></div>
+            <img class="CatProfile" src="/TestingDoggos/Images/Cat Profile.png" />
+        </div>
+        <div class="Searchbar">
+            <div class="Rectangle8"></div>
+            <img class="Rectangle9" src="/TestingDoggos/Images/Rectangle 9.png" />
+            <img class="Search" src="/TestingDoggos/Images/Search.png" />
+        </div>
+        <div class="Media">
+            <div class="Rectangle11"></div>
+            <div class="Rectangle14"></div>
+            <div class="Rectangle15"></div>
+            <div class="Rectangle16"></div>
+            <div class="Rectangle12"></div>
+            <div class="Rectangle13"></div>
+        </div>
+        <div class="SidePannelMen">
+            <div class="Menu"></div>
+            <img class="KawaiiSteak" src="/TestingDoggos/Images/Kawaii Steak.png" />
+            <img class="Pets" src="/TestingDoggos/Images/Pets.png" />
+        </div>
+        <div class="Support">
+            <div class="Rectangle5"></div>
+            <div class="WesprzyjNas">WESPRZYJ NAS</div>
+            <img class="Charity" src="/TestingDoggos/Images/Charity.png" />
+        </div>
+        <div class="PictureProfile">
+            <button class="Picture1"  ></button>
+            <button class="Picture2" src="/TestingDoggos/Images/Picture.png" ></button>
+            <button class="Picture3" src="/TestingDoggos/Images/Picture.png" ></button>
+            <button class="Picture4" src="/TestingDoggos/Images/Picture.png" ></button>
+            <button class="Picture5" src="/TestingDoggos/Images/Picture.png" ></button>
+            <button class="Picture6" src="/TestingDoggos/Images/Picture.png" ></button>
+        </div>
+    </div>
 
-    <h2>Animals</h2>
-    <ul id="animals-list"></ul>
-    
-    <h2>Foods</h2>
-    <ul id="foods-list"></ul>
-
-    <h2>Shelters</h2>
-    <ul id="shelters-list"></ul>
-
-    <script>
-        // Fetch and display animals
-        fetch('/animals')
-            .then(response => response.json())
-            .then(animals => {
-                const animalsList = document.getElementById('animals-list');
-                animals.forEach(animal => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${animal.name} - ${animal.species}`;
-                    animalsList.appendChild(listItem);
-                });
-            });
-
-        // Fetch and display foods
-        fetch('/foods')
-            .then(response => response.json())
-            .then(foods => {
-                const foodsList = document.getElementById('foods-list');
-                foods.forEach(food => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${food.name} - ${food.amount} units`;
-                    foodsList.appendChild(listItem);
-                });
-            });
-
-        // Fetch and display shelters
-        fetch('/shelters')
-            .then(response => response.json())
-            .then(shelters => {
-                const sheltersList = document.getElementById('shelters-list');
-                shelters.forEach(shelter => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${shelter.name} - Capacity: ${shelter.capacity}`;
-                    sheltersList.appendChild(listItem);
-                });
-            });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
+
+
