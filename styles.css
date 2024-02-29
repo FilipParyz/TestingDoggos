@@ -185,7 +185,7 @@
 }
 
 .Rectangle8 {
-    width: 899px;
+    width: 900px;
     height: 60px;
     left: 0px;
     top: 0px;
@@ -194,24 +194,49 @@
     border-radius: 30px;
 }
 
-.Rectangle9 {
-    width: 60px;
-    height: 50px;
-    left: 824px;
-    top: 5px;
-    position: absolute;
-    background: #D9D9D9;
-
-}
-
-.Search {
+.Searchback {
     width: 50px;
     height: 50px;
-    left: 821px;
+    left: 5px;
     top: 5px;
     position: absolute;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/TestingDoggos/Images/Rectangle9.png  );
+
+}
+.BackgroundSearch {
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 0px;
+    position: absolute;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/TestingDoggos/Images/Rectangle9.png  );
 }
 
+.Searching {
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    left: 830px;
+    position: absolute;
+    pointer-events: none;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url(/TestingDoggos/Images/Search.png);
+}
+.SearchButton{
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    left: 830px;
+    position: absolute;
+}
 .Media {
     width: 1300px;
     height: 550px;
@@ -279,7 +304,7 @@
     background: #D9D9D9;
     border-radius: 60px;
 }
-
+/*Side bar menu*/
 .SidePannelMen {
     width: 100px;
     height: 1080px;
@@ -287,160 +312,127 @@
     top: 0px;
     position: absolute;
 }
-
 .Menu {
     width: 100px;
     height: 1080px;
-    left: 0px;
-    top: 0px;
     position: absolute;
     background: #D9D9D9;
 }
-
 .KawaiiSteak {
     width: 90px;
     height: 90px;
+    position: absolute;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 42px;/* or square 22*/
+    background-image: url(/TestingDoggos/Images/KawaiiSteak.png);
+}
+.FoodButton {
     left: 5px;
     top: 425px;
-    position: absolute;
-}
-
-.Pets {
     width: 90px;
     height: 90px;
+    position: absolute;
+}
+.PetsButton {
     left: 5px;
     top: 275px;
+    width: 90px;
+    height: 90px;
     position: absolute;
 }
-
+.Animals {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 42px;/* or square 22*/
+    background-image: url(/TestingDoggos/Images/Pets.png);
+}
 .Support {
-    width: 275px;
-    height: 55px;
-    left: 825px;
     top: 10px;
-    position: absolute;
-}
-
-.Rectangle5 {
+    left: 825px;
     width: 275px;
     height: 55px;
-    left: 0px;
-    top: 0px;
     position: absolute;
-    background: #FFF7F7;
-    border-radius: 22px;
 }
-
+.supportButton {
+    top: 0px;
+    left: 0px;
+    width: 275px;
+    height: 55px;
+    position: absolute;
+    border-radius: 22px;
+    background: #FFF7F7;
+}
 .WesprzyjNas {
-    width: 201.64px;
-    left: 59px;
     top: 15px;
+    left: 59px;
+    color: black;
+    width: 201.64px;
+    font-size: 22px;
+    font-weight: 800;
     position: absolute;
     text-align: center;
-    color: black;
-    font-size: 22px;
     font-family: DM Sans;
-    font-weight: 800;
+    pointer-events: none;
     word-wrap: break-word;
 }
-
 .Charity {
-    width: 50px;
-    height: 50px;
-    left: 9px;
+    left: 10px;
     top: 2.50px;
     position: absolute;
+    pointer-events: none;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
+/* Profile Pictures */
 .PictureProfile1 {
-    left: 310px;
     top: 265px;
+    left: 310px;
     position: absolute;
     border-radius: 22px;
 }
 .PictureProfile2 {
-    left: 760px;
     top: 265px;
+    left: 760px;
     position: absolute;
     border-radius: 22px;
 }
 .PictureProfile3 { 
-    left: 1210px;
     top: 265px;
+    left: 1210px;
     position: absolute;
     border-radius: 22px;
 }
 .PictureProfile4 { 
-    left: 310px;
     top: 565px;
+    left: 310px;
     position: absolute;
     border-radius: 22px;
 }
 .PictureProfile5 {
-    left: 760px;
     top: 565px;
+    left: 760px;
     position: absolute;
     border-radius: 22px;
 }
 .PictureProfile6 { 
-    left: 1210px;
     top: 565px;
+    left: 1210px;
     position: absolute;
     border-radius: 22px;
 }
-.Picture1 {
+.Picture {
     width:400px;
     height: 250px;
-    background-image: url(/Images/Picture.png);
+    border-radius: 22px;
+    background-size: 90px 90px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
-}
-.Picture2 {
-    width:400px;
-    height: 250px;
-    background-image: url(/Images/Picture.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
-}
-.Picture3 {
-    width:400px;
-    height: 250px;
-    left: 100px;
-    top: 0px;
-    background-image: url(/Images/Picture.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
-}
-.Picture4 {
-    width:400px;
-    height: 250px;
-    background-image: url(/Images/Picture.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
-}
-.Picture5 {
-    width:400px;
-    height: 250px;
-    background-image: url(/Images/Picture.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
-}
-.Picture6 {
-    width:400px;
-    height: 250px;
-    background-image: url(/Images/Picture.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90px 90px;
-    border-radius: 22px;
+    background-image: url(/TestingDoggos/Images/Picture.png);
 }
