@@ -121,15 +121,6 @@
     position: absolute;
     pointer-events: none;
 }
-.Rectangle7 {
-    top: 14px;
-    left: 0px;
-    width: 16px;
-    height: 126px;
-    position: absolute;
-    border-radius: 22px;
-    background: #D9D9D9;
-}
 .Accounts {
     top: 0px;
     left: 0px;
@@ -193,62 +184,8 @@
     height: 550px;
     position: absolute;
 }
-.Rectangle11 {
-    top: 0px;
-    left: 450px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
-.Rectangle14 {
-    top: 300px;
-    left: 450px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
-.Rectangle15 {
-    top: 0px;
-    left: 900px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
-.Rectangle16 {
-    top: 300px;
-    left: 900px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
-.Rectangle12 {
-    top: 0px;
-    left: 0px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
-.Rectangle13 {
-    left: 0px;
-    top: 300px;
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    border-radius: 60px;
-    background: #D9D9D9;
-}
 /*Side bar menu*/
-.SidePannelMen {
+.SidePannelMenu {
     top: 0px;
     left: 0px;
     width: 100px;
@@ -269,7 +206,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 42px;/* or square 22*/
-    background-image: url(/Images/KawaiiSteak.png);
+    background-image: url(../images/KawaiiSteak.png);
 }
 .FoodButton {
     left: 5px;
@@ -293,7 +230,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 42px;/* or square 22*/
-    background-image: url(/Images/Pets.png);
+    background-image: url(../images/Pets.png);
 }
 .Support {
     top: 10px;
@@ -377,6 +314,5 @@
     background-size: 90px 90px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(/Images/Picture.png);
+    background-image: url(../images/Picture.png);
 }
-/* FILEPATH: /e:/Python/Doggos/TestingDoggos/styles.css */
