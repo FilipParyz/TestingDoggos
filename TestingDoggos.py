@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -62,7 +63,7 @@ class Shelter(db.Model):
 
 @app.route('/')
 def home():
-    return 'Welcome to the animal shelter!'
+    return render_template('index.html')
 
 @app.route('/animals', methods=['GET', 'POST'])
 def handle_animals():

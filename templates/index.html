@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body style="margin: 0;">
+    <div class="MainframeAdmin">
+        <div class="MenuTop"></div>
+            <div class="Contact">
+                <button id="ContactUs" class="ContackBackground"></button>
+                    <div class="Kontakt">KONTAKT</div>
+                    <img class="Call" src="{{ url_for('static', filename='images/call.png') }}"/>
+            </div>
+            <div class="Pets3">
+                <button id="Ourpets" class="OuranimalsBackground"></button>
+                    <div class="NaszeZwierzaki">NASZE ZWIERZAKI</div>
+                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}"/>
+            </div>
+            <div class="LogOut">
+                <button id="LogUt" class="LogoutBackground"></button>
+                    <div class="WylogujSi">WYLOGUJ SIĘ</div>
+                    <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}"/>
+            </div>
+            <div class="Account">
+                <button id="MyAccount" class="Accounts"></button>
+                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
+            </div>
+        </div>
+        <div class="Searchbar">
+            <div class="Rectangle8">
+                <button id="Search" class="Searching" >
+                    <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}"/>
+                </button>
+            </div>
+        </div>
+        <div class="SidePannelMenu">
+            <div class="Menu"></div>
+            <div  class="FoodButton">
+                <button id="Food" class="KawaiiSteak"></button>
+            </div>
+            <div class="PetsButton">
+                <button id="Pets" class="Animals"></button>
+            </div>
+        </div>
+        
+        <div class="Support">
+            <button id="SupportUs" class="supportButton"></button>
+            <div class="WesprzyjNas">WESPRZYJ NAS</div>
+            <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}"/>
+        </div>
+
+        <div class="PictureProfile1">
+            <button id="Animal1" class="Picture"></button>
+        </div>
+        <div class="PictureProfile2">
+            <button id="Animal2" class="Picture"></button>
+        </div>
+        <div class="PictureProfile3">
+            <button id="Animal3"  class="Picture"></button>
+        </div>
+        <div class="PictureProfile4">
+            <button id="Animal4" class="Picture"></button>
+        </div>
+        <div class="PictureProfile5">
+            <button id="Animal5"  class="Picture"></button>
+        </div>
+        <div class="PictureProfile6">
+            <button id="Animal6"  class="Picture"></button>
+        </div>
+    </div>
+</body>
+</html>
+
+
