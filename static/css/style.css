@@ -4,28 +4,42 @@
     position:static;
     background-color: #524F4F;
 }
-
 .Texts{
     top: 15px;
-    left: 50px;/* nasze zwierzaczki muszą mieć mniej*/
+    left: 55px;/* nasze zwierzaczki muszą mieć mniej*/
     color: black;
     font-size: 22px;
     font-weight: 800;
     position: absolute;
-    text-align: center;
     font-family: DM Sans;
     pointer-events: none;
 }
-label1 {
-    left:40px;
+labelW {
+    color: black;
+}
+labelZ {
     color: blue;
 }
+labelK{
+    color: red;
+}
+labelS {
+    color: green;
+}
+.Search {
+    top: 2px;
+    z-index: 1;
+    border: 0px;
+    width: 800px;
+    height: 54px;
+    font-size: 22px;
+    position: absolute;
+    border-radius: 22px;
+    background: #FFF7F7;
+}
 .MenuTop {
-    top: 0px;
-    left: 0px;
     height: 75px;
     width: 1920px;
-    position: absolute;
     background: #7D7C7C;
 }
 .Contact {
@@ -36,25 +50,10 @@ label1 {
     position:absolute;
 }
 .ContackBackground {
-    top: 0px;
-    left: 0px;
     width: 200px;
     height: 55px;
-    position: absolute;
     border-radius: 22px;
     background: #FFF7F7;   
-}
-.Kontakt {
-    top: 15px;
-    left: 50px;
-    width: 128px;
-    color: black;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
 }
 .Call {
     top: 0px;
@@ -63,7 +62,6 @@ label1 {
     height: 50px;
     position: absolute;
     pointer-events: none;
-
 }
 .Pets3 {
     top: 10px;
@@ -73,25 +71,10 @@ label1 {
     position: absolute;
 }
 .OuranimalsBackground {
-    left: 0px;
-    top: 0px;
     width: 275px;
     height: 55px;
-    position: absolute;
     border-radius: 22px;
     background: #FFF7F7;
-}
-.NaszeZwierzaki {
-    top: 15px;
-    left: 40px;
-    width: 229px;
-    color: black;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
 }
 .HeartWithDogPaw {
     left: 1px;
@@ -108,26 +91,10 @@ label1 {
     position: absolute;
 }
 .LogoutBackground {
-    top: 0px;
-    left: 0px;
     width: 250px;
     height: 55px;
-    position: absolute;
     border-radius: 22px;
     background: #FFF7F7;
-}
-.WylogujSi {
-    top: 15px;
-    left: 54px;
-    width: 169px;
-    height: 33px;
-    color: black;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
 }
 .Login {
     left: 5px;
@@ -138,12 +105,8 @@ label1 {
     pointer-events: none;
 }
 .Accounts {
-    top: 0px;
-    left: 0px;
     width: 100px;
     height: 100px;
-    position: absolute;
-    border-radius: 400px;
 }
 .Account {
     top: 95px;
@@ -164,12 +127,10 @@ label1 {
 }
 .Searchbar {
     top: 115px;
-    left: 512px;
-    width: 899px;
-    height: 60px;
+    left: 510px;
     position: absolute;
 }
-.Rectangle8 {
+.SearchBG {
     width: 900px;
     height: 60px;
     position: absolute;
@@ -177,11 +138,10 @@ label1 {
     background: #FFF7F7;
  }
 .Searchu {
-    left: 0;
+    left: 0px;
     top: 0px;
     width: 70px;
     height: 50px;
-    border-width: 2px;
     position: absolute;
  }   
 .Searching {
@@ -193,13 +153,6 @@ label1 {
     position: absolute;
     
  }
-.Media {
-    top: 265px;
-    left: 310px;
-    width: 1300px;
-    height: 550px;
-    position: absolute;
-}
 /*Side bar menu*/
 .SidePannelMenu {
     top: 0px;
@@ -218,11 +171,16 @@ label1 {
     width: 90px;
     height: 90px;
     position: absolute;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 42px;/* or square 22*/
-    background-image: url(../images/KawaiiSteak.png);
+}
+.Steak {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    pointer-events: none;
+    
 }
 .FoodButton {
     left: 5px;
@@ -242,11 +200,16 @@ label1 {
     width: 90px;
     height: 90px;
     position: absolute;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
+    
     border-radius: 42px;/* or square 22*/
-    background-image: url(../images/Pets.png);
+}
+.PetsIMG {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    pointer-events: none;
 }
 .Support {
     top: 10px;
@@ -278,7 +241,7 @@ label1 {
     word-wrap: break-word;
 }
 .Charity {
-    left: 10px;
+    left: 5px;
     top: 2.50px;
     position: absolute;
     pointer-events: none;

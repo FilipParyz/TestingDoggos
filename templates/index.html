@@ -10,54 +10,76 @@
 </head>
 <body style="margin: 0;">
     <div class="MainframeAdmin">
+        <!-- BEGINING Top Menu -->
         <div class="MenuTop"></div>
+        <!-- Contact button -->
             <div class="Contact">
                 <button id="ContactUs" class="ContackBackground"></button>
-                    <div class="Texts">KONTAKT</div>
+                    <div class="Texts">
+                        <labelK>  KONTAKT</labelK>
+                    </div>
                     <img class="Call" src="{{ url_for('static', filename='images/call.png') }}"/>
             </div>
+            <!-- Support button -->
+            <div class="Support">
+                <button id="SupportUs" class="supportButton"></button>
+                <div class="Texts">
+                    <labelS>WESPRZYJ NAS</labelS>   
+                </div>
+                <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}"/>
+            </div>
+            <!-- Our pets button -->
             <div class="Pets3">
                 <button id="Ourpets" class="OuranimalsBackground">
                     <div class="Texts">
-                        <label1>NASZE ZWIERZAKI</label1>
+                        <labelZ>NASZE ZWIERZAKI</labelZ>
                     </div>
                     <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}"/>
-                    
                 </button>
             </div>
+            <!-- About us button -->
             <div class="LogOut">
-                <button id="LogUt" class="LogoutBackground"></button>
-                    <div class="Texts">WYLOGUJ SIĘ</div>
+                <button id="LogUt" class="LogoutBackground">
+                    <labelW>WYLOGUJ SIĘ</labelW>
+                </button>
+                    <div class="Texts">
+                    </div>
                     <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}"/>
             </div>
+            <!-- Account logo -->
             <div class="Account">
-                <button id="MyAccount" class="Accounts"></button>
                 <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
             </div>
         </div>
+        <!-- END Top Menu -->
         <div class="Searchbar">
-            <div class="Rectangle8">
+            <!-- Search bar -->
+            <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
+            <div class="SearchBG">
                 <button id="Search" class="Searching" >
                     <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}"/>
                 </button>
+                <!-- END Search bar -->
             </div>
         </div>
         <div class="SidePannelMenu">
-            <div class="Menu"></div>
-            <div  class="FoodButton">
-                <button id="Food" class="KawaiiSteak"></button>
-            </div>
-            <div class="PetsButton">
-                <button id="Pets" class="Animals"></button>
+            <!-- Side pannel menu -->
+            <div class="Menu">
+                <!-- Food button -->
+                <div  class="FoodButton">
+                    <button id="Food" class="KawaiiSteak"></button>
+                    <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}"/>
+                </div>
+                <!-- Pets button -->
+                <div class="PetsButton">
+                    <button id="Pets" class="Animals"></button>
+                    <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}  " >
+                </div>
+            <!-- END Side pannel menu -->
             </div>
         </div>
         
-        <div class="Support">
-            <button id="SupportUs" class="supportButton"></button>
-            <div class="Texts">WESPRZYJ NAS</div>
-            <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}"/>
-        </div>
-
+        <!-- BEGINING Profiles Content -->
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture"></button>
         </div>
@@ -75,6 +97,7 @@
         </div>
         <div class="PictureProfile6">
             <button id="Animal6"  class="Picture"></button>
+        <!-- END Profiles Content -->
         </div>
     </div>
 </body>
