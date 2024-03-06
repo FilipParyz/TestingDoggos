@@ -4,6 +4,22 @@
     position:static;
     background-color: #524F4F;
 }
+
+.Texts{
+    top: 15px;
+    left: 50px;/* nasze zwierzaczki muszą mieć mniej*/
+    color: black;
+    font-size: 22px;
+    font-weight: 800;
+    position: absolute;
+    text-align: center;
+    font-family: DM Sans;
+    pointer-events: none;
+}
+label1 {
+    left:40px;
+    color: blue;
+}
 .MenuTop {
     top: 0px;
     left: 0px;

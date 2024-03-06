@@ -13,17 +13,21 @@
         <div class="MenuTop"></div>
             <div class="Contact">
                 <button id="ContactUs" class="ContackBackground"></button>
-                    <div class="Kontakt">KONTAKT</div>
+                    <div class="Texts">KONTAKT</div>
                     <img class="Call" src="{{ url_for('static', filename='images/call.png') }}"/>
             </div>
             <div class="Pets3">
-                <button id="Ourpets" class="OuranimalsBackground"></button>
-                    <div class="NaszeZwierzaki">NASZE ZWIERZAKI</div>
+                <button id="Ourpets" class="OuranimalsBackground">
+                    <div class="Texts">
+                        <label1>NASZE ZWIERZAKI</label1>
+                    </div>
                     <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}"/>
+                    
+                </button>
             </div>
             <div class="LogOut">
                 <button id="LogUt" class="LogoutBackground"></button>
-                    <div class="WylogujSi">WYLOGUJ SIĘ</div>
+                    <div class="Texts">WYLOGUJ SIĘ</div>
                     <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}"/>
             </div>
             <div class="Account">
@@ -50,7 +54,7 @@
         
         <div class="Support">
             <button id="SupportUs" class="supportButton"></button>
-            <div class="WesprzyjNas">WESPRZYJ NAS</div>
+            <div class="Texts">WESPRZYJ NAS</div>
             <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}"/>
         </div>
 
