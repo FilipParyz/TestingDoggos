@@ -45,7 +45,6 @@ function loadOnClicks(){
   const logoutButton = document.getElementById('LogUt');//✔️
   const foodButton = document.getElementById('Food');//✔️
   const pettsButton = document.getElementById('Pets');//✔️
-  const accountButton = document.getElementById('MyAccount');//✔️
 
   //Profiles
   animal.addEventListener('click', () => {
@@ -76,8 +75,4 @@ function loadOnClicks(){
   pettsButton.addEventListener('click', () => {
     console.log('Pets');
   });
-  //Account
-  accountButton.addEventListener('click', () => {
-    console.log('MyAccount');
-  });
-};
+}

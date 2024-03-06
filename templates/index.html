@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,97 +9,107 @@
 </head>
 <body style="margin: 0;">
     <div class="MainframeAdmin">
-        <!-- BEGINING Top Menu -->
-        <div class="MenuTop"></div>
-        <!-- Contact button -->
+        <!-- BEGINNING Top Menu -->
+        <div class="MenuTop">
+            <!-- Contact button -->
             <div class="Contact">
                 <button id="ContactUs" class="ContackBackground"></button>
-                    <div class="Texts">
-                        <labelK>  KONTAKT</labelK>
-                    </div>
-                    <img class="Call" src="{{ url_for('static', filename='images/call.png') }}"/>
+                <div class="Texts">
+                    <labelK>  KONTAKT</labelK>
+                </div>
+                <img class="Call" src="{{ url_for('static', filename='images/call.png') }}" />
             </div>
+            
             <!-- Support button -->
             <div class="Support">
                 <button id="SupportUs" class="supportButton"></button>
                 <div class="Texts">
-                    <labelS>WESPRZYJ NAS</labelS>   
+                    <labelS>WESPRZYJ NAS</labelS>
                 </div>
-                <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}"/>
+                <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}" />
             </div>
+            
             <!-- Our pets button -->
             <div class="Pets3">
                 <button id="Ourpets" class="OuranimalsBackground">
                     <div class="Texts">
                         <labelZ>NASZE ZWIERZAKI</labelZ>
                     </div>
-                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}"/>
+                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}" />
                 </button>
             </div>
+            
             <!-- About us button -->
             <div class="LogOut">
-                <button id="LogUt" class="LogoutBackground">
+                <button id="LogUt" class="LogoutBackground"></button>
+                <div class="Texts">
                     <labelW>WYLOGUJ SIĘ</labelW>
-                </button>
-                    <div class="Texts">
-                    </div>
-                    <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}"/>
+                </div>
+                <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}" />
             </div>
+            
             <!-- Account logo -->
             <div class="Account">
                 <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
             </div>
         </div>
         <!-- END Top Menu -->
+        
         <div class="Searchbar">
             <!-- Search bar -->
             <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
             <div class="SearchBG">
-                <button id="Search" class="Searching" >
-                    <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}"/>
+                <button id="Search" class="Searching">
+                    <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}" />
                 </button>
                 <!-- END Search bar -->
             </div>
         </div>
+        
         <div class="SidePannelMenu">
-            <!-- Side pannel menu -->
+            <!-- Side panel menu -->
             <div class="Menu">
                 <!-- Food button -->
-                <div  class="FoodButton">
+                <div class="FoodButton">
                     <button id="Food" class="KawaiiSteak"></button>
-                    <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}"/>
+                    <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}" />
                 </div>
+                
                 <!-- Pets button -->
                 <div class="PetsButton">
                     <button id="Pets" class="Animals"></button>
-                    <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}  " >
+                    <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}" >
                 </div>
-            <!-- END Side pannel menu -->
+                <!-- END Side panel menu -->
             </div>
         </div>
         
-        <!-- BEGINING Profiles Content -->
+        <!-- BEGINNING Profiles Content -->
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         </div>
         <div class="PictureProfile2">
             <button id="Animal2" class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         </div>
         <div class="PictureProfile3">
             <button id="Animal3"  class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         </div>
         <div class="PictureProfile4">
             <button id="Animal4" class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         </div>
         <div class="PictureProfile5">
             <button id="Animal5"  class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         </div>
         <div class="PictureProfile6">
             <button id="Animal6"  class="Picture"></button>
+            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
         <!-- END Profiles Content -->
         </div>
     </div>
 </body>
 </html>
-
-
