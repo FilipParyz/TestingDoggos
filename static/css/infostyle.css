@@ -1,5 +1,5 @@
 .container {
-    left: 2px;
+    left: 1px;
     top: 120px;
     z-index: 1;
     width: 100%;
@@ -7,8 +7,8 @@
 }
 
 .horizontal-line {
-    top: 38px;
-    width: 391px;
+    top: 37px;
+    width: 393px;
     border: 3px black solid;
 }
 
@@ -68,9 +68,9 @@
 .line.line5 { top: 86px; }
 .line.line6 { top: 110px; }
 
-.labelName{ left: 45px; font-size: 15px; }
-.line { width: 82px; border: 1px black solid; }
-.labelSex,.labelStatus,.labelWeight { font-size: 20px; }
-.profile-box .line { width: 80px; left: 95.50px; border: 1px black solid; }
-.horizontal-line,.vertical-line,.info-box,.line,.profile-box,.container,.info-box .label,.profile-box .label { position: absolute; }
 .labelName,.labelType,.labelRace,.labelAge{ bottom: 0px; left: 95px; font-size: 20px;position: absolute; }
+.horizontal-line,.vertical-line,.info-box,.line,.profile-box,.container,.info-box .label,.profile-box .label { position: absolute; }
+.profile-box .line { width: 80px; left: 95.50px; border: 1px black solid; }
+.labelSex,.labelStatus,.labelWeight { font-size: 20px; }
+.line { width: 82px; border: 1px black solid; }
+.labelName{ left: 45px; font-size: 15px; }

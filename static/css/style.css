@@ -1,4 +1,3 @@
-.Texts,.Search,.Contact,.Call,.Pets3,.HeartWithDogPaw,.LogOut,.Login,.Account,.CatProfil,.Searchbar,.SearchBG,.Searchu,.Searching,.SidePannelMenu,.Menu,.KawaiiSteak,.Steak,.FoodButton,.PetsButton,.Animals,.PetsIMG,.Support,.supportButton,.Charity,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic{ position: absolute; border-radius: 22px; }
 .MainframeAdmin {
     width: 100%;
     height: 1080px;
@@ -10,8 +9,9 @@
     left: 55px;
     color: black;
     font-size: 22px;
-    font-weight: 800;font-family: 'DM Sans';
+    font-weight: 800;
     pointer-events: none;
+    font-family: 'DM Sans';
 }
 
 .Search {
@@ -20,7 +20,7 @@
     border: 0px;
     width: 800px;
     height: 54px;
-    font-size: 22px;border-radius: 22px;
+    font-size: 22px;
     background: #FFF7F7;
 }
 
@@ -35,13 +35,11 @@
     width: 200px;
     left: 1400px;
     height: 55px;
-    
 }
 
 .ContackBackground {
     width: 200px;
     height: 55px;
-    border-radius: 22px;
     background: #FFF7F7;
 }
 
@@ -49,21 +47,20 @@
     top: 0px;
     left: 0px;
     width: 50px;
-    height: 50px;pointer-events: none;
+    height: 50px;
+    pointer-events: none;
 }
 
 .Pets3 {
     top: 10px;
     left: 1100px;
     width: 275px;
-    height: 55px;
-    
+    height: 55px;    
 }
 
 .OuranimalsBackground {
     width: 275px;
     height: 55px;
-    border-radius: 22px;
     background: #FFF7F7;
 }
 
@@ -71,22 +68,19 @@
     left: 1px;
     top: 2.50px;
     width: 50px;
-    height: 50px;
-    
+    height: 50px;    
 }
 
 .LogOut {
     top: 10px;
     left: 1625px;
     width: 250px;
-    height: 55px;
-    
+    height: 55px;    
 }
 
 .LogoutBackground {
     width: 250px;
     height: 55px;
-    border-radius: 22px;
     background: #FFF7F7;
 }
 
@@ -94,7 +88,8 @@
     left: 5px;
     top: 2.50px;
     width: 50px;
-    height: 50px;pointer-events: none;
+    height: 50px;
+    pointer-events: none;
 }
 
 .Account {
@@ -104,24 +99,25 @@
     height: 100px;
     border-radius: 80px;
     background: #D9D9D9;
+    position: relative;
 }
 
 .CatProfile {
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
     width: 90px;
-    height: 90px;pointer-events: none;
+    height: 90px;
+    pointer-events: none;
 }
 
 .Searchbar {
     top: 115px;
     left: 510px;
-    
 }
 
 .SearchBG {
     width: 900px;
-    height: 60px;border-radius: 22px;
+    height: 60px;
     background: #FFF7F7;
 }
 
@@ -129,7 +125,8 @@
     left: 0px;
     top: 0px;
     width: 70px;
-    height: 50px;border-radius: 0px;
+    height: 50px;
+    border-radius: 0px;
 }
 
 .Searching {
@@ -138,7 +135,6 @@
     width: 50px;
     height: 50px;
     border-width: 0px;
-    
 }
 
 /* Side bar menu */
@@ -146,26 +142,32 @@
     top: 0px;
     left: 0px;
     width: 100px;
-    height: 1080px;
-    
+    height: 100%;    
 }
 
 .Menu {
+    left: 0px;
     width: 100px;
     height: 1080px;
-    border-radius: 0px;background: #D9D9D9;
+    position: relative;
+    border-radius: 0px;
+    background: #D9D9D9;
 }
 
 .KawaiiSteak {
+    top: 90%;
     width: 90px;
-    height: 90px;border-radius: 42px;
+    height: 90px
+    ;border-radius: 42px;
+    position: relative;
 }
 
 .Steak {
     top: 20px;
     left: 20px;
     width: 50px;
-    height: 50px;pointer-events: none;
+    height: 50px;
+    pointer-events: none;
 }
 
 .FoodButton {
@@ -173,15 +175,14 @@
     top: 425px;
     width: 90px;
     height: 90px;
-    
 }
 
 .PetsButton {
     left: 5px;
-    top: 275px;
+    top: 35%;
     width: 90px;
     height: 90px;
-    
+    position:inherit ;
 }
 
 .Animals {
@@ -193,77 +194,54 @@
     top: 20px;
     left: 20px;
     width: 50px;
-    height: 50px;pointer-events: none;
+    height: 50px;
+    pointer-events: none;
 }
 
 .Support {
     top: 10px;
     left: 800px;
     width: 275px;
-    height: 55px;
-    
+    height: 55px;    
 }
 
 .supportButton {
     top: 0px;
     left: 0px;
     width: 275px;
-    height: 55px;border-radius: 22px;
+    height: 55px;
     background: #FFF7F7;
 }
 
 .Charity {
     left: 5px;
-    top: 2.50px;pointer-events: none;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
+    top: 2.50px;
+    pointer-events: none;  
 }
 
 /* Profile Pictures */
-.PictureProfile1 {
-    top: 265px;
-    left: 310px;border-radius: 22px;
-}
+.PictureProfile1,.PictureProfile4 { left: 310px;}  
+.PictureProfile2,.PictureProfile5 { left: 760px;}
+.PictureProfile3,.PictureProfile6 { left: 1210px;} 
 
-.PictureProfile2 {
-    top: 265px;
-    left: 760px;border-radius: 22px;
-}
-
-.PictureProfile3 {
-    top: 265px;
-    left: 1210px;border-radius: 22px;
-}
-
-.PictureProfile4 {
-    top: 565px;
-    left: 310px;border-radius: 22px;
-}
-
-.PictureProfile5 {
-    top: 565px;
-    left: 760px;border-radius: 22px;
-}
-
-.PictureProfile6 {
-    top: 565px;
-    left: 1210px;border-radius: 22px;
-}
+.PictureProfile1,.PictureProfile2,.PictureProfile3{ top: 265px; }
+.PictureProfile4,.PictureProfile5,.PictureProfile6{ top: 565px; }
 
 .Picture {
     width: 400px;
     height: 250px;
-    border-radius: 22px;
-   
 }
+
 .Pic {
     width: auto;
     height: 200px;
     left: 100px    ;
-    top: 25px;pointer-events: none;
+    top: 25px;
+    pointer-events: none;
 }
+
 labelW { color: black; }
 labelZ { color: blue; }
 labelK { color: red; }
-labelS { color: green; }
+.Support p { left: 70px; font-weight: 800;  top: -6px; font-family: 'DM Sans'; font-size: 22px; color: green; }
+.Texts,.Search,.Contact,.Call,.Pets3,.HeartWithDogPaw,.LogOut,.Login,.CatProfil,.LogoutBackground,.Searchbar,.SearchBG,.Searching,.SidePannelMenu,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.Support,.supportButton,.Charity,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture,.ContackBackground,.OuranimalsBackground{ position: absolute; border-radius: 22px; }

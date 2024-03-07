@@ -14,20 +14,20 @@
         <div class="MenuTop">
             <!-- Contact button -->
             <div class="Contact">
-                <button id="ContactUs" class="ContackBackground"></button>
+                <button id="ContactUs" class="ContackBackground">
+                    <img class="Call" src="{{ url_for('static', filename='images/call.png') }}" />
+                </button>
                 <div class="Texts">
-                    <labelK>  KONTAKT</labelK>
+                    <labelK>KONTAKT</labelK>
                 </div>
-                <img class="Call" src="{{ url_for('static', filename='images/call.png') }}" />
             </div>
             
             <!-- Support button -->
             <div class="Support">
-                <button id="SupportUs" class="supportButton"></button>
-                <div class="Texts">
-                    <labelS>WESPRZYJ NAS</labelS>
-                </div>
-                <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}" />
+                <button id="SupportUs" class="supportButton">
+                    <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}" />
+                    <p class="Texts">WESPRZYJ NAS</p>
+                </button>
             </div>
             
             <!-- Our pets button -->
@@ -42,11 +42,12 @@
             
             <!-- About us button -->
             <div class="LogOut">
-                <button id="LogUt" class="LogoutBackground"></button>
+                <button id="LogUt" class="LogoutBackground">
+                    <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}" />
+                </button>
                 <div class="Texts">
                     <labelW>WYLOGUJ SIĘ</labelW>
                 </div>
-                <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}" />
             </div>
             
             <!-- Account logo -->
@@ -72,14 +73,15 @@
             <div class="Menu">
                 <!-- Food button -->
                 <div class="FoodButton">
-                    <button id="Food" class="KawaiiSteak"></button>
-                    <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}" />
+                    <button id="Food" class="KawaiiSteak">
+                        <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}" />
+                    </button>
                 </div>
-                
                 <!-- Pets button -->
                 <div class="PetsButton">
-                    <button id="Pets" class="Animals"></button>
-                    <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}" >
+                    <button id="Pets" class="Animals">
+                        <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}" >
+                    </button> 
                 </div>
                 <!-- END Side panel menu -->
             </div>
@@ -87,8 +89,10 @@
         
         <!-- BEGINNING Profiles Content -->
         <div class="PictureProfile1">
-            <button id="Animal1" class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal1" class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
+            
             <div class="container">
                 <div class="horizontal-line"></div>
                 <div class="vertical-line"></div>
@@ -99,33 +103,22 @@
                     <div class="label status">Status</div>
                         <label class="labelStatus">Adopted</label>
                         <div></div>
-                    <div class="label sex"> Sex</div>
+                    <div class="label sex">Sex</div>
                             <label class="labelSex">Female</label>
-                            <div></div>
-                        
+                            <div></div>                        
                     <div class="line line1"></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
                 </div>
                 <div class="profile-box">
                     <div class="label type">Type<label class="labelType">Animal</label></div>
-                        
-                    <div></div>
-
+                        <div></div>
                     <div class="label name">Name: <label class="labelName">Betty</label></div>
-                        
-                        
-                    <div></div>
-
+                        <div></div>
                     <div class="label race">Race<label class="labelRace">Retriever</label></div>
-                        
-                    <div></div>
-
+                        <div></div>
                     <div class="label age">Age<label class="labelAge">0</label></div>
-                        
-                    <div></div>
-
-
+                        <div></div>
                     <div class="line line4"></div>
                     <div class="line line5"></div>
                     <div class="line line6"></div>
@@ -133,24 +126,31 @@
             </div>
         </div>
         <div class="PictureProfile2">
-            <button id="Animal2" class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal2" class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
         </div>
         <div class="PictureProfile3">
-            <button id="Animal3"  class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal3"  class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
         </div>
         <div class="PictureProfile4">
-            <button id="Animal4" class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal4" class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
+            
         </div>
         <div class="PictureProfile5">
-            <button id="Animal5"  class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal5"  class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
         </div>
         <div class="PictureProfile6">
-            <button id="Animal6"  class="Picture"></button>
-            <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <button id="Animal6"  class="Picture">
+                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            </button>
+            
         <!-- END Profiles Content -->
         </div>
     </div>
