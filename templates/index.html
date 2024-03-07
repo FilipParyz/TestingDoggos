@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Shelter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/infostyle.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body style="margin: 0;">
@@ -88,6 +89,48 @@
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture"></button>
             <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+            <div class="container">
+                <div class="horizontal-line"></div>
+                <div class="vertical-line"></div>
+                <div class="info-box">
+                    <div class="label weight">Weight</div>
+                        <label class="labelWeight">0</label>
+                        <div></div>
+                    <div class="label status">Status</div>
+                        <label class="labelStatus">Adopted</label>
+                        <div></div>
+                    <div class="label sex"> Sex</div>
+                            <label class="labelSex">Female</label>
+                            <div></div>
+                        
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <div class="profile-box">
+                    <div class="label type">Type<label class="labelType">Animal</label></div>
+                        
+                    <div></div>
+
+                    <div class="label name">Name: <label class="labelName">Betty</label></div>
+                        
+                        
+                    <div></div>
+
+                    <div class="label race">Race<label class="labelRace">Retriever</label></div>
+                        
+                    <div></div>
+
+                    <div class="label age">Age<label class="labelAge">0</label></div>
+                        
+                    <div></div>
+
+
+                    <div class="line line4"></div>
+                    <div class="line line5"></div>
+                    <div class="line line6"></div>
+                </div>
+            </div>
         </div>
         <div class="PictureProfile2">
             <button id="Animal2" class="Picture"></button>
