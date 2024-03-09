@@ -45,6 +45,7 @@ function loadOnClicks(){
   const logoutButton = document.getElementById('LogUt');//✔️
   const foodButton = document.getElementById('Food');//✔️
   const pettsButton = document.getElementById('Pets');//✔️
+  const accountButton = document.getElementById('MyAccount');//✔️
 
   //Profiles
   animal.addEventListener('click', () => {
