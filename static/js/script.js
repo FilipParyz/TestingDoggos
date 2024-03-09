@@ -76,8 +76,4 @@ function loadOnClicks(){
   pettsButton.addEventListener('click', () => {
     console.log('Pets');
   });
-  //Account
-  accountButton.addEventListener('click', () => {
-    console.log('MyAccount');
-  });
-};
+}

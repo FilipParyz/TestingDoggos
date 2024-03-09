@@ -1,318 +1,246 @@
 .MainframeAdmin {
-    width: 1920px;
+    width: 100%;
     height: 1080px;
-    position:static;
     background-color: #524F4F;
 }
-.MenuTop {
-    top: 0px;
-    left: 0px;
-    height: 75px;
-    width: 1920px;
-    position: absolute;
-    background: #7D7C7C;
-}
-.Contact {
-    top: 10px;
-    width: 200px;
-    left: 1425px;
-    height: 55px;
-    position:absolute;
-}
-.ContackBackground {
-    top: 0px;
-    left: 0px;
-    width: 200px;
-    height: 55px;
-    position: absolute;
-    border-radius: 22px;
-    background: #FFF7F7;   
-}
-.Kontakt {
+
+.Texts {
     top: 15px;
-    left: 50px;
-    width: 128px;
+    left: 55px;
     color: black;
     font-size: 22px;
     font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
     pointer-events: none;
+    font-family: 'DM Sans';
+}
+
+.Search {
+    top: 2px;
+    z-index: 1;
+    border: 0px;
+    width: 800px;
+    height: 54px;
+    font-size: 22px;
+    background: #FFF7F7;
+}
+
+.MenuTop {
+    height: 75px;
+    width: 100%;
+    background: #7D7C7C;
+}
+
+.Contact {
+    top: 10px;
+    width: 200px;
+    left: 1400px;
+    height: 55px;
+}
+
+.ContackBackground {
+    width: 200px;
+    height: 55px;
+    background: #FFF7F7;
 }
 .Call {
     top: 0px;
     left: 0px;
     width: 50px;
     height: 50px;
-    position: absolute;
     pointer-events: none;
-
 }
+
 .Pets3 {
     top: 10px;
-    left: 1125px;
+    left: 1100px;
     width: 275px;
-    height: 55px;
-    position: absolute;
+    height: 55px;    
 }
+
 .OuranimalsBackground {
-    left: 0px;
-    top: 0px;
     width: 275px;
     height: 55px;
-    position: absolute;
-    border-radius: 22px;
     background: #FFF7F7;
 }
-.NaszeZwierzaki {
-    top: 15px;
-    left: 40px;
-    width: 229px;
-    color: black;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
-}
+
 .HeartWithDogPaw {
     left: 1px;
     top: 2.50px;
     width: 50px;
-    height: 50px;
-    position: absolute;
+    height: 50px;    
 }
+
 .LogOut {
     top: 10px;
-    left: 1650px;
+    left: 1625px;
     width: 250px;
-    height: 55px;
-    position: absolute;
+    height: 55px;    
 }
+
 .LogoutBackground {
-    top: 0px;
-    left: 0px;
     width: 250px;
     height: 55px;
-    position: absolute;
-    border-radius: 22px;
     background: #FFF7F7;
 }
-.WylogujSi {
-    top: 15px;
-    left: 54px;
-    width: 169px;
-    height: 33px;
-    color: black;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
-}
+
 .Login {
     left: 5px;
     top: 2.50px;
     width: 50px;
     height: 50px;
-    position: absolute;
     pointer-events: none;
 }
-.Accounts {
-    top: 0px;
-    left: 0px;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    border-radius: 400px;
-}
+
 .Account {
     top: 95px;
     left: 1790px;
     width: 100px;
     height: 100px;
-    position: absolute;
     border-radius: 80px;
     background: #D9D9D9;
+    position: relative;
 }
+
 .CatProfile {
     top: 5px;
     left: 5px;
     width: 90px;
     height: 90px;
-    position: absolute;
     pointer-events: none;
 }
+
 .Searchbar {
     top: 115px;
-    left: 512px;
-    width: 899px;
-    height: 60px;
-    position: absolute;
+    left: 510px;
 }
-.Rectangle8 {
+
+.SearchBG {
     width: 900px;
     height: 60px;
-    position: absolute;
-    border-radius: 22px;
     background: #FFF7F7;
- }
+}
+
 .Searchu {
-    left: 0;
+    left: 0px;
     top: 0px;
     width: 70px;
     height: 50px;
-    border-width: 2px;
-    position: absolute;
- }   
+    border-radius: 0px;
+}
+
 .Searching {
     top: 5px;
     left: 810px;
     width: 50px;
     height: 50px;
     border-width: 0px;
-    position: absolute;
-    
- }
-.Media {
-    top: 265px;
-    left: 310px;
-    width: 1300px;
-    height: 550px;
-    position: absolute;
 }
-/*Side bar menu*/
+
+/* Side bar menu */
 .SidePannelMenu {
     top: 0px;
     left: 0px;
     width: 100px;
-    height: 1080px;
-    position: absolute;
+    height: 100%;    
 }
+
 .Menu {
+    left: 0px;
     width: 100px;
     height: 1080px;
-    position: absolute;
+    position: relative;
+    border-radius: 0px;
     background: #D9D9D9;
 }
+
 .KawaiiSteak {
+    top: 90%;
     width: 90px;
-    height: 90px;
-    position: absolute;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 42px;/* or square 22*/
-    background-image: url(../images/KawaiiSteak.png);
+    height: 90px
+    ;border-radius: 42px;
+    position: relative;
 }
+
+.Steak {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
 .FoodButton {
     left: 5px;
     top: 425px;
     width: 90px;
     height: 90px;
-    position: absolute;
 }
+
 .PetsButton {
     left: 5px;
-    top: 275px;
+    top: 35%;
     width: 90px;
     height: 90px;
-    position: absolute;
+    position:inherit ;
 }
+
 .Animals {
     width: 90px;
-    height: 90px;
-    position: absolute;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 42px;/* or square 22*/
-    background-image: url(../images/Pets.png);
+    height: 90px;border-radius: 42px;
 }
+
+.PetsIMG {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
 .Support {
     top: 10px;
-    left: 825px;
+    left: 800px;
     width: 275px;
-    height: 55px;
-    position: absolute;
+    height: 55px;    
 }
+
 .supportButton {
     top: 0px;
     left: 0px;
     width: 275px;
     height: 55px;
-    position: absolute;
-    border-radius: 22px;
     background: #FFF7F7;
 }
-.WesprzyjNas {
-    top: 15px;
-    left: 59px;
-    color: black;
-    width: 201.64px;
-    font-size: 22px;
-    font-weight: 800;
-    position: absolute;
-    text-align: center;
-    font-family: DM Sans;
-    pointer-events: none;
-    word-wrap: break-word;
-}
+
 .Charity {
-    left: 10px;
+    left: 5px;
     top: 2.50px;
-    position: absolute;
-    pointer-events: none;
-    background-size: 50px 50px;
-    background-position: center;
-    background-repeat: no-repeat;
+    pointer-events: none;  
 }
+
 /* Profile Pictures */
-.PictureProfile1 {
-    top: 265px;
-    left: 310px;
-    position: absolute;
-    border-radius: 22px;
-}
-.PictureProfile2 {
-    top: 265px;
-    left: 760px;
-    position: absolute;
-    border-radius: 22px;
-}
-.PictureProfile3 { 
-    top: 265px;
-    left: 1210px;
-    position: absolute;
-    border-radius: 22px;
-}
-.PictureProfile4 { 
-    top: 565px;
-    left: 310px;
-    position: absolute;
-    border-radius: 22px;
-}
-.PictureProfile5 {
-    top: 565px;
-    left: 760px;
-    position: absolute;
-    border-radius: 22px;
-}
-.PictureProfile6 { 
-    top: 565px;
-    left: 1210px;
-    position: absolute;
-    border-radius: 22px;
-}
+.PictureProfile1,.PictureProfile4 { left: 310px;}  
+.PictureProfile2,.PictureProfile5 { left: 760px;}
+.PictureProfile3,.PictureProfile6 { left: 1210px;} 
+
+.PictureProfile1,.PictureProfile2,.PictureProfile3{ top: 265px; }
+.PictureProfile4,.PictureProfile5,.PictureProfile6{ top: 565px; }
+
 .Picture {
-    width:400px;
+    width: 400px;
     height: 250px;
-    border-radius: 22px;
-    background-size: 90px 90px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../images/Picture.png);
 }
+
+.Pic {
+    width: auto;
+    height: 200px;
+    left: 100px    ;
+    top: 25px;
+    pointer-events: none;
+}
+
+labelW { color: black; }
+labelZ { color: blue; }
+labelK { color: red; }
+.Support p { left: 70px; font-weight: 800;  top: -6px; font-family: 'DM Sans'; font-size: 22px; color: green; }
+.Texts,.Search,.Contact,.Call,.Pets3,.HeartWithDogPaw,.LogOut,.Login,.CatProfil,.LogoutBackground,.Searchbar,.SearchBG,.Searching,.SidePannelMenu,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.Support,.supportButton,.Charity,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture,.ContackBackground,.OuranimalsBackground{ position: absolute; border-radius: 22px; }
