@@ -75,4 +75,8 @@ function loadOnClicks(){
   pettsButton.addEventListener('click', () => {
     console.log('Pets');
   });
+    supportButton.addEventListener('click', () => {
+    // Przekieruj użytkownika na podstronę "Wesprzyj Nas"
+    window.location.href = 'http://127.0.0.1:5000/support_us.html'; // Zmień adres URL na odpowiedni dla twojej aplikacji
+  });
 }
