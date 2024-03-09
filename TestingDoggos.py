@@ -148,7 +148,12 @@ def handle_shelter(shelter_id):
         db.session.delete(shelter)
         db.session.commit()
         return '', 204
-
+        
+# Routing dla podstrony "support_us"
+@app.route('/support_us.html')
+def support_us():
+    return render_template('support_us.html')
+    
 if __name__ == '__main__':
 
     with app.app_context():
