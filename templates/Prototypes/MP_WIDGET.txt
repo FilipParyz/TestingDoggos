@@ -1,0 +1,33 @@
+<div class="MpWidget" style="width: 100%; height: 100%; background: white; border-radius: 22px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div class="MpScrollThings" style="width: 275px; height: 750px; position: relative">
+        <div class="WidgetMpBg" style="width: 275px; height: 750px; left: 0px; top: 0px; position: absolute; background: #954081; border-radius: 22px"></div>
+        <div class="MpButtons" style="width: 220px; height: 541px; left: 23px; top: 92px; position: absolute">
+            <div class="Mp5thbuttonpair" style="width: 220px; height: 95px; left: 0px; top: 446px; position: absolute">
+                <div class="Mp5thbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, rgba(228.27, 121.34, 255, 0.40) 0%, rgba(228.27, 121.34, 255, 0.40) 100%)"></div>
+                <img class="Mp5thbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 130px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mp4thbuttonpair" style="width: 220px; height: 95px; left: 0px; top: 348px; position: absolute">
+                <div class="Mp4thbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, rgba(136.92, 247.55, 69.11, 0.40) 0%, rgba(136.92, 247.55, 69.11, 0.40) 100%)"></div>
+                <img class="Mp4thbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 130px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mp3rdbuttonpair" style="width: 220px; height: 95px; left: 0px; top: 236px; position: absolute">
+                <div class="Mp3rdbuttonpairPair" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, rgba(255, 121.34, 121.34, 0.40) 0%, rgba(255, 121.34, 121.34, 0.40) 100%)"></div>
+                <img class="Mp3rdbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 130px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mp2ndbuttonpair" style="width: 220px; height: 95px; left: 0px; top: 115px; position: absolute">
+                <div class="Mp2ndbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, rgba(232.25, 223.42, 11.42, 0.40) 0%, rgba(232.25, 223.42, 11.42, 0.40) 100%)"></div>
+                <img class="Mp2ndbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 130px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mp1stbuttonpair" style="width: 220px; height: 95px; left: 0px; top: 0px; position: absolute">
+                <div class="Mp1stbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%)"></div>
+                <img class="Mp1stbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 130px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+        </div>
+        <div class="AdditionOfANewAnimal" style="width: 241px; height: 50px; left: 26px; top: 10px; position: absolute">
+            <img class="MpAddbutton" style="width: 50px; height: 50px; left: 191px; top: 0px; position: absolute" src="https://via.placeholder.com/50x50" />
+            <div class="MpText" style="width: 158px; height: 48px; left: 0px; top: 1px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Add new</div>
+        </div>
+        <div class="MpScrolling" style="width: 8px; height: 312px; left: 259px; top: 99px; position: absolute; background: #151414; border-radius: 22px; border: 1px #42C9F3 solid"></div>
+        <div class="MpScrollingBg" style="width: 10px; height: 650px; left: 258px; top: 75px; position: absolute; background: rgba(21.45, 20.29, 20.29, 0.20); border-radius: 22px; border: 1px #42C9F3 solid"></div>
+    </div>
+</div>
