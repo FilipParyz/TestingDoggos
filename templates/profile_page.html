@@ -35,11 +35,7 @@
             <div class="ProfilePageSegmentdivision"></div>
             <div class="PhotoGalerry">
                 <div class="ProfilePagePicBg"></div>
-                <img class="Corgi" src="https://via.placeholder.com/300x232" />
-                <img class="Corgi" src="https://via.placeholder.com/309x225" />
-                <img class="Corgi" src="https://via.placeholder.com/300x232" />
-                <img class="ForwardArrow" src="https://via.placeholder.com/93x96" />
-                <img class="ForwardArrow" src="https://via.placeholder.com/94x95" />
+                <img class="Corgi" src="{{ url_for('static', filename='images/MF_5thbuttonpair_pic.png') }}" />
             </div>
             <div class="ProfilePageDatatoupdate">
                 <div class="ProfilePageDatasex">
@@ -72,10 +68,11 @@
                 </div>
             </div>
             <div class="ProfilePageControls">
-                <img class="ProfilePageClosePic" src="https://via.placeholder.com/52x53" />
-                <img class="ProfilePageArrowleftPic" src="https://via.placeholder.com/62x64" />
-                <img class="ProfilePageArrowrightPic" src="https://via.placeholder.com/62x64" />
-                <img class="ProfilePageTransferPic" src="https://via.placeholder.com/62x64" />
+                
+                <img class="ProfilePageClosePic"      src="{{ url_for('static', filename='images/navigation/Profile_page_Close_pic.png') }}" />
+                <img class="ProfilePageArrowleftPic"  src="{{ url_for('static', filename='images/navigation/Profile_page_ArrowLeft_pic.png') }}" />
+                <img class="ProfilePageArrowrightPic" src="{{ url_for('static', filename='images/navigation/Profile_page_ArrowRight_pic.png') }}" />
+                <img class="ProfilePageTransferPic" src="{{ url_for('static', filename='images/navigation/Profile_page_Transfer_pic.png') }}" />
             </div>
         </div>
     </div>

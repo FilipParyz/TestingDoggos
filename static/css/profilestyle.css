@@ -291,23 +291,6 @@
   transform-origin: 0 0;
 }
 
-.ForwardArrow {
-  width: 93.32px;
-  height: 96.17px;
-  left: 172.13px;
-  top: 65.18px;
-  position: absolute;
-}
-
-.ForwardArrow:nth-child(2) {
-  width: 94.09px;
-  height: 95.42px;
-  left: 481.76px;
-  top: 83.35px;
-  position: absolute;
-  transform: rotate(31.77deg);
-  transform-origin: 0 0;
-}
 
 .ProfilePageDatatoupdate {
   width: 345.30px;
@@ -561,10 +544,9 @@
 .ProfilePageArrowrightPic {
   width: 62.22px;
   height: 64.11px;
-  left: 829.54px;
-  top: 299.20px;
+  left: 769.54px;
+  top: 235.09px;
   position: absolute;
-  transform: rotate(-180deg);
   transform-origin: 0 0;
 }
 
