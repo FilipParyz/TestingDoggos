@@ -1,0 +1,577 @@
+.ProfilePageFrame {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.OpeningProfile {
+  width: 1348px;
+  height: 748px;
+  position: relative;
+}
+
+.ProfilePageMainBg {
+  width: 1348px;
+  height: 748px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #D9D9D9;
+  border-radius: 22px;
+}
+
+.AnimalIonfo {
+  width: 823.30px;
+  height: 267.14px;
+  left: 38.25px;
+  top: 480.86px;
+  position: absolute;
+}
+
+.ProfilePageInfoSeparationlineHorizontal {
+  width: 823.30px;
+  height: 0px;
+  left: -0px;
+  top: 80.39px;
+  position: absolute;
+  border: 5px black solid;
+}
+
+.ProfilePageInfoSeparationlineVertical {
+  width: 186.75px;
+  height: 0px;
+  left: 411.65px;
+  top: 80.39px;
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+  border: 1px black solid;
+}
+
+.RightInfo {
+  width: 370.33px;
+  height: 159.01px;
+  left: 438.22px;
+  top: 91.17px;
+  position: absolute;
+}
+
+.ProfilePageSexInfoText {
+  width: 84.35px;
+  height: 69.97px;
+  left: 228.37px;
+  top: 89.05px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageStatusInfoText {
+  width: 123.44px;
+  height: 55.12px;
+  left: 228.37px;
+  top: 48.76px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageWeightInfoText {
+  width: 133.73px;
+  height: 55.12px;
+  left: 236.60px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageWeightInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: -0px;
+  top: 42.40px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.ProfilePageStatusInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: -0px;
+  top: 91.17px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.ProfilePageSexInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: -0px;
+  top: 142.05px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.LeftInfo {
+  width: 740.58px;
+  height: 245.94px;
+  left: 12.34px;
+  top: -0px;
+  position: absolute;
+}
+
+.ProfilePageTypeInfoText {
+  width: 117.27px;
+  height: 69.97px;
+  left: 0px;
+  top: 80.57px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageNameInfoText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 30.86px;
+  top: -0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageShelterstayingText {
+  width: 233.31px;
+  height: 35.26px;
+  left: 507.27px;
+  top: 17.10px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageRaceInfoText {
+  width: 94.64px;
+  height: 55.12px;
+  left: 30.86px;
+  top: 139.93px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageAgeInfoText {
+  width: 74.07px;
+  height: 55.12px;
+  left: 51.43px;
+  top: 190.82px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageTypeInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: 196.48px;
+  top: 133.57px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.ProfilePageRaceInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: 196.48px;
+  top: 182.34px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.ProfilePageAgeInfoUnderline {
+  width: 168.71px;
+  height: 0px;
+  left: 196.48px;
+  top: 233.22px;
+  position: absolute;
+  border: 1px black solid;
+}
+
+.ProfilePageSegmentdivision {
+  width: 5.18px;
+  height: 694.57px;
+  left: 925.97px;
+  top: 26.71px;
+  position: absolute;
+  background: #FF1074;
+  border-radius: 22px;
+}
+
+.PhotoGalerry {
+  width: 837.83px;
+  height: 427.43px;
+  left: 23.85px;
+  top: 53.43px;
+  position: absolute;
+}
+
+.ProfilePagePicBg {
+  width: 829.54px;
+  height: 427.43px;
+  left: 8.30px;
+  top: -0px;
+  position: absolute;
+  background: #3C3939;
+  border-radius: 22px;
+}
+
+.Corgi {
+  width: 299.67px;
+  height: 231.88px;
+  left: 0px;
+  top: 149.60px;
+  position: absolute;
+}
+
+.Corgi:nth-child(2) {
+  width: 308.79px;
+  height: 225.03px;
+  left: 497.54px;
+  top: 48.09px;
+  position: absolute;
+  transform: rotate(92.91deg);
+  transform-origin: 0 0;
+}
+
+.Corgi:nth-child(3) {
+  width: 300.07px;
+  height: 231.59px;
+  left: 773.22px;
+  top: 403.92px;
+  position: absolute;
+  transform: rotate(-167.64deg);
+  transform-origin: 0 0;
+}
+
+.ForwardArrow {
+  width: 93.32px;
+  height: 96.17px;
+  left: 172.13px;
+  top: 65.18px;
+  position: absolute;
+}
+
+.ForwardArrow:nth-child(2) {
+  width: 94.09px;
+  height: 95.42px;
+  left: 481.76px;
+  top: 83.35px;
+  position: absolute;
+  transform: rotate(31.77deg);
+  transform-origin: 0 0;
+}
+
+.ProfilePageDatatoupdate {
+  width: 345.30px;
+  height: 617.99px;
+  left: 929.08px;
+  top: 53.43px;
+  position: absolute;
+}
+
+.ProfilePageDatasex {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 548.02px;
+  position: absolute;
+}
+
+.ProfilePageSexUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageSexText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDatastatus {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 456.69px;
+  position: absolute;
+}
+
+.ProfilePageStatusUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageStatusText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDataweight {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 365.35px;
+  position: absolute;
+}
+
+.ProfilePageWeightUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageWeightText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDataage {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 274.01px;
+  position: absolute;
+}
+
+.ProfilePageAgeUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageAgeText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDatarace {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 182.67px;
+  position: absolute;
+}
+
+.ProfilePageRaceUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageRaceText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDatatype {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 91.34px;
+  position: absolute;
+}
+
+.ProfilePageTypeUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageTypeText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageDataname {
+  width: 345.30px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.ProfilePageNameUnderline {
+  width: 178.35px;
+  height: 0px;
+  left: 166.94px;
+  top: 45.95px;
+  position: absolute;
+  border: 4px #E8DF0B solid;
+}
+
+.ProfilePageNameText {
+  width: 139.90px;
+  height: 69.97px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: DM Sans;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.ProfilePageControls {
+  width: 1315.86px;
+  height: 480.86px;
+  left: 32.14px;
+  top: -0px;
+  position: absolute;
+}
+
+.ProfilePageClosePic {
+  width: 51.85px;
+  height: 53.43px;
+  left: 1264.01px;
+  top: -0px;
+  position: absolute;
+}
+
+.ProfilePageArrowleftPic {
+  width: 62.22px;
+  height: 64.11px;
+  left: 0px;
+  top: 235.09px;
+  position: absolute;
+}
+
+.ProfilePageArrowrightPic {
+  width: 62.22px;
+  height: 64.11px;
+  left: 829.54px;
+  top: 299.20px;
+  position: absolute;
+  transform: rotate(-180deg);
+  transform-origin: 0 0;
+}
+
+.ProfilePageTransferPic {
+  width: 62.22px;
+  height: 64.11px;
+  left: 767.32px;
+  top: 416.74px;
+  position: absolute;
+}

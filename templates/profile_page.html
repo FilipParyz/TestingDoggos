@@ -3,80 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profilestyle.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <div class="ProfilePageFrame" style="width: 100%; height: 100%; background: white; border-radius: 22px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
-        <div class="OpeningProfile" style="width: 1348px; height: 748px; position: relative">
-            <div class="ProfilePageMainBg" style="width: 1348px; height: 748px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 22px"></div>
-            <div class="AnimalIonfo" style="width: 823.30px; height: 267.14px; left: 38.25px; top: 480.86px; position: absolute">
-                <div class="ProfilePageInfoSeparationlineHorizontal" style="width: 823.30px; height: 0px; left: -0px; top: 80.39px; position: absolute; border: 5px black solid"></div>
-                <div class="ProfilePageInfoSeparationlineVertical" style="width: 186.75px; height: 0px; left: 411.65px; top: 80.39px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
-                <div class="RightInfo" style="width: 370.33px; height: 159.01px; left: 438.22px; top: 91.17px; position: absolute">
-                    <div class="ProfilePageSexInfoText" style="width: 84.35px; height: 69.97px; left: 228.37px; top: 89.05px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Sex</div>
-                    <div class="ProfilePageStatusInfoText" style="width: 123.44px; height: 55.12px; left: 228.37px; top: 48.76px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Status</div>
-                    <div class="ProfilePageWeightInfoText" style="width: 133.73px; height: 55.12px; left: 236.60px; top: 0px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Weight</div>
-                    <div class="ProfilePageWeightInfoUnderline" style="width: 168.71px; height: 0px; left: -0px; top: 42.40px; position: absolute; border: 1px black solid"></div>
-                    <div class="ProfilePageStatusInfoUnderline" style="width: 168.71px; height: 0px; left: -0px; top: 91.17px; position: absolute; border: 1px black solid"></div>
-                    <div class="ProfilePageSexInfoUnderline" style="width: 168.71px; height: 0px; left: -0px; top: 142.05px; position: absolute; border: 1px black solid"></div>
+    <div class="ProfilePageFrame">
+        <div class="OpeningProfile">
+            <div class="ProfilePageMainBg"></div>
+            <div class="AnimalIonfo">
+                <div class="ProfilePageInfoSeparationlineHorizontal"></div>
+                <div class="ProfilePageInfoSeparationlineVertical"></div>
+                <div class="RightInfo">
+                    <div class="ProfilePageSexInfoText">Sex</div>
+                    <div class="ProfilePageStatusInfoText">Status</div>
+                    <div class="ProfilePageWeightInfoText">Weight</div>
+                    <div class="ProfilePageWeightInfoUnderline"></div>
+                    <div class="ProfilePageStatusInfoUnderline"></div>
+                    <div class="ProfilePageSexInfoUnderline"></div>
                 </div>
-                <div class="LeftInfo" style="width: 740.58px; height: 245.94px; left: 12.34px; top: -0px; position: absolute">
-                    <div class="ProfilePageTypeInfoText" style="width: 117.27px; height: 69.97px; left: 0px; top: 80.57px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Type</div>
-                    <div class="ProfilePageNameInfoText" style="width: 139.90px; height: 69.97px; left: 30.86px; top: -0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Name</div>
-                    <div class="ProfilePageShelterstayingText" style="width: 233.31px; height: 35.26px; left: 507.27px; top: 17.10px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Cage/Place Staying</div>
-                    <div class="ProfilePageRaceInfoText" style="width: 94.64px; height: 55.12px; left: 30.86px; top: 139.93px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Race</div>
-                    <div class="ProfilePageAgeInfoText" style="width: 74.07px; height: 55.12px; left: 51.43px; top: 190.82px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Age</div>
-                    <div class="ProfilePageTypeInfoUnderline" style="width: 168.71px; height: 0px; left: 196.48px; top: 133.57px; position: absolute; border: 1px black solid"></div>
-                    <div class="ProfilePageRaceInfoUnderline" style="width: 168.71px; height: 0px; left: 196.48px; top: 182.34px; position: absolute; border: 1px black solid"></div>
-                    <div class="ProfilePageAgeInfoUnderline" style="width: 168.71px; height: 0px; left: 196.48px; top: 233.22px; position: absolute; border: 1px black solid"></div>
-                </div>
-            </div>
-            <div class="ProfilePageSegmentdivision" style="width: 5.18px; height: 694.57px; left: 925.97px; top: 26.71px; position: absolute; background: #FF1074; border-radius: 22px"></div>
-            <div class="PhotoGalerry" style="width: 837.83px; height: 427.43px; left: 23.85px; top: 53.43px; position: absolute">
-                <div class="ProfilePagePicBg" style="width: 829.54px; height: 427.43px; left: 8.30px; top: -0px; position: absolute; background: #3C3939; border-radius: 22px"></div>
-                <img class="Corgi" style="width: 299.67px; height: 231.88px; left: 0px; top: 149.60px; position: absolute" src="https://via.placeholder.com/300x232" />
-                <img class="Corgi" style="width: 308.79px; height: 225.03px; left: 497.54px; top: 48.09px; position: absolute; transform: rotate(92.91deg); transform-origin: 0 0" src="https://via.placeholder.com/309x225" />
-                <img class="Corgi" style="width: 300.07px; height: 231.59px; left: 773.22px; top: 403.92px; position: absolute; transform: rotate(-167.64deg); transform-origin: 0 0" src="https://via.placeholder.com/300x232" />
-                <img class="ForwardArrow" style="width: 93.32px; height: 96.17px; left: 172.13px; top: 65.18px; position: absolute" src="https://via.placeholder.com/93x96" />
-                <img class="ForwardArrow" style="width: 94.09px; height: 95.42px; left: 481.76px; top: 83.35px; position: absolute; transform: rotate(31.77deg); transform-origin: 0 0" src="https://via.placeholder.com/94x95" />
-            </div>
-            <div class="ProfilePageDatatoupdate" style="width: 345.30px; height: 617.99px; left: 929.08px; top: 53.43px; position: absolute">
-                <div class="ProfilePageDatasex" style="width: 345.30px; height: 69.97px; left: 0px; top: 548.02px; position: absolute">
-                    <div class="ProfilePageSexUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageSexText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Sex</div>
-                </div>
-                <div class="ProfilePageDatastatus" style="width: 345.30px; height: 69.97px; left: 0px; top: 456.69px; position: absolute">
-                    <div class="ProfilePageStatusUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageStatusText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Status</div>
-                </div>
-                <div class="ProfilePageDataweight" style="width: 345.30px; height: 69.97px; left: 0px; top: 365.35px; position: absolute">
-                    <div class="ProfilePageWeightUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageWeightText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Weight</div>
-                </div>
-                <div class="ProfilePageDataage" style="width: 345.30px; height: 69.97px; left: 0px; top: 274.01px; position: absolute">
-                    <div class="ProfilePageAgeUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageAgeText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Age</div>
-                </div>
-                <div class="ProfilePageDatarace" style="width: 345.30px; height: 69.97px; left: 0px; top: 182.67px; position: absolute">
-                    <div class="ProfilePageRaceUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageRaceText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Race</div>
-                </div>
-                <div class="ProfilePageDatatype" style="width: 345.30px; height: 69.97px; left: 0px; top: 91.34px; position: absolute">
-                    <div class="ProfilePageTypeUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageTypeText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Type</div>
-                </div>
-                <div class="ProfilePageDataname" style="width: 345.30px; height: 69.97px; left: 0px; top: 0px; position: absolute">
-                    <div class="ProfilePageNameUnderline" style="width: 178.35px; height: 0px; left: 166.94px; top: 45.95px; position: absolute; border: 4px #E8DF0B solid"></div>
-                    <div class="ProfilePageNameText" style="width: 139.90px; height: 69.97px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Name</div>
+                <div class="LeftInfo">
+                    <div class="ProfilePageTypeInfoText">Type</div>
+                    <div class="ProfilePageNameInfoText">Name</div>
+                    <div class="ProfilePageShelterstayingText">Cage/Place Staying</div>
+                    <div class="ProfilePageRaceInfoText">Race</div>
+                    <div class="ProfilePageAgeInfoText">Age</div>
+                    <div class="ProfilePageTypeInfoUnderline"></div>
+                    <div class="ProfilePageRaceInfoUnderline"></div>
+                    <div class="ProfilePageAgeInfoUnderline"></div>
                 </div>
             </div>
-            <div class="ProfilePageControls" style="width: 1315.86px; height: 480.86px; left: 32.14px; top: -0px; position: absolute">
-                <img class="ProfilePageClosePic" style="width: 51.85px; height: 53.43px; left: 1264.01px; top: -0px; position: absolute" src="https://via.placeholder.com/52x53" />
-                <img class="ProfilePageArrowleftPic" style="width: 62.22px; height: 64.11px; left: 0px; top: 235.09px; position: absolute" src="https://via.placeholder.com/62x64" />
-                <img class="ProfilePageArrowrightPic" style="width: 62.22px; height: 64.11px; left: 829.54px; top: 299.20px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0" src="https://via.placeholder.com/62x64" />
-                <img class="ProfilePageTransferPic" style="width: 62.22px; height: 64.11px; left: 767.32px; top: 416.74px; position: absolute" src="https://via.placeholder.com/62x64" />
+            <div class="ProfilePageSegmentdivision"></div>
+            <div class="PhotoGalerry">
+                <div class="ProfilePagePicBg"></div>
+                <img class="Corgi" src="https://via.placeholder.com/300x232" />
+                <img class="Corgi" src="https://via.placeholder.com/309x225" />
+                <img class="Corgi" src="https://via.placeholder.com/300x232" />
+                <img class="ForwardArrow" src="https://via.placeholder.com/93x96" />
+                <img class="ForwardArrow" src="https://via.placeholder.com/94x95" />
+            </div>
+            <div class="ProfilePageDatatoupdate">
+                <div class="ProfilePageDatasex">
+                    <div class="ProfilePageSexUnderline"></div>
+                    <div class="ProfilePageSexText">Sex</div>
+                </div>
+                <div class="ProfilePageDatastatus">
+                    <div class="ProfilePageStatusUnderline"></div>
+                    <div class="ProfilePageStatusText">Status</div>
+                </div>
+                <div class="ProfilePageDataweight">
+                    <div class="ProfilePageWeightUnderline"></div>
+                    <div class="ProfilePageWeightText">Weight</div>
+                </div>
+                <div class="ProfilePageDataage">
+                    <div class="ProfilePageAgeUnderline"></div>
+                    <div class="ProfilePageAgeText">Age</div>
+                </div>
+                <div class="ProfilePageDatarace">
+                    <div class="ProfilePageRaceUnderline"></div>
+                    <div class="ProfilePageRaceText">Race</div>
+                </div>
+                <div class="ProfilePageDatatype">
+                    <div class="ProfilePageTypeUnderline"></div>
+                    <div class="ProfilePageTypeText">Type</div>
+                </div>
+                <div class="ProfilePageDataname">
+                    <div class="ProfilePageNameUnderline"></div>
+                    <div class="ProfilePageNameText">Name</div>
+                </div>
+            </div>
+            <div class="ProfilePageControls">
+                <img class="ProfilePageClosePic" src="https://via.placeholder.com/52x53" />
+                <img class="ProfilePageArrowleftPic" src="https://via.placeholder.com/62x64" />
+                <img class="ProfilePageArrowrightPic" src="https://via.placeholder.com/62x64" />
+                <img class="ProfilePageTransferPic" src="https://via.placeholder.com/62x64" />
             </div>
         </div>
     </div>
 </body>
-</html>l
+</html>
