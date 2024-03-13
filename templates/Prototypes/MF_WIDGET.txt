@@ -1,0 +1,56 @@
+<div class="MfWidget" style="width: 100%; height: 100%; background: white; border-radius: 22px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div class="WidgetManageFood" style="width: 275px; height: 750px; position: relative">
+        <div class="MfBg" style="width: 275px; height: 750px; left: 0px; top: 0px; position: absolute; background: #42C9F3; border-radius: 22px"></div>
+        <div class="MfScrollThings" style="width: 10px; height: 650px; left: 258px; top: 75px; position: absolute">
+            <div class="MfScrolling" style="width: 8px; height: 312px; left: 1px; top: 24px; position: absolute; background: #151414; border-radius: 22px; border: 1px #42C9F3 solid"></div>
+            <div class="MfScrollingBg" style="width: 10px; height: 650px; left: 0px; top: 0px; position: absolute; background: rgba(21.45, 20.29, 20.29, 0.20); border-radius: 22px; border: 1px #42C9F3 solid"></div>
+        </div>
+        <div class="AdditionOfANewAnimal" style="width: 241px; height: 50px; left: 26px; top: 10px; position: absolute">
+            <div class="MfUnderline" style="width: 127px; height: 0px; left: 15.50px; top: 34.50px; position: absolute; border: 1px black solid"></div>
+            <img class="MfButtonPlus" style="width: 50px; height: 50px; left: 191px; top: 0px; position: absolute" src="https://via.placeholder.com/50x50" />
+            <div class="MfText" style="width: 158px; height: 48px; left: 0px; top: 1px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: DM Sans; font-weight: 400; word-wrap: break-word">Add new</div>
+        </div>
+        <div class="MfButtons" style="width: 239px; height: 538px; left: 23px; top: 97px; position: absolute">
+            <div class="Mf5thbuttonpair" style="width: 239px; height: 95px; left: 0px; top: 443px; position: absolute">
+                <div class="Mf5buttonpairPlusMinus" style="width: 40px; height: 80px; left: 109px; top: 10px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <img class="Mf5thbuttonpairButtonPlus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                    <img class="Mf5thbuttonpairButtonMinus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                </div>
+                <img class="Mf5thbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 149px; top: 5px; position: absolute" src="https://via.placeholder.com/90x90" />
+                <img class="Mf5thbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mf4thbuttonpair" style="width: 239px; height: 91px; left: 0px; top: 333px; position: absolute">
+                <div class="Mf4thbuttonpairPlusMinus" style="width: 40px; height: 80px; left: 109px; top: 6px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <img class="Mf4thbuttonpairButtonPlus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                    <img class="Mf4thbuttonpairButtonMinus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                </div>
+                <img class="Mf4thbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 149px; top: 1px; position: absolute" src="https://via.placeholder.com/90x90" />
+                <img class="Mf4thbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mf3rdbuttonpair" style="width: 239px; height: 90px; left: 0px; top: 223px; position: absolute">
+                <div class="Mf3rdbuttonpairPlusMinus" style="width: 40px; height: 80px; left: 109px; top: 5px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <img class="Mf3rdbuttonpairButtonPlus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                    <img class="Mf3rdbuttonpairButtonMinus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                </div>
+                <img class="Mf3rdbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 149px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+                <img class="Mf3rdbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mf2ndbuttonpair" style="width: 239px; height: 91px; left: 0px; top: 112px; position: absolute">
+                <div class="Mf2ndbuttonpairPlusMinus" style="width: 40px; height: 80px; left: 109px; top: 5px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <img class="Mf2ndbuttonpairButtonPlus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                    <img class="Mf2ndbuttonpairButtonMinus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                </div>
+                <img class="Mf2ndbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 149px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+                <img class="Mf2ndbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 1px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+            <div class="Mf1stbuttonpair" style="width: 239px; height: 93px; left: 0px; top: 0px; position: absolute">
+                <div class="Mf1stbuttonpairPlusMinus" style="width: 40px; height: 80px; left: 109px; top: 5px; position: absolute; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <img class="Mf1stbuttonpairButtonPlus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                    <img class="Mf1stbuttonpairButtonMinus" style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+                </div>
+                <img class="Mf1stbuttonpairButtonRemove" style="width: 90px; height: 90px; left: 149px; top: 0px; position: absolute" src="https://via.placeholder.com/90x90" />
+                <img class="Mf1stbuttonpairPic" style="width: 90px; height: 90px; left: 0px; top: 3px; position: absolute" src="https://via.placeholder.com/90x90" />
+            </div>
+        </div>
+    </div>
+</div>
