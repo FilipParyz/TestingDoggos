@@ -6,26 +6,17 @@
     <title>Animal Shelter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/infostyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebarstyle.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body style="margin: 0;">
     <div class="MainframeAdmin">
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
-            <!-- Contact button -->
-            <div class="Contact">
-                <button id="ContactUs" class="ContackBackground">
-                    <img class="Call" src="{{ url_for('static', filename='images/call.png') }}" />
-                </button>
-                <div class="Texts">
-                    <labelK>KONTAKT</labelK>
-                </div>
-            </div>
-            
             <!-- Support button -->
             <div class="Support">
                 <button id="SupportUs" class="supportButton">
-                    <img class="Charity" src="{{ url_for('static', filename='images/Charity.png') }}" />
+                    <img class="Charity" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
                     <p class="Texts">WESPRZYJ NAS</p>
                 </button>
             </div>
@@ -36,27 +27,26 @@
                     <div class="Texts">
                         <labelZ>NASZE ZWIERZAKI</labelZ>
                     </div>
-                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/Heartwithdogpaw.png') }}" />
+                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
                 </button>
             </div>
             
             <!-- About us button -->
             <div class="LogOut">
                 <button id="LogUt" class="LogoutBackground">
-                    <img class="Login" src="{{ url_for('static', filename='images/Login.png') }}" />
+                    <img class="Login" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
                 </button>
                 <div class="Texts">
                     <labelW>WYLOGUJ SIĘ</labelW>
                 </div>
             </div>
             
-            <!-- Account logo -->
-            <div class="Account">
-                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
-            </div>
+            <!-- END Top Menu -->
+        </div>   
+        <!-- Account logo -->
+        <div class="Account">
+            <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
         </div>
-        <!-- END Top Menu -->
-        
         <div class="Searchbar">
             <!-- Search bar -->
             <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
@@ -74,13 +64,13 @@
                 <!-- Food button -->
                 <div class="FoodButton">
                     <button id="Food" class="KawaiiSteak">
-                        <img class="Steak" src="{{ url_for('static', filename='images/KawaiiSteak.png') }}" />
+                        <img class="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
                     </button>
                 </div>
                 <!-- Pets button -->
                 <div class="PetsButton">
                     <button id="Pets" class="Animals">
-                        <img class="PetsIMG" src="{{ url_for('static', filename='images/Pets.png') }}" >
+                        <img class="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
                     </button> 
                 </div>
                 <!-- END Side panel menu -->
@@ -90,7 +80,7 @@
         <!-- BEGINNING Profiles Content -->
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
             
             <div class="container">
@@ -127,32 +117,46 @@
         </div>
         <div class="PictureProfile2">
             <button id="Animal2" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
         </div>
         <div class="PictureProfile3">
             <button id="Animal3"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
         </div>
         <div class="PictureProfile4">
             <button id="Animal4" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
             
         </div>
         <div class="PictureProfile5">
             <button id="Animal5"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
         </div>
         <div class="PictureProfile6">
             <button id="Animal6"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
+                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
             
         <!-- END Profiles Content -->
         </div>
+        <!-- BEGINNING Contact info -->
+            <div class="ContactinfoLine">
+                <div class="SeperatelineBg"></div>
+                <div class="Seperateline3rd"></div>
+                <div class="Seperateline2nd"></div>
+                <div class="Seperateline1st"></div>
+                <div class="Tel48491825420">Tel:+48 491-825-420</div>
+                <img class="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
+                <div class="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
+                <img class="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
+                <div class="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
+                <img class="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+            </div>
+        <!-- END Contact info -->
     </div>
 </body>
 </html>

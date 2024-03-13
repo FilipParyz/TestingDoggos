@@ -166,10 +166,30 @@ def handle_shelter(shelter_id):
         db.session.delete(shelter)
         db.session.commit()
         return '', 204
+        
+# Routing dla podstrony "support_us"
+@app.route('/support_us.html')
+def support_us():
+    return render_template('support_us.html')
+    
+    ###Here are the tests###
+# Routing dla podstrony "profile_page"
+@app.route('/profile_page.html')
+def profile_page():
+    return render_template('profile_page.html')
+# Routing dla podstrony "MP_button"
+@app.route('/MP_button.html')
+def MP_button():
+    return render_template('MP_button.html')
+
+# Routing dla podstrony "MF_button"
+@app.route('/MF_button.html')
+def MF_button():
+    return render_template('MF_button.html')
+
 
 if __name__ == '__main__':
 
     with app.app_context():
         db.create_all()
-
     app.run(debug=True)
