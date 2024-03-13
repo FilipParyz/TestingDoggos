@@ -1,0 +1,613 @@
+/* Apply styles to the MpWidget class */
+.MpWidget {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Apply styles to the MpScrollThings class */
+  .MpScrollThings {
+    width: 275px;
+    height: 750px;
+    position: relative;
+  }
+  
+  /* Apply styles to the WidgetMpBg class */
+  .WidgetMpBg {
+    width: 275px;
+    height: 750px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #954081;
+    border-radius: 22px;
+  }
+  
+  /* Apply styles to the MpButtons class */
+  .MpButtons {
+    width: 220px;
+    height: 541px;
+    left: 23px;
+    top: 92px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp5thbuttonpair class */
+  .Mp5thbuttonpair {
+    width: 220px;
+    height: 95px;
+    left: 0px;
+    top: 446px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp5thbuttonpairPic class */
+  .Mp5thbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(228.27, 121.34, 255, 0.40) 0%, rgba(228.27, 121.34, 255, 0.40) 100%);
+  }
+  
+  /* Apply styles to the Mp5thbuttonpairButtonRemove class */
+  .Mp5thbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp4thbuttonpair class */
+  .Mp4thbuttonpair {
+    width: 220px;
+    height: 95px;
+    left: 0px;
+    top: 348px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp4thbuttonpairPic class */
+  .Mp4thbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(136.92, 247.55, 69.11, 0.40) 0%, rgba(136.92, 247.55, 69.11, 0.40) 100%);
+  }
+  
+  /* Apply styles to the Mp4thbuttonpairButtonRemove class */
+  .Mp4thbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp3rdbuttonpair class */
+  .Mp3rdbuttonpair {
+    width: 220px;
+    height: 95px;
+    left: 0px;
+    top: 236px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp3rdbuttonpairPair class */
+  .Mp3rdbuttonpairPair {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255, 121.34, 121.34, 0.40) 0%, rgba(255, 121.34, 121.34, 0.40) 100%);
+  }
+  
+  /* Apply styles to the Mp3rdbuttonpairButtonRemove class */
+  .Mp3rdbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp2ndbuttonpair class */
+  .Mp2ndbuttonpair {
+    width: 220px;
+    height: 95px;
+    left: 0px;
+    top: 115px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp2ndbuttonpairPic class */
+  .Mp2ndbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(232.25, 223.42, 11.42, 0.40) 0%, rgba(232.25, 223.42, 11.42, 0.40) 100%);
+  }
+  
+  /* Apply styles to the Mp2ndbuttonpairButtonRemove class */
+  .Mp2ndbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp1stbuttonpair class */
+  .Mp1stbuttonpair {
+    width: 220px;
+    height: 95px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the Mp1stbuttonpairPic class */
+  .Mp1stbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%);
+  }
+  
+  /* Apply styles to the Mp1stbuttonpairButtonRemove class */
+  .Mp1stbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the AdditionOfANewAnimal class */
+  .AdditionOfANewAnimal {
+    width: 241px;
+    height: 50px;
+    left: 26px;
+    top: 10px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the MpAddbutton class */
+  .MpAddbutton {
+    width: 50px;
+    height: 50px;
+    left: 191px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* Apply styles to the MpText class */
+  .MpText {
+    width: 158px;
+    height: 48px;
+    left: 0px;
+    top: 1px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: DM Sans;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  /* Apply styles to the MpScrolling class */
+  .MpScrolling {
+    width: 8px;
+    height: 312px;
+    left: 259px;
+    top: 99px;
+    position: absolute;
+    background: #151414;
+    border-radius: 22px;
+    border: 1px #42C9F3 solid;
+  }
+  
+  /* Apply styles to the MpScrollingBg class */
+  .MpScrollingBg {
+    width: 10px;
+    height: 650px;
+    left: 258px;
+    top: 75px;
+    position: absolute;
+    background: rgba(21.45, 20.29, 20.29, 0.20);
+    border-radius: 22px;
+    border: 1px #42C9F3 solid;
+  }
+  
+/* MF*/
+/* Overall Container Styles */
+.MfWidget {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Widget Styles */
+  .WidgetManageFood {
+    width: 275px;
+    height: 750px;
+    position: relative;
+  }
+  
+  /* Background Styles */
+  .MfBg {
+    width: 275px;
+    height: 750px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #42C9F3;
+    border-radius: 22px;
+  }
+  
+  /* Scroll Things Styles */
+  .MfScrollThings {
+    width: 10px;
+    height: 650px;
+    left: 258px;
+    top: 75px;
+    position: absolute;
+  }
+  
+  /* Scrolling Styles */
+  .MfScrolling {
+    width: 8px;
+    height: 312px;
+    left: 1px;
+    top: 24px;
+    position: absolute;
+    background: #151414;
+    border-radius: 22px;
+    border: 1px #42C9F3 solid;
+  }
+  
+  /* Scrolling Background Styles */
+  .MfScrollingBg {
+    width: 10px;
+    height: 650px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: rgba(21, 20, 20, 0.20);
+    border-radius: 22px;
+    border: 1px #42C9F3 solid;
+  }
+  
+  /* Addition Of A New Animal Styles */
+  .AdditionOfANewAnimal {
+    width: 241px;
+    height: 50px;
+    left: 26px;
+    top: 10px;
+    position: absolute;
+  }
+  
+  /* Underline Styles */
+  .MfUnderline {
+    width: 127px;
+    height: 0px;
+    left: 15.50px;
+    top: 34.50px;
+    position: absolute;
+    border: 1px black solid;
+  }
+  
+  /* Button Plus Styles */
+  .MfButtonPlus {
+    width: 50px;
+    height: 50px;
+    left: 191px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* Text Styles */
+  .MfText {
+    width: 158px;
+    height: 48px;
+    left: 0px;
+    top: 1px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  /* Buttons Container Styles */
+  .MfButtons {
+    width: 239px;
+    height: 538px;
+    left: 23px;
+    top: 97px;
+    position: absolute;
+  }
+  
+  /* 5th Button Pair Styles */
+  .Mf5thbuttonpair {
+    width: 239px;
+    height: 95px;
+    left: 0px;
+    top: 443px;
+    position: absolute;
+  }
+  
+  /* 5th Button Pair Plus Minus Styles */
+  .Mf5thbuttonpairPlusMinus {
+    width: 40px;
+    height: 80px;
+    left: 109px;
+    top: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 5th Button Pair Button Plus Styles */
+  .Mf5thbuttonpairButtonPlus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 5th Button Pair Button Minus Styles */
+  .Mf5thbuttonpairButtonMinus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 5th Button Pair Button Remove Styles */
+  .Mf5thbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 149px;
+    top: 5px;
+    position: absolute;
+  }
+  
+  /* 5th Button Pair Pic Styles */
+  .Mf5thbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 4th Button Pair Styles */
+  .Mf4thbuttonpair {
+    width: 239px;
+    height: 91px;
+    left: 0px;
+    top: 333px;
+    position: absolute;
+  }
+  
+  /* 4th Button Pair Plus Minus Styles */
+  .Mf4thbuttonpairPlusMinus {
+    width: 40px;
+    height: 80px;
+    left: 109px;
+    top: 6px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 4th Button Pair Button Plus Styles */
+  .Mf4thbuttonpairButtonPlus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 4th Button Pair Button Minus Styles */
+  .Mf4thbuttonpairButtonMinus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 4th Button Pair Button Remove Styles */
+  .Mf4thbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 149px;
+    top: 1px;
+    position: absolute;
+  }
+  
+  /* 4th Button Pair Pic Styles */
+  .Mf4thbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 3rd Button Pair Styles */
+  .Mf3rdbuttonpair {
+    width: 239px;
+    height: 90px;
+    left: 0px;
+    top: 223px;
+    position: absolute;
+  }
+  
+  /* 3rd Button Pair Plus Minus Styles */
+  .Mf3rdbuttonpairPlusMinus {
+    width: 40px;
+    height: 80px;
+    left: 109px;
+    top: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 3rd Button Pair Button Plus Styles */
+  .Mf3rdbuttonpairButtonPlus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 3rd Button Pair Button Minus Styles */
+  .Mf3rdbuttonpairButtonMinus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 3rd Button Pair Button Remove Styles */
+  .Mf3rdbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 149px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 3rd Button Pair Pic Styles */
+  .Mf3rdbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 2nd Button Pair Styles */
+  .Mf2ndbuttonpair {
+    width: 239px;
+    height: 91px;
+    left: 0px;
+    top: 112px;
+    position: absolute;
+  }
+  
+  /* 2nd Button Pair Plus Minus Styles */
+  .Mf2ndbuttonpairPlusMinus {
+    width: 40px;
+    height: 80px;
+    left: 109px;
+    top: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 2nd Button Pair Button Plus Styles */
+  .Mf2ndbuttonpairButtonPlus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 2nd Button Pair Button Minus Styles */
+  .Mf2ndbuttonpairButtonMinus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 2nd Button Pair Button Remove Styles */
+  .Mf2ndbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 149px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 2nd Button Pair Pic Styles */
+  .Mf2ndbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 1px;
+    position: absolute;
+  }
+  
+  /* 1st Button Pair Styles */
+  .Mf1stbuttonpair {
+    width: 239px;
+    height: 93px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 1st Button Pair Plus Minus Styles */
+  .Mf1stbuttonpairPlusMinus {
+    width: 40px;
+    height: 80px;
+    left: 109px;
+    top: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 1st Button Pair Button Plus Styles */
+  .Mf1stbuttonpairButtonPlus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 1st Button Pair Button Minus Styles */
+  .Mf1stbuttonpairButtonMinus {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 1st Button Pair Button Remove Styles */
+  .Mf1stbuttonpairButtonRemove {
+    width: 90px;
+    height: 90px;
+    left: 149px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  /* 1st Button Pair Pic Styles */
+  .Mf1stbuttonpairPic {
+    width: 90px;
+    height: 90px;
+    left: 0px;
+    top: 3px;
+    position: absolute;
+  }  

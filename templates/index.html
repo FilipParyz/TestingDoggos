@@ -6,22 +6,14 @@
     <title>Animal Shelter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/infostyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebarstyle.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body style="margin: 0;">
     <div class="MainframeAdmin">
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
-            <!-- Contact button -->
-            <div class="Contact">
-                <button id="ContactUs" class="ContackBackground">
-                    <img class="Call" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
-                </button>
-                <div class="Texts">
-                    <labelK>KONTAKT</labelK>
-                </div>
-            </div>
-            
+                       
             <!-- Support button -->
             <div class="Support">
                 <button id="SupportUs" class="supportButton">
@@ -50,13 +42,13 @@
                 </div>
             </div>
             
-            <!-- Account logo -->
-            <div class="Account">
-                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
-            </div>
+            <!-- END Top Menu -->
+        </div>   
+        <!-- Account logo -->
+        <div class="Account">
+            <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
         </div>
-        <!-- END Top Menu -->
-        
+   
         <div class="Searchbar">
             <!-- Search bar -->
             <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
@@ -153,6 +145,21 @@
             
         <!-- END Profiles Content -->
         </div>
+        <!-- BEGINNING Contact info -->
+            <div class="ContactinfoLine">
+                <div class="SeperatelineBg"></div>
+                <div class="Seperateline3rd"></div>
+                <div class="Seperateline2nd"></div>
+                <div class="Seperateline1st"></div>
+                <div class="Tel48491825420">Tel:+48 491-825-420</div>
+                <img class="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
+                <div class="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
+                <img class="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
+                <div class="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
+                <img class="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+            </div>
+        <!-- END Contact info -->
+        
     </div>
 </body>
 </html>
