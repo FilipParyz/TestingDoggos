@@ -35,25 +35,29 @@ class Animal(db.Model):
 class Food(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    amount = db.Column(db.Float, nullable=False)
+    amount = db.Column(db.Integer, nullable=False)
+    weight = db.Column(db.Integer, nullable=False)
 
     def to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
-            'amount': self.amount
+            'amount': self.amount,
+            'weight': self.weight 
         }
 
 # Define a model for spaces in a shelter
 class Shelter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
+    amount = db.Column(db.Integer, nullable=False)
     capacity = db.Column(db.Integer, nullable=False)
 
     def to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
+            'amount': self.amount,
             'capacity': self.capacity
         }
 
@@ -65,7 +69,12 @@ def home():
 def handle_animals():
     if request.method == 'POST':
         data = request.get_json()
-        new_animal = Animal(name=data['name'], species=data['species'], age=data.get('age'))
+        new_animal = Animal(name=data['name'],
+                            species=data['species'],
+                            food_id=data['food_id'],
+                            shelter_id=data['shelter_id'],
+                            age=data.get('age'),
+                            weight=data.get('weight'))
         db.session.add(new_animal)
         db.session.commit()
         return jsonify(new_animal.to_dict()), 201
@@ -83,7 +92,10 @@ def handle_animal(animal_id):
         data = request.get_json()
         animal.name = data['name']
         animal.species = data['species']
+        animal.food_id = data['food_id']
+        animal.shelter_id = data['shelter_id']
         animal.age = data.get('age')
+        animal.weight = data.get('weight')
         db.session.commit()
         return jsonify(animal.to_dict())
     elif request.method == 'DELETE':
@@ -95,7 +107,9 @@ def handle_animal(animal_id):
 def handle_foods():
     if request.method == 'POST':
         data = request.get_json()
-        new_food = Food(name=data['name'], amount=data['amount'])
+        new_food = Food(    name=data['name'],
+                            amount=data['amount'],
+                            weight=data['weight'])
         db.session.add(new_food)
         db.session.commit()
         return jsonify(new_food.to_dict()), 201
@@ -113,6 +127,7 @@ def handle_food(food_id):
         data = request.get_json()
         food.name = data['name']
         food.amount = data['amount']
+        food.weight = data['weight']
         db.session.commit()
         return jsonify(food.to_dict())
     elif request.method == 'DELETE':
@@ -124,7 +139,9 @@ def handle_food(food_id):
 def handle_shelters():
     if request.method == 'POST':
         data = request.get_json()
-        new_shelter = Shelter(name=data['name'], capacity=data['capacity'])
+        new_shelter = Shelter(  name=data['name'],
+                                amount=data['amount'],
+                                capacity=data['capacity'])
         db.session.add(new_shelter)
         db.session.commit()
         return jsonify(new_shelter.to_dict()), 201
@@ -141,6 +158,7 @@ def handle_shelter(shelter_id):
     elif request.method == 'PUT':
         data = request.get_json()
         shelter.name = data['name']
+        shelter.amount = data['amount']
         shelter.capacity = data['capacity']
         db.session.commit()
         return jsonify(shelter.to_dict())
@@ -175,4 +193,3 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-

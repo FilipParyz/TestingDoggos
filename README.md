@@ -31,3 +31,22 @@ All of the implemented interfaces should allow for testing.
 -
 
 The project is an assignment for a subject "Testing and code optimizaiton" in the University of Economics in Katowice.
+
+
+## Installation
+
+1. Clone the repository
+2. Install the required packages
+'''bash
+pip install Flask Flask-SQLAlchemy
+'''
+3. Run the application
+'''bash
+python TestingDoggos.py
+'''
+
+## Usage
+Open the browser and go to the address:
+'''bash
+http://127.0.0.1:5000/
+'''
