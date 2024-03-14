@@ -6,11 +6,13 @@
 }
 
 .Texts {
-    top: 15px;
-    left: 55px;
+    top: -10px;
+    left: 75px;
     color: black;
     font-size: 22px;
+    text-wrap:nowrap;
     font-weight: 800;
+    text-align: center;
     pointer-events: none;
     font-family: 'DM Sans';
 }
@@ -34,40 +36,30 @@
     background: #7D7C7C;
 }
 
-.Pets3 {
+#Ourpets {
     top: 10px;
     left: 67%;
     width: 275px;
     height: 55px;    
 }
 
-.OuranimalsBackground {
-    width: 275px;
-    height: 55px;
-    background: #FFF7F7;
+
+#HeartWithDogPaw {
+    left: -100px;
+    top: 0px;
+    pointer-events: none; 
+    position: relative;    
 }
 
-.HeartWithDogPaw {
-    left: 1px;
-    top: 2.50px;
-    width: 50px;
-    height: 50px;    
-}
-
-.LogOut {
+#LogUt {
     top: 10px;
     left: 85%;
     width: 250px;
     height: 55px;    
 }
 
-.LogoutBackground {
-    width: 250px;
-    height: 55px;
-    background: #FFF7F7;
-}
 
-.Login {
+#Login {
     left: 5px;
     top: 2.50px;
     width: 50px;
@@ -91,6 +83,7 @@
     width: 90px;
     height: 90px;
     pointer-events: none;
+    position: absolute;
 }
 
 .Searchbar {
@@ -184,25 +177,25 @@
     pointer-events: none;
 }
 
-.Support {
+#SupportUs {
     left: 50%;
     top: 10px;
     width: 275px;
     height: 55px;    
 }
 
-.supportButton {
-    top: 0px;
-    left: 0px;
+.TopButton {
+    position: relative;
     width: 275px;
     height: 55px;
     background: #FFF7F7;
 }
 
-.Charity {
-    left: 5px;
-    top: 2.50px;
-    pointer-events: none;  
+.TopImage {
+    left: -100px;
+    top: 0px;
+    pointer-events: none; 
+    position: relative; 
 }
 
 /* Profile Pictures */
@@ -226,8 +219,7 @@
     pointer-events: none;
 }
 
-labelW { color: black; }
-labelZ { color: blue; }
-labelK { color: red; }
-.Support p { left: 70px; font-weight: 800;  top: -6px; font-family: 'DM Sans'; font-size: 22px; color: green; }
-.Texts,.Search,.Contact,.Call,.Pets3,.HeartWithDogPaw,.LogOut,.Login,.CatProfil,.LogoutBackground,.Searchbar,.SearchBG,.Searching,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.Support,.supportButton,.Charity,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture,.ContackBackground,.OuranimalsBackground{ position: absolute; border-radius: 22px; }
+#Ourpets p { left: 55px;   top: -10px;  color: red; }
+#LogUt p { left: 55px;   top: -10px;  color: green; }
+#SupportUs p { top: -10px;  color: blue; }
+.TopButton,.Texts,.Search,.CatProfil,.Searchbar,.SearchBG,.Searching,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }

@@ -14,32 +14,22 @@
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
             <!-- Support button -->
-            <div class="Support">
-                <button id="SupportUs" class="supportButton">
-                    <img class="Charity" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
-                    <p class="Texts">WESPRZYJ NAS</p>
-                </button>
-            </div>
+            <button id="SupportUs" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
+                <p class="Texts">WESPRZYJ NAS</p>
+            </button>
             
             <!-- Our pets button -->
-            <div class="Pets3">
-                <button id="Ourpets" class="OuranimalsBackground">
-                    <div class="Texts">
-                        <labelZ>NASZE ZWIERZAKI</labelZ>
-                    </div>
-                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
-                </button>
-            </div>
-            
-            <!-- About us button -->
-            <div class="LogOut">
-                <button id="LogUt" class="LogoutBackground">
-                    <img class="Login" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
-                </button>
-                <div class="Texts">
-                    <labelW>WYLOGUJ SIĘ</labelW>
-                </div>
-            </div>
+            <button id="Ourpets" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
+                <p class="Texts">NASZE ZWIERZAKI</p>
+            </button>
+        
+            <!-- Login button -->
+            <button id="LogUt" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
+                <p class="Texts">WYLOGUJ SIĘ</p>
+            </button>
             
             <!-- END Top Menu -->
         </div>   
@@ -47,6 +37,7 @@
         <div class="Account">
             <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
         </div>
+
         <div class="Searchbar">
             <!-- Search bar -->
             <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
