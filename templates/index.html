@@ -14,106 +14,106 @@
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
             <!-- Support button -->
-            <div class="Support">
-                <button id="SupportUs" class="supportButton">
-                    <img class="Charity" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
-                    <p class="Texts">WESPRZYJ NAS</p>
-                </button>
-            </div>
+            <button id="SupportUs" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
+                <p class="Texts">WESPRZYJ NAS</p>
+            </button>
             
             <!-- Our pets button -->
-            <div class="Pets3">
-                <button id="Ourpets" class="OuranimalsBackground">
-                    <div class="Texts">
-                        <labelZ>NASZE ZWIERZAKI</labelZ>
-                    </div>
-                    <img class="HeartWithDogPaw" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
-                </button>
-            </div>
-            
-            <!-- About us button -->
-            <div class="LogOut">
-                <button id="LogUt" class="LogoutBackground">
-                    <img class="Login" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
-                </button>
-                <div class="Texts">
-                    <labelW>WYLOGUJ SIĘ</labelW>
-                </div>
-            </div>
+            <button id="Ourpets" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
+                <p class="Texts">NASZE ZWIERZAKI</p>
+            </button>
+        
+            <!-- Login button -->
+            <button id="LogUt" class="TopButton">
+                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
+                <p class="Texts">WYLOGUJ SIĘ</p>
+            </button>
             
             <!-- END Top Menu -->
         </div>   
         <!-- Account logo -->
-        <div class="Account">
-            <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
+        <div>
+            <div id="Account">
+                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
+            </div>
         </div>
-        <div class="Searchbar">
+
+        <div id="search-bar">
             <!-- Search bar -->
-            <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
-            <div class="SearchBG">
-                <button id="Search" class="Searching">
-                    <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}" />
+            <input type="text" id="search-input" placeholder="Wyszukaj zwierzaka" />
+            <div id="search-background">
+                <button id="search-button">
+                    <img id="search-icon" src="{{ url_for('static', filename='images/Search.png') }}" />
                 </button>
                 <!-- END Search bar -->
             </div>
         </div>
         
-        <div class="SidePannelMenu">
+        <div id="SidePannelMenu">
             <!-- Side panel menu -->
-            <div class="Menu">
-                <!-- Food button -->
-                <div class="FoodButton">
-                    <button id="Food" class="KawaiiSteak">
-                        <img class="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
-                    </button>
-                </div>
-                <!-- Pets button -->
-                <div class="PetsButton">
-                    <button id="Pets" class="Animals">
-                        <img class="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
-                    </button> 
-                </div>
-                <!-- END Side panel menu -->
+            <!-- Food button -->
+            <div id="FoodButton">
+                <button id="food-button" >
+                    <img id="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
+                </button>
             </div>
+            <!-- Pets button -->
+            <div id="PetsButton">
+                <button id="pets-button" >
+                    <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
+                </button> 
+            </div>
+            <!-- END Side panel menu -->
         </div>
+        <!-- Here prototype of profiles 
+            <div class="profiles-container">
+            {% for image in profile_images %}
+            <div class="PictureProfile">
+                <button id="Animal{{ loop.index }}" class="Picture">
+                    <img class="Pic" src="{{ url_for('static', filename='images/profiles/' + image) }}" />
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+            <div class="container">
+                <div class="horizontal-line"></div>
+                <div class="vertical-line"></div>
+                <div class="info-box">
+                    <div class="label-weight">Weight</div>
+                        <label class="paragraphWeight">0</label>
+                        <div></div>
+                    <div class="label-status">Status</div>
+                        <label class="paragraphStatus">Adopted</label>
+                        <div></div>
+                    <div class="label-sex">Sex</div>
+                            <label class="paragraphlSex">Female</label>
+                            <div></div>                        
+                    <div class="linyline1"></div>
+                    <div class="linyline2"></div>
+                    <div class="linyline3"></div>
+                </div>
+                <div class="profile-box">
+                    <div class="label-type">Type<label class="paragraphType">Animal</label></div>
+                        <div></div>
+                    <div class="label-name">Name: <label class="paragraphName">Betty</label></div>
+                        <div></div>
+                    <div class="label-race">Race<label class="paragraphRace">Retriever</label></div>
+                        <div></div>
+                    <div class="label-age">Age<label class="paragraphAge">0</label></div>
+                        <div></div>
+                    <div class="linyline4"></div>
+                    <div class="linyline5"></div>
+                    <div class="linyline6"></div>
+                </div>
+            </div>-->
         
         <!-- BEGINNING Profiles Content -->
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture">
                 <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
-            
-            <div class="container">
-                <div class="horizontal-line"></div>
-                <div class="vertical-line"></div>
-                <div class="info-box">
-                    <div class="label weight">Weight</div>
-                        <label class="labelWeight">0</label>
-                        <div></div>
-                    <div class="label status">Status</div>
-                        <label class="labelStatus">Adopted</label>
-                        <div></div>
-                    <div class="label sex">Sex</div>
-                            <label class="labelSex">Female</label>
-                            <div></div>                        
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div>
-                <div class="profile-box">
-                    <div class="label type">Type<label class="labelType">Animal</label></div>
-                        <div></div>
-                    <div class="label name">Name: <label class="labelName">Betty</label></div>
-                        <div></div>
-                    <div class="label race">Race<label class="labelRace">Retriever</label></div>
-                        <div></div>
-                    <div class="label age">Age<label class="labelAge">0</label></div>
-                        <div></div>
-                    <div class="line line4"></div>
-                    <div class="line line5"></div>
-                    <div class="line line6"></div>
-                </div>
-            </div>
         </div>
         <div class="PictureProfile2">
             <button id="Animal2" class="Picture">
@@ -144,17 +144,17 @@
         <!-- END Profiles Content -->
         </div>
         <!-- BEGINNING Contact info -->
-            <div class="ContactinfoLine">
-                <div class="SeperatelineBg"></div>
-                <div class="Seperateline3rd"></div>
-                <div class="Seperateline2nd"></div>
-                <div class="Seperateline1st"></div>
-                <div class="Tel48491825420">Tel:+48 491-825-420</div>
-                <img class="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
-                <div class="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
-                <img class="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
-                <div class="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
-                <img class="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+            <div id="ContactinfoLine">
+                <div id="SeperatelineBg"></div>
+                <div id="Seperateline3rd"></div>
+                <div id="Seperateline2nd"></div>
+                <div id="Seperateline1st"></div>
+                <div id="Tel48491825420">Tel:+48 491-825-420</div>
+                <img id="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
+                <div id="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
+                <img id="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
+                <div id="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
+                <img id="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
             </div>
         <!-- END Contact info -->
     </div>

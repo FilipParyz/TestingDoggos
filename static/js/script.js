@@ -38,7 +38,7 @@ function fetchAllAnimals() {
 
 function loadOnClicks(){
   const animal = document.getElementById('Animal1');//✔️
-  const searchButton = document.getElementById('Search');//✔️
+  const searchButton = document.getElementById('search-button');//✔️
   const ourAnimalsButton = document.getElementById('Ourpets');//✔️
   const supportButton = document.getElementById('SupportUs');//✔️
   const contactButton = document.getElementById('ContactUs');//✔️
@@ -57,12 +57,6 @@ function loadOnClicks(){
   //top menu
   ourAnimalsButton.addEventListener('click', () => {
     console.log('OurAnimals');
-  });
-  contactButton.addEventListener('click', () => {
-    console.log('ContactUs');
-  });
-  supportButton.addEventListener('click', () => {
-    console.log('SupportUs');
   });
   logoutButton.addEventListener('click', () => {
     console.log('LogOut');

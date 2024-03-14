@@ -6,20 +6,22 @@
 }
 
 .Texts {
-    top: 15px;
-    left: 55px;
+    top: -10px;
+    left: 75px;
     color: black;
     font-size: 22px;
+    text-wrap:nowrap;
     font-weight: 800;
+    text-align: center;
     pointer-events: none;
     font-family: 'DM Sans';
 }
 
-.Search {
+#search-input {
     top: 2px;
     z-index: 1;
     border: 0px;
-    width: 800px;
+    width: 750px;
     height: 54px;
     font-size: 22px;
     position: relative;
@@ -34,40 +36,30 @@
     background: #7D7C7C;
 }
 
-.Pets3 {
+#Ourpets {
     top: 10px;
     left: 67%;
     width: 275px;
     height: 55px;    
 }
 
-.OuranimalsBackground {
-    width: 275px;
-    height: 55px;
-    background: #FFF7F7;
+
+#HeartWithDogPaw {
+    left: -100px;
+    top: 0px;
+    pointer-events: none; 
+    position: relative;    
 }
 
-.HeartWithDogPaw {
-    left: 1px;
-    top: 2.50px;
-    width: 50px;
-    height: 50px;    
-}
-
-.LogOut {
+#LogUt {
     top: 10px;
     left: 85%;
     width: 250px;
     height: 55px;    
 }
 
-.LogoutBackground {
-    width: 250px;
-    height: 55px;
-    background: #FFF7F7;
-}
 
-.Login {
+#Login {
     left: 5px;
     top: 2.50px;
     width: 50px;
@@ -75,9 +67,10 @@
     pointer-events: none;
 }
 
-.Account {
+#Account {
     top: 45px;
     left: 90%;
+    z-index: 1;
     width: 100px;
     height: 100px;
     position: relative;
@@ -90,56 +83,52 @@
     left: 5px;
     width: 90px;
     height: 90px;
+    position: absolute;
     pointer-events: none;
 }
 
-.Searchbar {
+#search-bar {
     top: 115px;
     left: 25%;
 }
 
-.SearchBG {
+#search-background {
     width: 900px;
     height: 60px;
     background: #FFF7F7;
 }
 
-.Searchu {
-    left: 0px;
+#search-icon {
     top: 0px;
+    left: -5px;
     width: 70px;
     height: 50px;
     border-radius: 0px;
+    position: absolute;
 }
 
-.Searching {
+#search-button {
     top: 5px;
     left: 86%;
-    z-index: 1;
     width: 50px;
     height: 50px;
-    border-width: 0px;
+    border-width: 0px;  
 }
 
 /* Side bar menu */
-.SidePannelMenu {
+#SidePannelMenu {
     top: 0px;
     left: 0px;
     width: 100px;
     height: 100%;   
-    position: fixed;    
-}
-
-.Menu {
-    left: 0px;
-    width: 100px;
-    height: 100%;
-    position: relative;
+    position: fixed; 
     border-radius: 0px;
-    background: #D9D9D9;
+    background: #D9D9D9;   
 }
 
-.KawaiiSteak {
+
+
+#food-button {
     top: 90%;
     width: 90px;
     height: 90px;
@@ -147,7 +136,7 @@
     border-radius: 42px;
 }
 
-.Steak {
+#Steak {
     top: 20px;
     left: 20px;
     width: 50px;
@@ -155,14 +144,14 @@
     pointer-events: none;
 }
 
-.FoodButton {
+#FoodButton {
     top: 40%;
     left: 5px;
     width: 90px;
     height: 90px;
 }
 
-.PetsButton {
+#PetsButton {
     top: 35%;
     left: 5px;
     width: 90px;
@@ -170,13 +159,13 @@
     position:inherit ;
 }
 
-.Animals {
+#pets-button {
     width: 90px;
     height: 90px;
     border-radius: 42px;
 }
 
-.PetsIMG {
+#PetsIMG {
     top: 20px;
     left: 20px;
     width: 50px;
@@ -184,25 +173,25 @@
     pointer-events: none;
 }
 
-.Support {
+#SupportUs {
     left: 50%;
     top: 10px;
     width: 275px;
     height: 55px;    
 }
 
-.supportButton {
-    top: 0px;
-    left: 0px;
+.TopButton {
+    position: relative;
     width: 275px;
     height: 55px;
     background: #FFF7F7;
 }
 
-.Charity {
-    left: 5px;
-    top: 2.50px;
-    pointer-events: none;  
+.TopImage {
+    left: -100px;
+    top: 0px;
+    pointer-events: none; 
+    position: relative; 
 }
 
 /* Profile Pictures */
@@ -226,8 +215,7 @@
     pointer-events: none;
 }
 
-labelW { color: black; }
-labelZ { color: blue; }
-labelK { color: red; }
-.Support p { left: 70px; font-weight: 800;  top: -6px; font-family: 'DM Sans'; font-size: 22px; color: green; }
-.Texts,.Search,.Contact,.Call,.Pets3,.HeartWithDogPaw,.LogOut,.Login,.CatProfil,.LogoutBackground,.Searchbar,.SearchBG,.Searching,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.Support,.supportButton,.Charity,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture,.ContackBackground,.OuranimalsBackground{ position: absolute; border-radius: 22px; }
+#Ourpets p { left: 55px;   top: -10px;  color: red; }
+#LogUt p { left: 55px;   top: -10px;  color: green; }
+#SupportUs p { top: -10px;  color: blue; }
+.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }

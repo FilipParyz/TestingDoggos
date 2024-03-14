@@ -1,11 +1,11 @@
-.ContactinfoLine {
+#ContactinfoLine {
     width: 100%;  
     height: 30px;
     bottom: 0px;
     position:absolute;
 }
 
-.SeperatelineBg {
+#SeperatelineBg {
     width: 100%;
     height: 30px;
     left: 0px;
@@ -14,7 +14,7 @@
     background: #42C9F3;
 }
 
-.Seperateline3rd {
+#Seperateline3rd {
     width: 20px;
     left: 98%;
     top: 5px;
@@ -25,7 +25,7 @@
 
 }
 
-.Seperateline2nd {
+#Seperateline2nd {
     width: 20px;
     height: 0px;
     left: 81%;
@@ -36,7 +36,7 @@
     border: 1px black solid;
 }
 
-.Seperateline1st {
+#Seperateline1st {
     width: 20px;
     height: 0px;
     left: 57%;
@@ -47,7 +47,7 @@
     border: 1px black solid;
 }
 
-.Tel48491825420 {
+#Tel48491825420 {
     left: 85%;
     top: 0px;
     position: absolute;
@@ -59,14 +59,14 @@
     word-wrap: break-word;
 }
 
-.ContactinfoLineCallPic {
+#ContactinfoLineCallPic {
     height: 30px;
     left: 82%;
     top: 0px;
     position: absolute;
 }
 
-.DoggosProductionGmailCom {
+#DoggosProductionGmailCom {
     left: 61%;
     top: 0px;
     position: absolute;
@@ -78,14 +78,14 @@
     word-wrap: break-word;
 }
 
-.ContactinfoLineEmailPic {
+#ContactinfoLineEmailPic {
     height: 30px;
     left: 58%;
     top: 0px;
     position: absolute;
 }
 
-.KatowiceUlBogucicka534 {
+#KatowiceUlBogucicka534 {
     width: 366.22px;
     left: 37%;
     top: 0px;
@@ -98,13 +98,13 @@
     word-wrap: break-word;
 }
 
-.ContactinfoLineAddressPic {
+#ContactinfoLineAddressPic {
     height: 30px;
     left: 36%;
     top: 0px;
     position: absolute;
 }
-.ContactinfoLineAddressPic,.ContactinfoLine,.ContactinfoLineCallPic,.ContactinfoLineEmailPic,.Seperateline1st,.Seperateline2nd,.Seperateline3rd,.SeperatelineBg,.Tel48491825420,.DoggosProductionGmailCom,.KatowiceUlBogucicka534 {
+#ContactinfoLineAddressPic,#ContactinfoLine,#ContactinfoLineCallPic,#ContactinfoLineEmailPic,#Seperateline1st,#Seperateline2nd,#Seperateline3rd,#SeperatelineBg,#Tel48491825420,#DoggosProductionGmailCom,#KatowiceUlBogucicka534 {
   
     z-index: 2;
 }
