@@ -51,23 +51,21 @@
             </div>
         </div>
         
-        <div class="SidePannelMenu">
+        <div id="SidePannelMenu">
             <!-- Side panel menu -->
-            <div class="Menu">
-                <!-- Food button -->
-                <div class="FoodButton">
-                    <button id="Food" class="KawaiiSteak">
-                        <img class="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
-                    </button>
-                </div>
-                <!-- Pets button -->
-                <div class="PetsButton">
-                    <button id="Pets" class="Animals">
-                        <img class="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
-                    </button> 
-                </div>
-                <!-- END Side panel menu -->
+            <!-- Food button -->
+            <div id="FoodButton">
+                <button id="food-button" >
+                    <img id="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
+                </button>
             </div>
+            <!-- Pets button -->
+            <div id="PetsButton">
+                <button id="pets-button" >
+                    <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
+                </button> 
+            </div>
+            <!-- END Side panel menu -->
         </div>
         
         <!-- BEGINNING Profiles Content -->

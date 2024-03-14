@@ -116,24 +116,19 @@
 }
 
 /* Side bar menu */
-.SidePannelMenu {
+#SidePannelMenu {
     top: 0px;
     left: 0px;
     width: 100px;
     height: 100%;   
-    position: fixed;    
-}
-
-.Menu {
-    left: 0px;
-    width: 100px;
-    height: 100%;
-    position: relative;
+    position: fixed; 
     border-radius: 0px;
-    background: #D9D9D9;
+    background: #D9D9D9;   
 }
 
-.KawaiiSteak {
+
+
+#food-button {
     top: 90%;
     width: 90px;
     height: 90px;
@@ -141,7 +136,7 @@
     border-radius: 42px;
 }
 
-.Steak {
+#Steak {
     top: 20px;
     left: 20px;
     width: 50px;
@@ -149,14 +144,14 @@
     pointer-events: none;
 }
 
-.FoodButton {
+#FoodButton {
     top: 40%;
     left: 5px;
     width: 90px;
     height: 90px;
 }
 
-.PetsButton {
+#PetsButton {
     top: 35%;
     left: 5px;
     width: 90px;
@@ -164,13 +159,13 @@
     position:inherit ;
 }
 
-.Animals {
+#pets-button {
     width: 90px;
     height: 90px;
     border-radius: 42px;
 }
 
-.PetsIMG {
+#PetsIMG {
     top: 20px;
     left: 20px;
     width: 50px;
@@ -223,4 +218,4 @@
 #Ourpets p { left: 55px;   top: -10px;  color: red; }
 #LogUt p { left: 55px;   top: -10px;  color: green; }
 #SupportUs p { top: -10px;  color: blue; }
-.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }
+.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }
