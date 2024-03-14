@@ -67,44 +67,53 @@
             </div>
             <!-- END Side panel menu -->
         </div>
+        <!-- Here prototype of profiles 
+            <div class="profiles-container">
+            {% for image in profile_images %}
+            <div class="PictureProfile">
+                <button id="Animal{{ loop.index }}" class="Picture">
+                    <img class="Pic" src="{{ url_for('static', filename='images/profiles/' + image) }}" />
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+            <div class="container">
+                <div class="horizontal-line"></div>
+                <div class="vertical-line"></div>
+                <div class="info-box">
+                    <div class="label-weight">Weight</div>
+                        <label class="paragraphWeight">0</label>
+                        <div></div>
+                    <div class="label-status">Status</div>
+                        <label class="paragraphStatus">Adopted</label>
+                        <div></div>
+                    <div class="label-sex">Sex</div>
+                            <label class="paragraphlSex">Female</label>
+                            <div></div>                        
+                    <div class="linyline1"></div>
+                    <div class="linyline2"></div>
+                    <div class="linyline3"></div>
+                </div>
+                <div class="profile-box">
+                    <div class="label-type">Type<label class="paragraphType">Animal</label></div>
+                        <div></div>
+                    <div class="label-name">Name: <label class="paragraphName">Betty</label></div>
+                        <div></div>
+                    <div class="label-race">Race<label class="paragraphRace">Retriever</label></div>
+                        <div></div>
+                    <div class="label-age">Age<label class="paragraphAge">0</label></div>
+                        <div></div>
+                    <div class="linyline4"></div>
+                    <div class="linyline5"></div>
+                    <div class="linyline6"></div>
+                </div>
+            </div>-->
         
         <!-- BEGINNING Profiles Content -->
         <div class="PictureProfile1">
             <button id="Animal1" class="Picture">
                 <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
-            
-            <div class="container">
-                <div class="horizontal-line"></div>
-                <div class="vertical-line"></div>
-                <div class="info-box">
-                    <div class="label weight">Weight</div>
-                        <label class="labelWeight">0</label>
-                        <div></div>
-                    <div class="label status">Status</div>
-                        <label class="labelStatus">Adopted</label>
-                        <div></div>
-                    <div class="label sex">Sex</div>
-                            <label class="labelSex">Female</label>
-                            <div></div>                        
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div>
-                <div class="profile-box">
-                    <div class="label type">Type<label class="labelType">Animal</label></div>
-                        <div></div>
-                    <div class="label name">Name: <label class="labelName">Betty</label></div>
-                        <div></div>
-                    <div class="label race">Race<label class="labelRace">Retriever</label></div>
-                        <div></div>
-                    <div class="label age">Age<label class="labelAge">0</label></div>
-                        <div></div>
-                    <div class="line line4"></div>
-                    <div class="line line5"></div>
-                    <div class="line line6"></div>
-                </div>
-            </div>
         </div>
         <div class="PictureProfile2">
             <button id="Animal2" class="Picture">
@@ -135,17 +144,17 @@
         <!-- END Profiles Content -->
         </div>
         <!-- BEGINNING Contact info -->
-            <div class="ContactinfoLine">
-                <div class="SeperatelineBg"></div>
-                <div class="Seperateline3rd"></div>
-                <div class="Seperateline2nd"></div>
-                <div class="Seperateline1st"></div>
-                <div class="Tel48491825420">Tel:+48 491-825-420</div>
-                <img class="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
-                <div class="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
-                <img class="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
-                <div class="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
-                <img class="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+            <div id="ContactinfoLine">
+                <div id="SeperatelineBg"></div>
+                <div id="Seperateline3rd"></div>
+                <div id="Seperateline2nd"></div>
+                <div id="Seperateline1st"></div>
+                <div id="Tel48491825420">Tel:+48 491-825-420</div>
+                <img id="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
+                <div id="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
+                <img id="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
+                <div id="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
+                <img id="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
             </div>
         <!-- END Contact info -->
     </div>
