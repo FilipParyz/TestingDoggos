@@ -17,7 +17,7 @@
     font-family: 'DM Sans';
 }
 
-.search-input {
+#search-input {
     top: 2px;
     z-index: 1;
     border: 0px;
@@ -87,26 +87,27 @@
     pointer-events: none;
 }
 
-.search-bar {
+#search-bar {
     top: 115px;
     left: 25%;
 }
 
-.search-background {
+#search-background {
     width: 900px;
     height: 60px;
     background: #FFF7F7;
 }
 
 #search-icon {
+    top: 0px;
     left: -5px;
-    top: 10px;
     width: 70px;
     height: 50px;
     border-radius: 0px;
+    position: absolute;
 }
 
-.search-button {
+#search-button {
     top: 5px;
     left: 86%;
     width: 50px;
@@ -222,4 +223,4 @@
 #Ourpets p { left: 55px;   top: -10px;  color: red; }
 #LogUt p { left: 55px;   top: -10px;  color: green; }
 #SupportUs p { top: -10px;  color: blue; }
-.TopButton,.Texts,.search-input,.CatProfil,.search-bar,.search-background,.search-button,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }
+.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,.FoodButton,.PetsButton,.PetsButton,.PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }
