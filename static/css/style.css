@@ -67,9 +67,10 @@
     pointer-events: none;
 }
 
-.Account {
+#Account {
     top: 45px;
     left: 90%;
+    z-index: 1;
     width: 100px;
     height: 100px;
     position: relative;
@@ -82,8 +83,8 @@
     left: 5px;
     width: 90px;
     height: 90px;
-    pointer-events: none;
     position: absolute;
+    pointer-events: none;
 }
 
 .Searchbar {
