@@ -58,9 +58,6 @@ function loadOnClicks(){
   ourAnimalsButton.addEventListener('click', () => {
     console.log('OurAnimals');
   });
-  supportButton.addEventListener('click', () => {
-    console.log('SupportUs');
-  });
   logoutButton.addEventListener('click', () => {
     console.log('LogOut');
   });
