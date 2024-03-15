@@ -1,0 +1,38 @@
+
+.button-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: scroll;  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+}
+
+.button {
+  width: 400px;
+  height: 250px;
+  margin: 40px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button img {
+  width: 400px; /* Ustaw rozmiar obrazka według potrzeb */
+  height: auto;
+  margin-bottom: 10px;
+}
