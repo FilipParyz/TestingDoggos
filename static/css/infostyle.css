@@ -3,7 +3,31 @@
     top: 125px;
     z-index: 1;
     height: 100%;
+    pointer-events: none;
 }
+
+.line {
+    top: 0px;
+    width: 40%;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    font-family: DM Sans;
+    word-wrap: break-word;
+    border: 1px black solid;
+}
+
+.label {
+    top: 0px;
+    left: 100px;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    font-family: DM Sans;
+    word-wrap: break-word;
+}
+
+.paragraph { font-size: 20px; }
 
 #horizontal-line {
     top: 37px;
@@ -14,7 +38,7 @@
 #vertical-line {
     top: 38px;
     left: 200px;
-    width: 88px;
+    width: 85px;
     transform-origin: 0 0;
     transform: rotate(90deg);
     border: 1px black solid;
@@ -34,28 +58,6 @@
     width: 177.50px;
 }
 
-.line {
-    top: 0px;
-    width: 40%;
-    border: 1px black solid;
-    color: black;
-    font-weight: 400;
-    text-align: center;
-    font-family: DM Sans;
-    word-wrap: break-word;
-}
-.label {
-    top: 0px;
-    left: 100px;
-    font-weight: 400;
-    text-align: center;
-    font-family: DM Sans;
-    word-wrap: break-word;
-    color: black;
-}
-.paragraph {
-    font-size: 20px;
-}
 #label-type { top: 39px; font-size: 25px; }
 #label-name { top: 20px; font-size: 15px; }
 #label-race { top: 66px; font-size: 20px; }
@@ -71,7 +73,8 @@
 
 #linyline4 { top: 63px; left:  195px; }
 #linyline5 { top: 86px; left:  195px; }
-#linyline6 { top: 110px; left: 195px;}
+#linyline6 { top: 110px; left: 195px; }
 
-#paragraphType,#paragraphName,#paragraphRace,#paragraphAge  { bottom: 0px; left: 95px; font-size: 20px;position: absolute; }
-#horizontal-line,#vertical-line,#info-box-Left,.container,#info-box-Right,.label,.line { position: absolute; }
+#paragraphType,#paragraphName,#paragraphRace,#paragraphAge  { bottom: 0px; left: 95px; position: absolute; }
+.container,.label,.line,#horizontal-line,#vertical-line,#info-box-Left,#info-box-Right { position: absolute; }
+#paragraphName { left: 50px; }
