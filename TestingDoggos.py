@@ -63,7 +63,7 @@ class Shelter(db.Model):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', animals=Animal.query.all())
 
 @app.route('/animals', methods=['GET', 'POST'])
 def handle_animals():

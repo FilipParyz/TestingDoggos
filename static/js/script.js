@@ -1,51 +1,13 @@
 onload = function() {
-  // Fetch all animals
-  fetchAllAnimals();
   loadOnClicks();
 };
 
-function fetchAllAnimals() {
-  const url = 'http://127.0.0.1:5000/animals';
-  fetch(url)
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error('Network response was not ok.');
-    })
-    .then(data => {
-      for (let i = 0; i < data.length; i++) {
-        if (i > 5) {
-          break;
-        } else{
-          console.log('Animal:', data[i]);
-          animal = document.getElementsByClassName('PictureProfile'+(i+1))[0];
-          paragraph = document.createElement('p');
-          paragraph.innerHTML = "Name: " + data[i].name;
-          animal.appendChild(paragraph);
-          
-          paragraph = document.createElement('p');
-          paragraph.innerHTML = "Age: " + data[i].age;
-          animal.appendChild(paragraph);
-        }
-      }
-      console.log('All animals:', data);
-    })
-    .catch(error => {
-      console.error('There has been a problem with your fetch operation:', error);
-    });
-}
-
 function loadOnClicks(){
-  const animal = document.getElementById('Animal1');//✔️
-  const searchButton = document.getElementById('search-button');//✔️
-  const ourAnimalsButton = document.getElementById('Ourpets');//✔️
-  const supportButton = document.getElementById('SupportUs');//✔️
-  const contactButton = document.getElementById('ContactUs');//✔️
-  const logoutButton = document.getElementById('LogUt');//✔️
-  const foodButton = document.getElementById('Food');//✔️
-  const pettsButton = document.getElementById('Pets');//✔️
-
+  const animal = document.getElementById('Animal1');
+  const searchButton = document.getElementById('search-button');
+  const ourAnimalsButton = document.getElementById('Ourpets');
+  const supportButton = document.getElementById('SupportUs');
+  const logoutButton = document.getElementById('LogUt');
   //Profiles
   animal.addEventListener('click', () => {
     console.log('Animal');
@@ -61,16 +23,8 @@ function loadOnClicks(){
   logoutButton.addEventListener('click', () => {
     console.log('LogOut');
   });
-
-  //side menu
-  foodButton.addEventListener('click', () => {
-    console.log('Food');
-  });
-  pettsButton.addEventListener('click', () => {
-    console.log('Pets');
-  });
-    supportButton.addEventListener('click', () => {
-    // Przekieruj użytkownika na podstronę "Wesprzyj Nas"
+  supportButton.addEventListener('click', () => {
+      // Przekieruj użytkownika na podstronę "Wesprzyj Nas"
     window.location.href = 'http://127.0.0.1:5000/support_us.html'; // Zmień adres URL na odpowiedni dla twojej aplikacji
   });
 }
