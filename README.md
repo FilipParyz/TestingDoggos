@@ -50,3 +50,10 @@ Open the browser and go to the address:
 '''bash
 http://127.0.0.1:5000/
 '''
+
+## Testing
+To run the tests, use the following command:
+
+'''bash
+python test_TestingDoggos.py
+'''
