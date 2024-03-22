@@ -168,7 +168,7 @@ def handle_shelter(shelter_id):
         return '', 204
         
 # Routing dla podstrony "support_us"
-@app.route('/support_us.html')
+@app.route('/support_us')
 def support_us():
     return render_template('support_us.html')
     
