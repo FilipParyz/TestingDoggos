@@ -28,25 +28,22 @@ Admin view will allow user to:
 Backend of the application will be written in Python. The frontend will be written using Javascript (Plain or using a framework).
 All of the implemented interfaces should allow for testing.
 
--
-
 The project is an assignment for a subject "Testing and code optimizaiton" in the University of Economics in Katowice.
-
 
 ## Installation
 
 1. Clone the repository
 2. Install the required packages
-'''bash
-pip install Flask Flask-SQLAlchemy
-'''
+
+```bash
+  pip install -r requirements.txt
+```
+
 3. Run the application
+
 '''bash
-python TestingDoggos.py
+  python TestingDoggos.py
 '''
 
 ## Usage
-Open the browser and go to the address:
-'''bash
-http://127.0.0.1:5000/
-'''
+Open the browser and go to the address: http://127.0.0.1:5000/
