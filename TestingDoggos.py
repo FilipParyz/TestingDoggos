@@ -13,22 +13,26 @@ db = SQLAlchemy(app)
 # Define a model for animals
 class Animal(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    species = db.Column(db.String(50), nullable=False)
     food_id = db.Column(db.Integer, db.ForeignKey('food.id'), nullable=False)
     shelter_id = db.Column(db.Integer, db.ForeignKey('shelter.id'), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
+    race = db.Column(db.String(50), nullable=False)
     age = db.Column(db.Integer)
     weight = db.Column(db.Float)
+    status = db.Column(db.String(50), nullable=False)
+    sex = db.Column(db.String(50), nullable=False)
 
     def to_dict(self):
         return {
             'id': self.id,
-            'name': self.name,
-            'species': self.species,
             'food_id': self.food_id,
             'shelter_id': self.shelter_id,
+            'name': self.name,
+            'race': self.race,
             'age': self.age,
-            'weight': self.weight
+            'weight': self.weight,
+            'status': self.status,
+            'sex': self.sex
         }
 
 # Define a model for animal food
@@ -70,11 +74,13 @@ def handle_animals():
     if request.method == 'POST':
         data = request.get_json()
         new_animal = Animal(name=data['name'],
-                            species=data['species'],
+                            race=data['race'],
                             food_id=data['food_id'],
                             shelter_id=data['shelter_id'],
                             age=data.get('age'),
-                            weight=data.get('weight'))
+                            weight=data.get('weight'),
+                            status=data['status'],
+                            sex=data['sex'])
         db.session.add(new_animal)
         db.session.commit()
         return jsonify(new_animal.to_dict()), 201
@@ -91,11 +97,13 @@ def handle_animal(animal_id):
     elif request.method == 'PUT':
         data = request.get_json()
         animal.name = data['name']
-        animal.species = data['species']
+        animal.race = data['race']
         animal.food_id = data['food_id']
         animal.shelter_id = data['shelter_id']
         animal.age = data.get('age')
         animal.weight = data.get('weight')
+        animal.status = data['status']
+        animal.sex = data['sex']
         db.session.commit()
         return jsonify(animal.to_dict())
     elif request.method == 'DELETE':
