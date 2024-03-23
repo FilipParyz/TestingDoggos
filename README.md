@@ -34,13 +34,13 @@ To get a local copy up and running follow these simple steps.
    git clone https://github.com/your_username_/TestingDoggos.git
 2. Install the required packages
 
-```bash
+  ```bash
   pip install -r requirements.txt
 ```
 
 3. Run the application
 
-```bash
+  ```bash
   python TestingDoggos.py
 ```
 
