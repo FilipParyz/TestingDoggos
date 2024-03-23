@@ -19,12 +19,14 @@ class AnimalTestCase(unittest.TestCase):
 
     def test_add_animal(self):
         response = self.app.post('/animals', json={
-            'name': 'Doggo',
-            'species': 'Dog',
+            'name': 'Hector',
+            'race': 'Dog',
             'food_id': 1,
             'shelter_id': 1,
             'age': 3,
-            'weight': 10.5
+            'weight': 10.5,
+            'status': 'Adoptable',
+            'sex': 'Female'
         })
         self.assertEqual(response.status_code, 201)
 
@@ -35,49 +37,58 @@ class AnimalTestCase(unittest.TestCase):
 
     def test_get_animal(self):
         testingDoggo = {
-            'name': 'Doggo',
-            'species': 'Dog',
+            'name': 'Hector',
+            'race': 'Dog',
             'food_id': 1,
             'shelter_id': 1,
             'age': 3,
-            'weight': 10.5
+            'weight': 10.5,
+            'status': 'Adoptable',
+            'sex': 'Female'
         }
         response = self.app.post('/animals', json=testingDoggo)
         animal_id = response.json['id']
         response = self.app.get(f'/animals/{animal_id}')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json['name'], testingDoggo['name'])
-        self.assertEqual(response.json['species'], testingDoggo['species'])
+        self.assertEqual(response.json['race'], testingDoggo['race'])
 
     def test_update_animal(self):
         response = self.app.post('/animals', json={
             'name': 'Doggo',
-            'species': 'Dog',
+            'race': 'Dog',
             'food_id': 1,
             'shelter_id': 1,
             'age': 3,
-            'weight': 10.5
+            'weight': 10.5,
+            'status': 'Adoptable',
+            'sex': 'Female'
         })
         animal_id = response.json['id']
         response = self.app.put(f'/animals/{animal_id}', json={
-            'name': 'Updated Doggo',
-            'species': 'Dog',
-            'food_id': 1,
-            'shelter_id': 1,
-            'age': 4,
-            'weight': 11.2
+            'name': 'Whiskas',
+            'race': 'Cat',
+            'food_id': 2,
+            'shelter_id': 2,
+            'age': 5,
+            'weight': 4.5,
+            'status': 'Adoptable',
+            'sex': 'Male'
         })
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['name'], 'Updated Doggo')
+        self.assertEqual(response.json['name'], 'Whiskas')
+        self.assertEqual(response.json['race'], 'Cat')
 
     def test_delete_animal(self):
         response = self.app.post('/animals', json={
-            'name': 'Doggo',
-            'species': 'Dog',
-            'food_id': 1,
-            'shelter_id': 1,
-            'age': 3,
-            'weight': 10.5
+            'name': 'Hector',
+            'race': 'Dog',
+            'food_id': 3,
+            'shelter_id': 5,
+            'age': 12,
+            'weight': 32,
+            'status': 'Adoptable',
+            'sex': 'Male'
         })
         animal_id = response.json['id']
         response = self.app.delete(f'/animals/{animal_id}')
