@@ -30,22 +30,22 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 
 1. Clone the repository
-
-   ```bash
-   git clone https://github.com/your_username_/TestingDoggos.git
-   ```
+   
+```bash
+git clone https://github.com/your_username_/TestingDoggos.git
+```
+    
 3. Install the required packages
 
-  ```bash
-  pip install -r requirements.txt
-  ```
-
+```bash
+pip install -r requirements.txt
+```
 
 3. Run the application
 
-  ```bash
-  python TestingDoggos.py
-  ```
+```bash
+python TestingDoggos.py
+```
 
 ## Usage
 Open the browser and go to the address: http://127.0.0.1:5000/
