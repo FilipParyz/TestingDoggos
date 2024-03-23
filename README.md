@@ -41,20 +41,16 @@ The project is an assignment for a subject "Testing and code optimizaiton" in th
 
 3. Run the application
 
-'''bash
+```bash
   python TestingDoggos.py
-'''
+```
 
 ## Usage
-Open the browser and go to the address:
-
-'''bash
-http://127.0.0.1:5000/
-'''
+Open the browser and go to the address: [Localhost](http://127.0.0.1:5000/)
 
 ## Testing
 To run the tests, use the following command:
 
-'''bash
-python test_TestingDoggos.py
-'''
+```bash
+  python test_TestingDoggos.py
+```
