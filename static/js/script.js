@@ -18,7 +18,7 @@ function loadOnClicks(){
   });
   //top menu
   ourAnimalsButton.addEventListener('click', () => {
-    console.log('OurAnimals');
+    window.location.href = manageAnimalsUrl;
   });
   logoutButton.addEventListener('click', () => {
     console.log('LogOut');
