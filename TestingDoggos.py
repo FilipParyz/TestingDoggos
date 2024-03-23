@@ -179,6 +179,10 @@ def handle_shelter(shelter_id):
 @app.route('/support_us')
 def support_us():
     return render_template('support_us.html')
+
+@app.route('/manage_animals')
+def manage_animals():
+    return render_template('manage_animals.html')
     
     ###Here are the tests###
 # Routing dla podstrony "profile_page"
