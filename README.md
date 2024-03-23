@@ -1,6 +1,8 @@
 # TestingDoggos
 Learn testing principles with doggos 🐶
 
+![Automated tests](https://github.com/FilipParyz/TestingDoggos/actions/workflows/run_tests.yml/badge.svg)
+
 This project is playground for learning and understanding the basics and importance of testing.
 Including but not limited to manual and automated testing, TDD principles, code review, and optimization in terms of performance, UI and UX.
 The end result will be a portal for an animal shelter, with guest and administrator modes.
