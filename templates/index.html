@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/infostyle.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebarstyle.css') }}">
+    <script>
+        var supportUsUrl = "{{ url_for('support_us') }}";
+    </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body style="margin: 0;">
@@ -83,8 +86,10 @@
         
              
         <!-- BEGINNING Profiles Content -->
-        <div class="PictureProfile1">
-            <button id="Animal1" class="Picture">
+        {% for animal in animals %}
+        {% if loop.index <= 6 %}
+        <div class="PictureProfile{{loop.index}}">
+            <button id="Animal{{loop.index}}" class="Picture">
                 <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
             </button>
 
@@ -93,11 +98,11 @@
                     <div id="vertical-line"></div>
                     <div id="info-box-Right">
                         <div class="label" id="label-weight">Weight</div>
-                            <label class="paragraph" id="paragraphWeight">0</label><div></div>
+                            <label class="paragraph" id="paragraphWeight">{{ animal.weight }}</label><div></div>
                         <div class="label" id="label-status">Status</div>
-                            <label class="paragraph" id="paragraphStatus">Adopted</label><div></div>
+                            <label class="paragraph" id="paragraphStatus">{{ animal.status }}</label><div></div>
                         <div class="label" id="label-sex">Sex</div>
-                            <label class="paragraph" id="paragraphlSex">Female</label><div></div>                        
+                            <label class="paragraph" id="paragraphlSex">{{ animal.sex }}</label><div></div>                        
                         <div class="line" id="linyline1"></div>
                         <div class="line" id="linyline2"></div>
                         <div class="line" id="linyline3"></div>
@@ -107,13 +112,13 @@
                             <label class="paragraph" id="paragraphType">Animal</label>
                         </div><div></div>
                         <div class="label" id="label-name">Name: 
-                            <label class="paragraph" id="paragraphName">Betty</label>
+                            <label class="paragraph" id="paragraphName">{{ animal.name }}</label>
                         </div><div></div>
                         <div class="label" id="label-race">Race
-                            <label class="paragraph" id="paragraphRace">Retriever</label>
+                            <label class="paragraph" id="paragraphRace">{{ animal.race }}</label>
                         </div><div></div>
                         <div class="label" id="label-age">Age
-                            <label class="paragraph" id="paragraphAge">0</label>
+                            <label class="paragraph" id="paragraphAge">{{ animal.age }}</label>
                         </div><div></div>
                         <div class="line" id="linyline4"></div>
                         <div class="line" id="linyline5"></div>
@@ -122,31 +127,8 @@
                     </div>
                 </div>
         </div>
-        <div class="PictureProfile2">
-            <button id="Animal2" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
-            </button>
-        </div>
-        <div class="PictureProfile3">
-            <button id="Animal3"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
-            </button>
-        </div>
-        <div class="PictureProfile4">
-            <button id="Animal4" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
-            </button>
-            
-        </div>
-        <div class="PictureProfile5">
-            <button id="Animal5"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
-            </button>
-        </div>
-        <div class="PictureProfile6">
-            <button id="Animal6"  class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
-            </button>
+        {% endif %}
+        {% endfor %}
             
         <!-- END Profiles Content -->
         </div>
