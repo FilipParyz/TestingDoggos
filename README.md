@@ -30,10 +30,11 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/your_username_/TestingDoggos.git
    ```
-2. Install the required packages
+3. Install the required packages
 
   ```bash
   pip install -r requirements.txt
