@@ -1,6 +1,8 @@
 # TestingDoggos
 Learn testing principles with doggos 🐶
 
+![Automated tests](https://github.com/FilipParyz/TestingDoggos/actions/workflows/run_tests.yml/badge.svg)
+
 This project is playground for learning and understanding the basics and importance of testing.
 Including but not limited to manual and automated testing, TDD principles, code review, and optimization in terms of performance, UI and UX.
 The end result will be a portal for an animal shelter, with guest and administrator modes.
@@ -41,20 +43,16 @@ The project is an assignment for a subject "Testing and code optimizaiton" in th
 
 3. Run the application
 
-'''bash
+```bash
   python TestingDoggos.py
-'''
+```
 
 ## Usage
-Open the browser and go to the address:
-
-'''bash
-http://127.0.0.1:5000/
-'''
+Open the browser and go to the address: [Localhost](http://127.0.0.1:5000/)
 
 ## Testing
 To run the tests, use the following command:
 
-'''bash
-python test_TestingDoggos.py
-'''
+```bash
+  python test_TestingDoggos.py
+```
