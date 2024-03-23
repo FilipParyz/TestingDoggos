@@ -40,9 +40,9 @@ To get a local copy up and running follow these simple steps.
 
 3. Run the application
 
-'''bash
+```bash
   python TestingDoggos.py
-'''
+```
 
 ## Usage
 Open the browser and go to the address: http://127.0.0.1:5000/
