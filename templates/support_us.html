@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support us</title>
     <!-- Podłącz arkusze stylów CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/support_us.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/infostyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebarstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttonsstyles.css') }}">
     <!-- Podłącz skrypty JavaScript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
@@ -14,15 +17,6 @@
     <div class="MainframeAdmin">
         <!-- Początek głównego paska menu -->
         <div class="MenuTop">
-            <!-- Przycisk kontaktu -->
-            <div class="Contact">
-                <button id="ContactUs" class="ContackBackground">
-                    <img class="Call" src="{{ url_for('static', filename='images/call.png') }}" />
-                </button>
-                <div class="Texts">
-                    <labelK>KONTAKT</labelK>
-                </div>
-            </div>
             
             <!-- Przycisk wsparcia -->
             <div class="Support">
@@ -59,19 +53,6 @@
         </div>
         <!-- Koniec głównego paska menu -->
         
-        <!-- Początek paska wyszukiwania -->
-        <div class="Searchbar">
-            <!-- Pole wyszukiwania -->
-            <input type="text" class="Search" placeholder="Wyszukaj zwierzaka" />
-            <div class="SearchBG">
-                <button id="Search" class="Searching">
-                    <img class="Searchu" src="{{ url_for('static', filename='images/Search.png') }}" />
-                </button>
-                <!-- Koniec pola wyszukiwania -->
-            </div>
-        </div>
-        <!-- Koniec paska wyszukiwania -->
-        
         <!-- Początek bocznego menu -->
         <div class="SidePannelMenu">
             <!-- Menu boczne -->
@@ -93,32 +74,43 @@
         </div>
         <!-- Koniec bocznego menu -->
         
-        <!-- Początek treści profili -->
-        <div class="PictureProfile1">
-            <button id="Animal1" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
-            </button>           
-            <div class="container">
-                <div class="horizontal-line"></div>          
-                <div class="profile-box">
-                    <div class="label race">Podaruj karmę</div>
-                        <div></div>
-                </div>
+        <!-- Początek treści -->
+        <div class="MainWindow">
+        <div class="button-container">
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Wspomóż finansowo</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
+            </div>
+            <div class="button">
+                <img src="your_image_url.jpg" alt="Image">
+                <p>Podaruj karmę</p>
             </div>
         </div>
-        <div class="PictureProfile2">
-            <button id="Animal2" class="Picture">
-                <img class="Pic"  src="{{ url_for('static', filename='images/Picture.png') }}" />
-            </button>
-            <div class="container">
-                <div class="horizontal-line"></div>          
-                <div class="profile-box">
-                    <div class="label race">Podaruj środki</div>
-                        <div></div>
-                </div>
-            </div>
-        </div>
-        <!-- Koniec treści profili -->
+    </div>
+
+ 
+    
+        <!-- Koniec treści -->
     </div>
 </body>
 </html>
