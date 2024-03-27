@@ -79,7 +79,7 @@
         {% if loop.index <= 12 %}
             <div id="PictureProfile{{loop.index}}" class="PictureProfile">
                 <button id="Animal{{loop.index}}" class="Picture">
-                    <img class="Pic"  src="{{ url_for('static', filename='images/profiles/Picture.png') }}" />
+                    <img class="Pic"  src="{{ url_for('static', filename='images/profiles/5MP_buttonpair_pic.png') }}" />
                 </button>
                 <div class="container">
                     <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
@@ -111,17 +111,18 @@
         <!-- END Profiles Content -->
        
         <!-- BEGINNING Contact info -->
-            <div id="ContactinfoLine">
+            <div class="ContactinfoLine">
                 <div id="SeperatelineBg"></div>
-                <div id="Seperateline3rd"></div>
-                <div id="Seperateline2nd"></div>
-                <div id="Seperateline1st"></div>
-                <div id="Tel48491825420">Tel:+48 491-825-420</div>
-                <img id="ContactinfoLineCallPic" src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
-                <div id="DoggosProductionGmailCom">Doggos.production@gmail.com</div>
-                <img id="ContactinfoLineEmailPic" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
-                <div id="KatowiceUlBogucicka534">Katowice Ul. Bogucicka 5&3/4</div>
-                <img id="ContactinfoLineAddressPic" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+                <div id="Seperateline3rd" class="Line"></div>
+                <div id="Seperateline2nd" class="Line"></div>
+                <div id="Seperateline1st" class="Line"></div>
+                <div id="Seperateline0th" class="Line"></div>
+                <div id="Tel48491825420"  class="Text">Tel:+48 491-825-420</div>
+                <img id="ContactinfoLineCallPic"    class="Pictu"  src="{{ url_for('static', filename='images/TopSidebar/Call.png') }}" />
+                <div id="DoggosProductionGmailCom"  class="Text">Doggos.production@gmail.com</div>
+                <img id="ContactinfoLineEmailPic"   class="Pictu" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
+                <div id="KatowiceUlBogucicka534"    class="Text">Katowice Ul. Bogucicka 5&3/4</div>
+                <img id="ContactinfoLineAddressPic" class="Pictu" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
             </div>
         <!-- END Contact info -->
     </div>

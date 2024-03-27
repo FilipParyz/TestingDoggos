@@ -263,9 +263,9 @@
 
 .Pic {
     top: 25px;
-    left: 100px;
+    left: 125px;
     width: auto;
-    height: 200px;
+    height: 150px;
     pointer-events: none;
 }
 

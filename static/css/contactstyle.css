@@ -1,8 +1,13 @@
-#ContactinfoLine {
+.ContactinfoLine {
     width: 100%;  
     height: 30px;
     bottom: 0px;
     position:fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 #SeperatelineBg {
@@ -10,101 +15,49 @@
     height: 30px;
     left: 0px;
     top: 0px;
-    position: relative  ;
     background: #42C9F3;
 }
 
-#Seperateline3rd {
-    width: 20px;
-    left: 98%;
-    top: 5px;
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
-    border: 1px black solid;
+#ContactinfoLineAddressPic { left: 40%; order: 1; }
 
-}
+#Seperateline0th { left: 42%; order: 2; }
 
-#Seperateline2nd {
-    width: 20px;
-    height: 0px;
-    left: 81%;
-    top: 5px;
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
-    border: 1px black solid;
-}
+#KatowiceUlBogucicka534 { left: 43%; order: 3; }
 
-#Seperateline1st {
-    width: 20px;
-    height: 0px;
-    left: 57%;
-    top: 5px;
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
-    border: 1px black solid;
-}
+#Seperateline1st { left: 61.5%; order: 4; }
 
-#Tel48491825420 {
-    left: 85%;
-    top: 0px;
-    position: absolute;
-    text-align: center;
+#ContactinfoLineEmailPic { left: 62.5%; order: 5; }
+
+#DoggosProductionGmailCom { left: 65%; order: 6; }
+
+#Seperateline2nd { left: 84%; order: 7; }
+
+#ContactinfoLineCallPic { left: 85%; order: 8; }
+
+#Tel48491825420 { left: 87%; order: 9; }
+
+#Seperateline3rd { left: 99.5%; order: 10; }
+
+.Pictu{ width: 30px; height: 30px; top: 0px;}
+
+.Text{
     color: white;
+    text-align: center;
     font-size: 25px;
+    word-wrap: break-word;
     font-family: DM Sans;
     font-weight: 400;
-    word-wrap: break-word;
 }
 
-#ContactinfoLineCallPic {
-    height: 30px;
-    left: 82%;
-    top: 0px;
-    position: absolute;
+.Line{
+    border: 1px black solid;
+    transform: rotate(90deg);
+    top:5px;
+    transform-origin: 0 0;
+    width: 20px;
 }
 
-#DoggosProductionGmailCom {
-    left: 61%;
-    top: 0px;
+#Seperateline0th,#ContactinfoLineAddressPic,#ContactinfoLineCallPic,#ContactinfoLineEmailPic,#Seperateline1st,#Seperateline2nd,#Seperateline3rd,#SeperatelineBg,#Tel48491825420,#DoggosProductionGmailCom,#KatowiceUlBogucicka534 {
+    display: flex;
     position: absolute;
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-#ContactinfoLineEmailPic {
-    height: 30px;
-    left: 58%;
-    top: 0px;
-    position: absolute;
-}
-
-#KatowiceUlBogucicka534 {
-    width: 366.22px;
-    left: 37%;
-    top: 0px;
-    position: absolute;
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-family: Inter;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-#ContactinfoLineAddressPic {
-    height: 30px;
-    left: 36%;
-    top: 0px;
-    position: absolute;
-}
-#ContactinfoLineAddressPic,#ContactinfoLine,#ContactinfoLineCallPic,#ContactinfoLineEmailPic,#Seperateline1st,#Seperateline2nd,#Seperateline3rd,#SeperatelineBg,#Tel48491825420,#DoggosProductionGmailCom,#KatowiceUlBogucicka534 {
-  
-    z-index: 2;
 }
