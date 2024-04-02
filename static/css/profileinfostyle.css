@@ -58,13 +58,13 @@
     width: 177.50px;
 }
 
-#label-type { top: 39px; font-size: 20px; }
+#label-type { top: 42px; font-size: 20px; }
 #label-name { top: 20px; font-size: 15px; }
 #label-race { top: 66px; font-size: 20px; }
 #label-age  { top: 90px; font-size: 20px; }
 
-#label-sex    { left: 115px; top: 42px; font-size: 20px; }
-#label-status { left: 115px; top: 23px; font-size: 20px; }
+#label-sex    { left: 141px; top: 42px; font-size: 20px; }
+#label-status { left: 123px; top: 23px; font-size: 20px; }
 #label-weight { left: 115px; top: 0px;  font-size: 20px; }
 
 #linyline1 { top: 20px; }

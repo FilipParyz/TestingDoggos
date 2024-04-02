@@ -2,15 +2,30 @@
     height: 100vh;
     width: 100%;
     position: relative;
-
+    background-color: #524F4F; 
+    overflow-y: scroll; 
 }
+.MainframeAdmin::-webkit-scrollbar-track {
+    background-color: #404040; /* Track background */
+    border: 1px solid #000; /* Track border */
+  }
+  
+  /* Customizes the scrollbar's thumb */
+  .MainframeAdmin::-webkit-scrollbar-thumb {
+    background-color: #737272; /* Thumb background */
+    border-radius: 10px; /* Thumb border radius */
+    border: 1px solid #000080 ; /* Thumb border */
+  }
+  
+  /* Customizes the scrollbar itself */
+  .MainframeAdmin::-webkit-scrollbar {
+    width: 10px; /* Scrollbar width */
+  }
 .MainWindow {
     height: 100%;
-    background-color: #524F4F; 
     padding: 0px;
     margin-bottom: 75px;
     margin-left: 100px;
-    overflow-y: scroll; 
 }
 
 .Texts {
@@ -37,6 +52,11 @@
 }
 
 .MenuTop {
+    display: flex;
+    justify-content:right;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; 
     z-index: 2;
     width: 100%;
     height: 75px;
@@ -189,6 +209,7 @@
 }
 
 .TopButton {
+    display: flex;
     position: relative;
     width: 275px;
     height: 55px;
@@ -196,20 +217,45 @@
 }
 
 .TopImage {
-    left: -100px;
+    display: flex;
     top: 0px;
     pointer-events: none; 
     position: relative; 
 }
 
 /* Profile Pictures */
-.PictureProfile1,.PictureProfile4 { left: 15%;}  
-.PictureProfile2,.PictureProfile5 { left: 40%;}
-.PictureProfile3,.PictureProfile6 { left: 65%;} 
+.Profiles-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+#PictureProfile1,#PictureProfile4,#PictureProfile7,#PictureProfile10{
+    order: 1;
+}
+#PictureProfile2,#PictureProfile5,#PictureProfile8,#PictureProfile11{
+  order: 2;
+}
+#PictureProfile3,#PictureProfile6,#PictureProfile9,#PictureProfile12{
+    order: 3;
+}
+    
+.PictureProfile{
+    display: flex;
+    width: 400px;
+    height: 250px;
+    margin: 40px;
+    background-color: #778899;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
 
-.PictureProfile1,.PictureProfile2,.PictureProfile3{ top: 25%; }
-.PictureProfile4,.PictureProfile5,.PictureProfile6{ top: 55%; }
-
+}
 .Picture {
     width: 400px;
     height: 250px;
@@ -217,13 +263,13 @@
 
 .Pic {
     top: 25px;
-    left: 100px;
+    left: 125px;
     width: auto;
-    height: 200px;
+    height: 150px;
     pointer-events: none;
 }
 
 #Ourpets p { left: 55px;   top: -10px;  color: red; }
 #LogUt p { left: 55px;   top: -10px;  color: green; }
 #SupportUs p { top: -10px;  color: blue; }
-.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.PictureProfile1,.PictureProfile2,.PictureProfile3,.PictureProfile4,.PictureProfile5,.PictureProfile6,.Pic,.Picture{ position: absolute; border-radius: 22px; }
+.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.Pic,.Picture{ position: absolute; border-radius: 22px; }
