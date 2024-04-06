@@ -2,7 +2,9 @@
 
 Learn testing principles with doggos 🐶
 
-![Automated tests](https://github.com/FilipParyz/TestingDoggos/actions/workflows/run_tests.yml/badge.svg) ![Javascript --version](https://img.shields.io/badge/Javascript-3776AB?style=flat&logo=javascript&logoColor=yellow&labelColor=gray&color=yellow) ![Python --version](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=black&label=3.12&labelColor=yellow&color=blue) ![CSS --version](https://img.shields.io/badge/CSS-3776AB?style=flat&logo=css3&logoColor=black&labelColor=darkblue&color=darkorange)
+![Automated tests](https://github.com/FilipParyz/TestingDoggos/actions/workflows/run_tests.yml/badge.svg) ![Autopep8 & Pylint](https://github.com/FilipParyz/TestingDoggos/actions/workflows/codecheck.yml/badge.svg)
+
+![Javascript --version](https://img.shields.io/badge/Javascript-3776AB?style=flat&logo=javascript&logoColor=yellow&labelColor=gray&color=yellow) ![Python --version](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=black&label=3.12&labelColor=yellow&color=blue) ![CSS --version](https://img.shields.io/badge/CSS-3776AB?style=flat&logo=css3&logoColor=black&labelColor=darkblue&color=darkorange)
 ![Flask --version](https://img.shields.io/badge/Flask-3776AB%3F?style=flat&logo=flask&logoColor=black&labelColor=yellow&color=gray)
 
 
@@ -50,7 +52,7 @@ pip install -r requirements.txt
 3. Run the application
 
 ```bash
-python TestingDoggos.py
+python testing_doggos.py
 ```
 
 ## Usage
@@ -60,5 +62,5 @@ Open the browser and go to the address: http://127.0.0.1:5000/
 To run the tests, use the following command:
 
 ```bash
-  python test_TestingDoggos.py
+  python tests.py
 ```

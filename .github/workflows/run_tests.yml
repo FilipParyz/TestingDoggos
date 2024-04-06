@@ -1,9 +1,6 @@
 name: Running tests
 
-on:
-  push:
-    branches:
-      - '*'
+on: [push]
 
 permissions:
   contents: read
@@ -32,4 +29,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test using our tests
       run: |
-        python test_TestingDoggos.py
+        python tests.py
