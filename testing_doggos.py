@@ -3,7 +3,7 @@ This file contains the implementation of a Flask application for managing an ani
 It defines the routes for handling HTTP requests,
 as well as the models for animals, food, and shelters.
 """
-
+import json
 from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -52,6 +52,17 @@ class Animal(db.Model):
             'sex': self.sex
         }
 
+    def update(self, data):
+        """Updates the Animal object with new data."""
+        self.name = data['name']
+        self.race = data['race']
+        self.food_id = data['food_id']
+        self.shelter_id = data['shelter_id']
+        self.status = data['status']
+        self.sex = data['sex']
+        self.age = data['age']
+        self.weight = data['weight']
+
 class Food(db.Model):
     """Model class for animal food in the animal shelter."""
 
@@ -73,7 +84,13 @@ class Food(db.Model):
             'amount': self.amount,
             'weight': self.weight 
         }
-
+    
+    def update(self, data):
+        """Updates the Food object with new data."""
+        self.name = data['name']
+        self.amount = data['amount']
+        self.weight = data['weight']
+        
 class Shelter(db.Model):
     """Model class for spaces in a shelter in the animal shelter."""
 
@@ -95,6 +112,12 @@ class Shelter(db.Model):
             'amount': self.amount,
             'capacity': self.capacity
         }
+
+    def update(self, data):
+        """Updates the Shelter object with new data."""
+        self.name = data['name']
+        self.amount = data['amount']
+        self.capacity = data['capacity']
 
 @app.route('/')
 def home():
@@ -130,15 +153,8 @@ def handle_animal(animal_id):
     if request.method == 'GET':
         return jsonify(animal.to_dict())
     if request.method == 'PUT':
-        data = request.get_json()
-        animal.name = data['name']
-        animal.race = data['race']
-        animal.food_id = data['food_id']
-        animal.shelter_id = data['shelter_id']
-        animal.age = data.get('age')
-        animal.weight = data.get('weight')
-        animal.status = data['status']
-        animal.sex = data['sex']
+        data = json.loads(request.get_json())
+        animal.update(data)
         db.session.commit()
         return jsonify(animal.to_dict())
     if request.method == 'DELETE':
@@ -170,10 +186,8 @@ def handle_food(food_id):
     if request.method == 'GET':
         return jsonify(food.to_dict())
     if request.method == 'PUT':
-        data = request.get_json()
-        food.name = data['name']
-        food.amount = data['amount']
-        food.weight = data['weight']
+        data = json.loads(request.get_json())
+        food.update(data)
         db.session.commit()
         return jsonify(food.to_dict())
     if request.method == 'DELETE':
@@ -205,10 +219,8 @@ def handle_shelter(shelter_id):
     if request.method == 'GET':
         return jsonify(shelter.to_dict())
     if request.method == 'PUT':
-        data = request.get_json()
-        shelter.name = data['name']
-        shelter.amount = data['amount']
-        shelter.capacity = data['capacity']
+        data = json.loads(request.get_json())
+        shelter.update(data)
         db.session.commit()
         return jsonify(shelter.to_dict())
     if request.method == 'DELETE':

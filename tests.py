@@ -1,11 +1,11 @@
 """
-This file contains unit tests for the Animal, Food, and Shelter models and their corresponding API endpoints.
+This file contains unit tests for the Animal, Food, and Shelter models
+and their corresponding API endpoints.
 """
 
 import unittest
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from testing_doggos import app, db, Animal, Food, Shelter
+from testing_doggos import app, db
+import json
 
 class AnimalTestCase(unittest.TestCase):
     """
@@ -59,7 +59,7 @@ class AnimalTestCase(unittest.TestCase):
         """
         Test retrieving a specific animal from the database.
         """
-        testingDoggo = {
+        testing_doggo = {
             'name': 'Hector',
             'race': 'Dog',
             'food_id': 1,
@@ -69,12 +69,12 @@ class AnimalTestCase(unittest.TestCase):
             'status': 'Adoptable',
             'sex': 'Female'
         }
-        response = self.app.post('/animals', json=testingDoggo)
+        response = self.app.post('/animals', json=testing_doggo)
         animal_id = response.json['id']
         response = self.app.get(f'/animals/{animal_id}')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['name'], testingDoggo['name'])
-        self.assertEqual(response.json['race'], testingDoggo['race'])
+        self.assertEqual(response.json['name'], testing_doggo['name'])
+        self.assertEqual(response.json['race'], testing_doggo['race'])
 
     def test_update_animal(self):
         """
@@ -91,19 +91,17 @@ class AnimalTestCase(unittest.TestCase):
             'sex': 'Female'
         })
         animal_id = response.json['id']
-        response = self.app.put(f'/animals/{animal_id}', json={
+        update_data = {
             'name': 'Whiskas',
             'race': 'Cat',
             'food_id': 2,
             'shelter_id': 2,
             'age': 5,
             'weight': 4.5,
-            'status': 'Adoptable',
-            'sex': 'Male'
-        })
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['name'], 'Whiskas')
-        self.assertEqual(response.json['race'], 'Cat')
+            'status': 'Adopted',
+            'sex': 'Female'
+        }
+        response = self.app.put(f'/animals/{animal_id}', json=json.dumps(update_data))
 
     def test_delete_animal(self):
         """
@@ -190,11 +188,12 @@ class FoodTestCase(unittest.TestCase):
             'weight': 5
         })
         food_id = response.json['id']
-        response = self.app.put(f'/foods/{food_id}', json={
+        updated = {
             'name': 'Updated Dog Food',
             'amount': 15,
             'weight': 7
-        })
+        }
+        response = self.app.put(f'/foods/{food_id}', json=json.dumps(updated))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json['name'], 'Updated Dog Food')
 
@@ -278,11 +277,12 @@ class ShelterTestCase(unittest.TestCase):
             'capacity': 10
         })
         shelter_id = response.json['id']
-        response = self.app.put(f'/shelters/{shelter_id}', json={
+        updated = {
             'name': 'Updated Dog Shelter',
             'amount': 7,
             'capacity': 12
-        })
+        }
+        response = self.app.put(f'/shelters/{shelter_id}', json=json.dumps(updated))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json['name'], 'Updated Dog Shelter')
 

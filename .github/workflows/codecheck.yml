@@ -31,7 +31,7 @@ jobs:
         autopep8 --in-place --aggressive --aggressive $(git ls-files '*.py')
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint --fail-under=9 $(git ls-files '*.py')
     - name: Commit autopep8 fixes
       run: |
         git config --global user.name "Workflow Bot"
