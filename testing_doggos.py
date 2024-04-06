@@ -1,6 +1,7 @@
 """
 This file contains the implementation of a Flask application for managing an animal shelter.
-It defines the models for animals, food, and shelters, as well as the routes for handling HTTP requests.
+It defines the routes for handling HTTP requests,
+as well as the models for animals, food, and shelters.
 """
 
 from flask import Flask, request, jsonify, render_template
@@ -27,15 +28,15 @@ class Animal(db.Model):
     status = db.Column(db.String(50), nullable=False)
     sex = db.Column(db.String(50), nullable=False)
 
-    def __init__(self, name, race, food_id, shelter_id, age=None, weight=None, status=None, sex=None):
+    def __init__(self, name, race, food_id, shelter_id, status, sex, age=None, weight=None):
         self.name = name
         self.race = race
         self.food_id = food_id
         self.shelter_id = shelter_id
-        self.age = age
-        self.weight = weight
         self.status = status
         self.sex = sex
+        self.age = age
+        self.weight = weight
 
     def to_dict(self):
         """Converts the Animal object to a dictionary."""
@@ -109,10 +110,10 @@ def handle_animals():
                             race=data['race'],
                             food_id=data['food_id'],
                             shelter_id=data['shelter_id'],
-                            age=data.get('age'),
-                            weight=data.get('weight'),
                             status=data['status'],
-                            sex=data['sex'])
+                            sex=data['sex'],
+                            age=data.get('age'),
+                            weight=data.get('weight'))
         db.session.add(new_animal)
         db.session.commit()
         return jsonify(new_animal.to_dict()), 201
@@ -120,6 +121,7 @@ def handle_animals():
     if request.method == 'GET':
         animals = Animal.query.all()
         return jsonify([animal.to_dict() for animal in animals])
+    return '', 405
 
 @app.route('/animals/<int:animal_id>', methods=['GET', 'PUT', 'DELETE'])
 def handle_animal(animal_id):
@@ -143,6 +145,7 @@ def handle_animal(animal_id):
         db.session.delete(animal)
         db.session.commit()
         return '', 204
+    return '', 405
 
 @app.route('/foods', methods=['GET', 'POST'])
 def handle_foods():
@@ -158,6 +161,7 @@ def handle_foods():
     if request.method == 'GET':
         foods = Food.query.all()
         return jsonify([food.to_dict() for food in foods])
+    return '', 405
 
 @app.route('/foods/<int:food_id>', methods=['GET', 'PUT', 'DELETE'])
 def handle_food(food_id):
@@ -176,6 +180,7 @@ def handle_food(food_id):
         db.session.delete(food)
         db.session.commit()
         return '', 204
+    return '', 405
 
 @app.route('/shelters', methods=['GET', 'POST'])
 def handle_shelters():
@@ -191,6 +196,7 @@ def handle_shelters():
     if request.method == 'GET':
         shelters = Shelter.query.all()
         return jsonify([shelter.to_dict() for shelter in shelters])
+    return '', 405
 
 @app.route('/shelters/<int:shelter_id>', methods=['GET', 'PUT', 'DELETE'])
 def handle_shelter(shelter_id):
@@ -209,6 +215,7 @@ def handle_shelter(shelter_id):
         db.session.delete(shelter)
         db.session.commit()
         return '', 204
+    return '', 405
         
 # Routing dla podstrony "support_us"
 @app.route('/support_us')
