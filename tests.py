@@ -7,6 +7,7 @@ import unittest
 from testing_doggos import app, db
 import json
 
+
 class AnimalTestCase(unittest.TestCase):
     """
     Test case for the Animal model and API endpoints.
@@ -101,7 +102,9 @@ class AnimalTestCase(unittest.TestCase):
             'status': 'Adopted',
             'sex': 'Female'
         }
-        response = self.app.put(f'/animals/{animal_id}', json=json.dumps(update_data))
+        response = self.app.put(
+            f'/animals/{animal_id}',
+            json=json.dumps(update_data))
 
     def test_delete_animal(self):
         """
@@ -120,6 +123,7 @@ class AnimalTestCase(unittest.TestCase):
         animal_id = response.json['id']
         response = self.app.delete(f'/animals/{animal_id}')
         self.assertEqual(response.status_code, 204)
+
 
 class FoodTestCase(unittest.TestCase):
     """
@@ -210,6 +214,7 @@ class FoodTestCase(unittest.TestCase):
         response = self.app.delete(f'/foods/{food_id}')
         self.assertEqual(response.status_code, 204)
 
+
 class ShelterTestCase(unittest.TestCase):
     """
     Test case for the Shelter model and API endpoints.
@@ -282,7 +287,9 @@ class ShelterTestCase(unittest.TestCase):
             'amount': 7,
             'capacity': 12
         }
-        response = self.app.put(f'/shelters/{shelter_id}', json=json.dumps(updated))
+        response = self.app.put(
+            f'/shelters/{shelter_id}',
+            json=json.dumps(updated))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json['name'], 'Updated Dog Shelter')
 
@@ -298,6 +305,7 @@ class ShelterTestCase(unittest.TestCase):
         shelter_id = response.json['id']
         response = self.app.delete(f'/shelters/{shelter_id}')
         self.assertEqual(response.status_code, 204)
+
 
 if __name__ == '__main__':
     unittest.main()
