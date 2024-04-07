@@ -201,6 +201,28 @@
     pointer-events: none;
 }
 
+#SheltersButton {
+    top: 65%;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    position:inherit ;
+}
+
+#shelters-button {
+    width: 90px;
+    height: 90px;
+    border-radius: 42px;
+}
+
+#SheltersIMG {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
 #SupportUs {
     left: 50%;
     top: 10px;
