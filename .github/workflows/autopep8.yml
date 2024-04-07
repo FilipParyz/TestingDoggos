@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-      with:
-        ref: ${{ github.ref_name }}
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
@@ -25,10 +23,10 @@ jobs:
     - name: Parsing the code with autopep8
       run: |
         autopep8 --in-place --aggressive --aggressive $(git ls-files '*.py')
-    - name: Commit autopep8 fixes
+    - name: Commit autopep8 fixes if needed
       run: |
-        git config --global user.name "Workflow Bot"
-        git config --global user.email "paryz.filip+workflow.bot@gmail.com"
-        git add .
-        git commit -m "Autopep8 formatting"
-        git push
+        git diff --quiet
+        || (   git config --global user.name "Workflow Bot"
+            && git config --global user.email "paryz.filip+workflow.bot@gmail.com"
+            && git commit -am "Autopep8 formatting"
+            && git push)
