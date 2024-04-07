@@ -40,4 +40,5 @@ jobs:
         git config --global user.email "paryz.filip+workflow.bot@gmail.com"
         git add .
         git commit -m "Autopep8 formatting"
+        git push
 
