@@ -25,8 +25,6 @@ jobs:
         autopep8 --in-place --aggressive --aggressive $(git ls-files '*.py')
     - name: Commit autopep8 fixes if needed
       run: |
-        git diff --quiet
-        || (   git config --global user.name "Workflow Bot"
-            && git config --global user.email "paryz.filip+workflow.bot@gmail.com"
-            && git commit -am "Autopep8 formatting"
-            && git push)
+        git config --global user.name "Workflow Bot"
+        git config --global user.email "paryz.filip+workflow.bot@gmail.com"
+        (git diff --quiet) || (git commit -am "Autopep8 formatting" && git push)
