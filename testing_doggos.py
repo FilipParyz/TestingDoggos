@@ -101,6 +101,8 @@ class Food(db.Model):
 
     def update(self, data):
         """Updates the Food object with new data."""
+        if isinstance(data, str):
+            data = json.loads(data)
         self.name = data['name']
         self.amount = data['amount']
         self.weight = data['weight']
