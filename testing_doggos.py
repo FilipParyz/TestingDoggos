@@ -304,6 +304,11 @@ def mf_button():
     """Renders the MF button page."""
     return render_template('MF_button.html')
 
+# Routing for subsite manage_food
+@app.route('/manage_food')
+def manage_food():
+    """Returns the HTML content of the add food form."""
+    return render_template('manage_food.html')
 
 if __name__ == '__main__':
     with app.app_context():

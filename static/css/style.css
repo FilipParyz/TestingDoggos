@@ -248,6 +248,10 @@
 /* Profile Pictures */
 .Profiles-container {
     display: flex;
+    width: 80%;
+    /*margin is crutial for sidebar buttons! withoud it
+    them are not available!*/
+    margin-left: 10%;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;

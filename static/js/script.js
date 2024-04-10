@@ -3,11 +3,24 @@ onload = function() {
 };
 
 function loadOnClicks(){
-  // Menu buttons
+  const searchButton = document.getElementById('search-button');
   const ourAnimalsButton = document.getElementById('Ourpets');
   const supportButton = document.getElementById('SupportUs');
   const shelterButton = document.getElementById('shelters-button');
   const logoutButton = document.getElementById('LogUt');
+  const foodButton = document.getElementById('food-button');
+  
+  foodButton.addEventListener('click', () => {
+    window.location.href = manageFoodUrl;
+  });
+  //Profiles
+
+  //search
+
+  searchButton.addEventListener('click', () => {
+    console.log('Search');
+  });
+  //top menu
   ourAnimalsButton.addEventListener('click', () => {
     window.location.href = manageAnimalsUrl;
   });
