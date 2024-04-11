@@ -3,33 +3,13 @@ onload = function() {
 };
 
 function loadOnClicks(){
-  const searchButton = document.getElementById('search-button');
-  const ourAnimalsButton = document.getElementById('Ourpets');
-  const supportButton = document.getElementById('SupportUs');
-  const shelterButton = document.getElementById('shelters-button');
-  const logoutButton = document.getElementById('LogUt');
-  const foodButton = document.getElementById('food-button');
   
-  foodButton.addEventListener('click', () => {
-    window.location.href = manageFoodUrl;
-  });
-  //Profiles
-
-  //search
-
-  searchButton.addEventListener('click', () => {
-    console.log('Search');
-  });
-  //top menu
-  ourAnimalsButton.addEventListener('click', () => {
+  // Top menu
+  const ouranimalsButton = document.getElementById('ourpets-button');
+  ouranimalsButton.addEventListener('click', () => {
     window.location.href = manageAnimalsUrl;
   });
-  supportButton.addEventListener('click', () => {
-    window.location.href = supportUsUrl;
-  });
-  shelterButton.addEventListener('click', () => {
-    window.location.href = manageSheltersUrl;
-  });
+  const logoutButton = document.getElementById('logout-button');
   logoutButton.addEventListener('click', () => {
     console.log('LogOut');
   });
@@ -42,5 +22,23 @@ function loadOnClicks(){
   });
   searchButton.addEventListener('click', () => {
     console.log('Search');
+  });
+
+  // Shelter profiles
+  const shelterButton = document.getElementById('shelters-button');
+  shelterButton.addEventListener('click', () => {
+    window.location.href = manageSheltersUrl;
+  });
+
+  // Food
+  const foodButton = document.getElementById('food-button');
+  foodButton.addEventListener('click', () => {
+    window.location.href = manageFoodUrl;
+  });
+
+  // Support us
+  const supportButton = document.getElementById('supportus-button');
+  supportButton.addEventListener('click', () => {
+    window.location.href = supportUsUrl;
   });
 }
