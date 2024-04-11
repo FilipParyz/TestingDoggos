@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Shelter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactstyle.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/profileinfostyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile-style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Icon/favicon.ico') }}" sizes="16x16" />
     <script>
         var supportUsUrl = "{{ url_for('support_us') }}";
         var manageAnimalsUrl = "{{ url_for('manage_animals') }}";
@@ -19,21 +20,21 @@
     <div class="MainframeAdmin">
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
-            <button id="SupportUs" class="TopButton">
+            <button id="supportus-button" class="TopButton">
                 <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
-                <p class="Texts">WESPRZYJ NAS</p>
+                <p class="Texts">SUPPORT US</p>
             </button>
             
             <!-- Our pets button -->
-            <button id="Ourpets" class="TopButton">
+            <button id="ourpets-button" class="TopButton">
                 <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
-                <p class="Texts">NASZE ZWIERZAKI</p>
+                <p class="Texts">OUR ANIMALS</p>
             </button>
         
             <!-- Login button -->
-            <button id="LogUt" class="TopButton">
+            <button id="logout-button" class="TopButton">
                 <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
-                <p class="Texts">WYLOGUJ SIĘ</p>
+                <p class="Texts">LOG OUT</p>
             </button>
             
             <!-- END Top Menu -->
