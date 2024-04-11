@@ -85,7 +85,7 @@ class Food(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     amount = db.Column(db.Integer, nullable=False)
-    weight = db.Column(db.Integer, nullable=False)
+    weight = db.Column(db.Float, nullable=False)
 
     def __init__(self, name, amount, weight):
         self.name = name
@@ -106,8 +106,8 @@ class Food(db.Model):
         if isinstance(data, str):
             data = json.loads(data)
         self.name = data['name']
-        self.amount = data['amount']
-        self.weight = data['weight']
+        self.amount = int(data['amount'])
+        self.weight = float(data['weight'])
 
 
 class Shelter(db.Model):

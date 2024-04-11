@@ -156,7 +156,7 @@ class FoodTestCase(unittest.TestCase):
         response = self.app.post('/foods', json={
             'name': 'Dog Food',
             'amount': 10,
-            'weight': 5
+            'weight': 5.0
         })
         self.assertEqual(response.status_code, 201)
 
@@ -175,7 +175,7 @@ class FoodTestCase(unittest.TestCase):
         response = self.app.post('/foods', json={
             'name': 'Dog Food',
             'amount': 10,
-            'weight': 5
+            'weight': 5.0
         })
         food_id = response.json['id']
         response = self.app.get(f'/foods/{food_id}')
@@ -189,13 +189,13 @@ class FoodTestCase(unittest.TestCase):
         response = self.app.post('/foods', json={
             'name': 'Dog Food',
             'amount': 10,
-            'weight': 5
+            'weight': 5.0
         })
         food_id = response.json['id']
         updated = {
             'name': 'Updated Dog Food',
             'amount': 15,
-            'weight': 7
+            'weight': 7.5
         }
         response = self.app.put(f'/foods/{food_id}', json=json.dumps(updated))
         self.assertEqual(response.status_code, 200)
@@ -208,7 +208,7 @@ class FoodTestCase(unittest.TestCase):
         response = self.app.post('/foods', json={
             'name': 'Dog Food',
             'amount': 10,
-            'weight': 5
+            'weight': 5.0
         })
         food_id = response.json['id']
         response = self.app.delete(f'/foods/{food_id}')

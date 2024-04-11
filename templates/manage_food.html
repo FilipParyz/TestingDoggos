@@ -4,39 +4,177 @@
     <title>Manage Food</title>
     <script>
         window.onload = function() {
-            document.querySelector('form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                let formData = new FormData(event.target);
-                let jsonObject = {};
-                for (const [key, value]  of formData.entries()) {
-                    jsonObject[key] = value;
-                }
-                fetch('{{ url_for('handle_foods') }}', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(jsonObject)
-                }).then(response => response.json())
-                  .then(data => console.log(data))
-                  .catch(error => console.error('Error:', error));
-            });
+            loadFood();
         };
+
+        function loadFood() {
+            fetch(`{{ url_for('handle_foods') }}`)
+                .then(response => response.json())
+                .then(data => {
+                    let foodList = document.getElementById("foodList");
+                    foodList.innerHTML = "";
+                    let foodOptions = document.getElementById("foodId");
+                    foodOptions.innerHTML = "";
+
+                    // Dodaj domyślną opcję wyboru
+                    let defaultOption = document.createElement("option");
+                    defaultOption.value = -1;
+                    defaultOption.textContent = "Wybierz jedzenie";
+                    foodOptions.appendChild(defaultOption);
+
+                    data.forEach(food => {
+                        let foodItem = document.createElement("li");
+                        foodItem.textContent = `Name:: ${food.name}, Amount: ${food.amount}, Weight: ${food.weight}`;
+                        foodList.appendChild(foodItem);
+
+                        let foodOption = document.createElement("option");
+                        foodOption.value = food.id;
+                        foodOption.textContent = food.name;
+                        document.getElementById("foodId").appendChild(foodOption);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        function handleActionChange() {
+            var action = document.getElementById("action").value;
+            var addFoodForm = document.getElementById("addFoodForm");
+            var editFoodForm = document.getElementById("editFoodForm");
+            var deleteFoodForm = document.getElementById("deleteFoodForm");
+            var existingFood = document.getElementById("existingFood");
+
+            if (action === "add") {
+                addFoodForm.style.display = "block";
+                editFoodForm.style.display = "none";
+                deleteFoodForm.style.display = "none";
+                existingFood.style.display = "none";
+            } else {
+                if (action === "edit") {
+                    addFoodForm.style.display = "none";
+                    editFoodForm.style.display = "block";
+                    deleteFoodForm.style.display = "none";
+                } else if (action === "delete") {
+                    addFoodForm.style.display = "none";
+                    editFoodForm.style.display = "none";
+                    deleteFoodForm.style.display = "block";
+                }
+                existingFood.style.display = "block";
+            }
+        }
+
+        function addFood(event) {
+            event.preventDefault();
+            let formData = new FormData(event.target);
+            let jsonObject = {};
+            for (const [key, value]  of formData.entries()) {
+                jsonObject[key] = value;
+            }
+            fetch(`{{ url_for('handle_foods') }}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonObject)
+            }).then(response => response.json())
+            .then( data => {
+                console.log(data)
+                loadFood();
+            })
+            .catch(error => console.error('Error:', error));
+        };
+
+        function deleteFood() {
+            var foodId = document.getElementById("foodId").value;
+            fetch(`{{ url_for('handle_foods') }}/`+foodId, {
+                method: 'DELETE'
+            })
+            .then(response => console.log(response))
+            .then(data => {
+                console.log(data);
+                loadFood();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function editFood(event) {
+            event.preventDefault();
+            var foodId = document.getElementById("foodId").value;
+            let formData = new FormData(event.target);
+            let jsonObject = {};
+            for (const [key, value] of formData.entries()) {
+                jsonObject[key] = value;
+            }
+            fetch(`{{ url_for('handle_foods') }}/`+foodId, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonObject)
+            })
+            .then(response => console.log(response))
+            .then(data => {
+                console.log(data);
+                loadFood();
+            })
+            .catch(error => console.error('Error:', error));
+        }
     </script>
 </head>
 <body>
     <h1>Manage Food</h1>
-    <form method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+    <h2>Select action:</h2>
+    <select id="action" onchange="handleActionChange()">
+        <option value="add">Add</option>
+        <option value="edit">Edit</option>
+        <option value="delete">Delete</option>
+    </select>
 
-        <label for="amount">Packs number:</label>
-        <input type="number" id="amount" name="amount" required><br>
+    <div id="existingFood" style="display: none;">
+        <h2>Choose a Food:</h2>
+        <select id="foodId">
+            <option value="">Select a Food</option>
+        </select>
+    </div>
 
-        <label for="weight">SIngle item weight:</label>
-        <input type="number" id="weight" name="weight" required><br>
+    <div id="addFoodForm">
+        <form method="POST" onsubmit="addFood(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
+            <label for="amount">Packs number:</label>
+            <input type="number" id="amount" name="amount" required><br>
+    
+            <label for="weight">Single item weight:</label>
+            <input type="number" id="weight" name="weight" step="0.1" required><br>
+    
+            <button type="submit">Add Food</button>
+        </form>
+    </div>
 
-        <button type="submit">Add Food</button>
-    </form>
+    <div id="editFoodForm" style="display: none;">
+        <h2>Edit Food</h2>
+        <form method="POST" onsubmit="editFood(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
+            <label for="amount">Packs number:</label>
+            <input type="number" id="amount" name="amount" required><br>
+    
+            <label for="weight">Single item weight:</label>
+            <input type="number" id="weight" name="weight" step="0.1" required><br>   
+
+            <button type="submit">Edit Food</button>
+        </form>
+    </div>
+
+    <div id="deleteFoodForm" style="display: none;">
+        <h2>Delete Food</h2>
+        <button onclick="deleteFood()">Delete</button>
+    </div>
+
+    <div></div>
+        <h2>All Food:</h2>
+        <ul id="foodList">
+        </ul>
+    </div>
 </body>
 </html>
