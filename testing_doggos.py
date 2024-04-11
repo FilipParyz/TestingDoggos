@@ -257,8 +257,6 @@ def handle_shelter(shelter_id):
         return '', 204
     return '', 405
 
-# Routing dla podstrony "support_us"
-
 
 @app.route('/support_us')
 def support_us():
@@ -270,6 +268,16 @@ def support_us():
 def manage_animals():
     """Renders the manage animals page."""
     return render_template('manage_animals.html')
+
+@app.route('/manage_foods')
+def manage_foods():
+    """Renders the manage foods page."""
+    return render_template('manage_foods.html')
+
+@app.route('/manage_shelters')
+def manage_shelters():
+    """Renders the manage shelters page."""
+    return render_template('manage_shelters.html')
 
     ### Here are the tests###
 # Routing dla podstrony "profile_page"

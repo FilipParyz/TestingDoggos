@@ -10,6 +10,7 @@
     <script>
         var supportUsUrl = "{{ url_for('support_us') }}";
         var manageAnimalsUrl = "{{ url_for('manage_animals') }}";
+        var manageSheltersUrl = "{{ url_for('manage_shelters') }}";
         var manageFoodUrl = "{{ url_for('manage_food') }}";
     </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
@@ -18,7 +19,6 @@
     <div class="MainframeAdmin">
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
-            <!-- Support button -->
             <button id="SupportUs" class="TopButton">
                 <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
                 <p class="Texts">WESPRZYJ NAS</p>
@@ -69,6 +69,12 @@
                 <button id="pets-button" >
                     <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
                 </button> 
+            </div>
+            <!-- Shelters button -->
+            <div id="SheltersButton">
+                <button id="shelters-button" >
+                    <img id="SheltersIMG" src="{{ url_for('static', filename='images/Sidebar/Beds.png') }}" >
+                </button>
             </div>
             <!-- END Side panel menu -->
         </div>
