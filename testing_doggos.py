@@ -67,6 +67,8 @@ class Animal(db.Model):
 
     def update(self, data):
         """Updates the Animal object with new data."""
+        if isinstance(data, str):
+            data = json.loads(data)
         self.name = data['name']
         self.race = data['race']
         self.food_id = data['food_id']
@@ -83,7 +85,7 @@ class Food(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     amount = db.Column(db.Integer, nullable=False)
-    weight = db.Column(db.Integer, nullable=False)
+    weight = db.Column(db.Float, nullable=False)
 
     def __init__(self, name, amount, weight):
         self.name = name
@@ -104,8 +106,8 @@ class Food(db.Model):
         if isinstance(data, str):
             data = json.loads(data)
         self.name = data['name']
-        self.amount = data['amount']
-        self.weight = data['weight']
+        self.amount = int(data['amount'])
+        self.weight = float(data['weight'])
 
 
 class Shelter(db.Model):
@@ -132,6 +134,8 @@ class Shelter(db.Model):
 
     def update(self, data):
         """Updates the Shelter object with new data."""
+        if isinstance(data, str):
+            data = json.loads(data)
         self.name = data['name']
         self.amount = data['amount']
         self.capacity = data['capacity']
@@ -173,7 +177,7 @@ def handle_animal(animal_id):
     if request.method == 'GET':
         return jsonify(animal.to_dict())
     if request.method == 'PUT':
-        data = json.loads(request.get_json())
+        data = request.get_json()
         animal.update(data)
         db.session.commit()
         return jsonify(animal.to_dict())
@@ -208,7 +212,7 @@ def handle_food(food_id):
     if request.method == 'GET':
         return jsonify(food.to_dict())
     if request.method == 'PUT':
-        data = json.loads(request.get_json())
+        data = request.get_json()
         food.update(data)
         db.session.commit()
         return jsonify(food.to_dict())
@@ -243,7 +247,7 @@ def handle_shelter(shelter_id):
     if request.method == 'GET':
         return jsonify(shelter.to_dict())
     if request.method == 'PUT':
-        data = json.loads(request.get_json())
+        data = request.get_json()
         shelter.update(data)
         db.session.commit()
         return jsonify(shelter.to_dict())

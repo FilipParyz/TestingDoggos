@@ -75,9 +75,11 @@
                 },
                 body: JSON.stringify(jsonObject)
             }).then(response => response.json())
-            .then(data => console.log(data))
+            .then( data => {
+                console.log(data)
+                loadFood();
+            })
             .catch(error => console.error('Error:', error));
-            loadFood();
         };
 
         function deleteFood() {
@@ -91,7 +93,6 @@
                 loadFood();
             })
             .catch(error => console.error('Error:', error));
-            loadFood();
         }
 
         function editFood(event) {
@@ -99,7 +100,7 @@
             var foodId = document.getElementById("foodId").value;
             let formData = new FormData(event.target);
             let jsonObject = {};
-            for (const [key, value]  of formData.entries()) {
+            for (const [key, value] of formData.entries()) {
                 jsonObject[key] = value;
             }
             fetch(`{{ url_for('handle_foods') }}/`+foodId, {
@@ -115,7 +116,6 @@
                 loadFood();
             })
             .catch(error => console.error('Error:', error));
-            loadFood();
         }
     </script>
 </head>
@@ -136,7 +136,7 @@
     </div>
 
     <div id="addFoodForm">
-        <form method="POST">
+        <form method="POST" onsubmit="addFood(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
     
@@ -144,7 +144,7 @@
             <input type="number" id="amount" name="amount" required><br>
     
             <label for="weight">Single item weight:</label>
-            <input type="number" id="weight" name="weight" required><br>
+            <input type="number" id="weight" name="weight" step="0.1" required><br>
     
             <button type="submit">Add Food</button>
         </form>
@@ -160,7 +160,7 @@
             <input type="number" id="amount" name="amount" required><br>
     
             <label for="weight">Single item weight:</label>
-            <input type="number" id="weight" name="weight" required><br>   
+            <input type="number" id="weight" name="weight" step="0.1" required><br>   
 
             <button type="submit">Edit Food</button>
         </form>
