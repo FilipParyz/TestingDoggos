@@ -19,12 +19,12 @@
                     // Dodaj domyślną opcję wyboru
                     let defaultOption = document.createElement("option");
                     defaultOption.value = -1;
-                    defaultOption.textContent = "Wybierz jedzenie";
+                    defaultOption.textContent = "Select an animal:";
                     animalOptions.appendChild(defaultOption);
 
                     data.forEach(animal => {
                         let animalItem = document.createElement("li");
-                        animalItem.textContent = `Name:: ${animal.name}, Amount: ${animal.amount}, Weight: ${animal.weight}`;
+                        animalItem.textContent = `Name: ${animal.name}, Race: ${animal.race}, Food_id: ${animal.food_id}, Shelter_id: ${animal.shelter_id}, Status: ${animal.status}, Sex: ${animal.sex}, Age: ${animal.age}, Weight: ${animal.weight}`;
                         animalList.appendChild(animalItem);
 
                         let animalOption = document.createElement("option");
@@ -37,27 +37,27 @@
         }
         function handleActionChange() {
             var action = document.getElementById("action").value;
-            var addanimalForm = document.getElementById("addanimalForm");
-            var editanimalForm = document.getElementById("editanimalForm");
-            var deleteanimalForm = document.getElementById("deleteanimalForm");
-            var existinganimal = document.getElementById("existinganimal");
+            var addAnimalForm = document.getElementById("addAnimalForm");
+            var editAnimalForm = document.getElementById("editAnimalForm");
+            var deleteAnimalForm = document.getElementById("deleteAnimalForm");
+            var existingAnimal = document.getElementById("existingAnimal");
 
             if (action === "add") {
-                addanimalForm.style.display = "block";
-                editanimalForm.style.display = "none";
-                deleteanimalForm.style.display = "none";
-                existinganimal.style.display = "none";
+                addAnimalForm.style.display = "block";
+                editAnimalForm.style.display = "none";
+                deleteAnimalForm.style.display = "none";
+                existingAnimal.style.display = "none";
             } else {
                 if (action === "edit") {
-                    addanimalForm.style.display = "none";
-                    editanimalForm.style.display = "block";
-                    deleteanimalForm.style.display = "none";
+                    addAnimalForm.style.display = "none";
+                    editAnimalForm.style.display = "block";
+                    deleteAnimalForm.style.display = "none";
                 } else if (action === "delete") {
-                    addanimalForm.style.display = "none";
-                    editanimalForm.style.display = "none";
-                    deleteanimalForm.style.display = "block";
+                    addAnimalForm.style.display = "none";
+                    editAnimalForm.style.display = "none";
+                    deleteAnimalForm.style.display = "block";
                 }
-                existinganimal.style.display = "block";
+                existingAnimal.style.display = "block";
             }
         }
 
@@ -137,16 +137,32 @@
 
     <div id="addAnimalForm">
         <form method="POST" onsubmit="addAnimal(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <form method="POST" onsubmit="editAnimal(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label for="race">Race:</label>
+                <input type="text" id="race" name="race" required><br>
+        
+                <label for="food_id">Food Id:</label>
+                <input type="number" id="food_id" name="food_id"  required><br>   
     
-            <label for="amount">Packs number:</label>
-            <input type="number" id="amount" name="amount" required><br>
+                <label for="shelter_id">Shelter_id:</label>
+                <input type="number" id="shelter_id" name="shelter_id" required><br>   
     
-            <label for="weight">Single item weight:</label>
-            <input type="number" id="weight" name="weight" step="0.1" required><br>
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" required><br>   
     
-            <button type="submit">Add animal</button>
+                <label for="sex">Sex:</label>
+                <input type="text" id="sex" name="sex" required><br>   
+    
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" step="0.1" required><br>   
+    
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" step="0.1" required><br>   
+
+                <button type="submit">Add animal</button>
         </form>
     </div>
 
@@ -156,10 +172,25 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
     
-            <label for="amount">Packs number:</label>
-            <input type="number" id="amount" name="amount" required><br>
+            <label for="race">Race:</label>
+            <input type="text" id="race" name="race" required><br>
     
-            <label for="weight">Single item weight:</label>
+            <label for="food_id">Food Id:</label>
+            <input type="number" id="food_id" name="food_id"  required><br>   
+
+            <label for="shelter_id">Shelter_id:</label>
+            <input type="number" id="shelter_id" name="shelter_id" required><br>   
+
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required><br>   
+
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" required><br>   
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" step="0.1" required><br>   
+
+            <label for="weight">Weight:</label>
             <input type="number" id="weight" name="weight" step="0.1" required><br>   
 
             <button type="submit">Edit animal</button>
@@ -172,7 +203,7 @@
     </div>
 
     <div></div>
-        <h2>All animal:</h2>
+        <h2>All animals:</h2>
         <ul id="animalList">
         </ul>
     </div>
