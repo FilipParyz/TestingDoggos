@@ -4,6 +4,7 @@ It defines the routes for handling HTTP requests,
 as well as the models for animals, food, and shelters.
 """
 import json
+from socket import gethostname
 from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -303,4 +304,7 @@ def manage_food():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    if 'liveconsole' not in gethostname():
+        app.run()
+    else:
+        app.run(debug=True)
