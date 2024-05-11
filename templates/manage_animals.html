@@ -35,6 +35,7 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
+        
         function handleActionChange() {
             var action = document.getElementById("action").value;
             var addAnimalForm = document.getElementById("addAnimalForm");
@@ -52,6 +53,25 @@
                     addAnimalForm.style.display = "none";
                     editAnimalForm.style.display = "block";
                     deleteAnimalForm.style.display = "none";
+
+                    // Pobierz dane dotyczące wybranego zwierzęcia
+                    var selectedAnimalId = document.getElementById("animalId").value;
+                    if (selectedAnimalId) {
+                        fetch(`{{ url_for('handle_animals') }}/` + selectedAnimalId)
+                            .then(response => response.json())
+                            .then(data => {
+                                // Wypełnij pola formularza danymi zwróconymi z serwera
+                                document.getElementById("editName").value = data.name;
+                                document.getElementById("editRace").value = data.race;
+                                document.getElementById("editFoodId").value = data.food_id;
+                                document.getElementById("editShelterId").value = data.shelter_id;
+                                document.getElementById("editStatus").value = data.status;
+                                document.getElementById("editSex").value = data.sex;
+                                document.getElementById("editAge").value = data.age;
+                                document.getElementById("editWeight").value = data.weight;
+                            })
+                            .catch(error => console.error('Error:', error));
+                    }
                 } else if (action === "delete") {
                     addAnimalForm.style.display = "none";
                     editAnimalForm.style.display = "none";
@@ -119,13 +139,24 @@
                 },
                 body: JSON.stringify(jsonObject)
             })
-            .then(response => console.log(response))
+            .then(response => response.json())
             .then(data => {
                 console.log(data);
                 loadAnimal();
+                clearEditAnimalForm(); // Dodaj funkcję do wyczyszczenia pól formularza edycji
             })
             .catch(error => console.error('Error:', error));
-            event.target.reset();
+        }
+
+        function clearEditAnimalForm() {
+            document.getElementById("editName").value = "";
+            document.getElementById("editRace").value = "";
+            document.getElementById("editFoodId").value = "";
+            document.getElementById("editShelterId").value = "";
+            document.getElementById("editStatus").value = "";
+            document.getElementById("editSex").value = "";
+            document.getElementById("editAge").value = "";
+            document.getElementById("editWeight").value = "";
         }
     </script>
 </head>
@@ -139,9 +170,9 @@
     </select>
 
     <div id="existingAnimal" style="display: none;">
-        <h2>Choose a animal:</h2>
-        <select id="animalId">
-            <option value="">Select a animal</option>
+        <h2>Choose an animal:</h2>
+        <select id="animalId" onchange="handleActionChange()">
+            <option value="">Select an animal</option>
         </select>
     </div>
 
@@ -179,29 +210,29 @@
     <div id="editAnimalForm" style="display: none;">
         <h2>Edit animal</h2>
         <form method="POST" onsubmit="editAnimal(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" name="name" required><br>
     
-            <label for="race">Race:</label>
-            <input type="text" id="race" name="race" required><br>
+            <label for="editRace">Race:</label>
+            <input type="text" id="editRace" name="race" required><br>
     
-            <label for="food_id">Food Id:</label>
-            <input type="number" id="food_id" name="food_id"  required><br>   
+            <label for="editFoodId">Food Id:</label>
+            <input type="number" id="editFoodId" name="food_id"  required><br>   
 
-            <label for="shelter_id">Shelter_id:</label>
-            <input type="number" id="shelter_id" name="shelter_id" required><br>   
+            <label for="editShelterId">Shelter_id:</label>
+            <input type="number" id="editShelterId" name="shelter_id" required><br>   
 
-            <label for="status">Status:</label>
-            <input type="text" id="status" name="status" required><br>   
+            <label for="editStatus">Status:</label>
+            <input type="text" id="editStatus" name="status" required><br>   
 
-            <label for="sex">Sex:</label>
-            <input type="text" id="sex" name="sex" required><br>   
+            <label for="editSex">Sex:</label>
+            <input type="text" id="editSex" name="sex" required><br>   
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" step="0.1" required><br>   
+            <label for="editAge">Age:</label>
+            <input type="number" id="editAge" name="age" step="0.1" required><br>   
 
-            <label for="weight">Weight:</label>
-            <input type="number" id="weight" name="weight" step="0.1" required><br>   
+            <label for="editWeight">Weight:</label>
+            <input type="number" id="editWeight" name="weight" step="0.1" required><br>   
 
             <button type="submit">Edit animal</button>
         </form>
