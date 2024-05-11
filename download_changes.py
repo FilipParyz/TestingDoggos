@@ -33,8 +33,9 @@ if __name__ == '__main__':
     # Initialize a Git repository object
     repo = Repo(current_dir)
 
-    # Run the check_and_download_changes function
-    check_and_download_changes()
-    
-    # Sleep for 60 seconds before checking for changes again
-    time.sleep(60)
+    while True:
+        # Run the check_and_download_changes function
+        check_and_download_changes()
+        
+        # Sleep for 60 seconds before checking for changes again
+        time.sleep(60)
