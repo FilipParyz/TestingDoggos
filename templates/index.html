@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile-style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Icon/favicon.ico') }}" sizes="16x16" />
-    <script>
-        var supportUsUrl = "{{ url_for('support_us') }}";
-        var manageAnimalsUrl = "{{ url_for('manage_animals') }}";
-        var manageSheltersUrl = "{{ url_for('manage_shelters') }}";
-        var manageFoodUrl = "{{ url_for('manage_food') }}";
+   <script>
+        let supportUsUrl = "{{ url_for('support_us') }}";
+        let manageAnimalsUrl = "{{ url_for('manage_animals') }}";
+        let manageSheltersUrl = "{{ url_for('manage_shelters') }}";
+        let manageFoodUrl = "{{ url_for('manage_food') }}";     
     </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
@@ -20,35 +20,31 @@
     <div class="MainframeAdmin">
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
-            <button id="supportus-button" class="TopButton">
-                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
-                <p class="Texts">SUPPORT US</p>
-            </button>
+            <div class="TopContainer">
+                <button id="supportus-button" class="TopButton">
+                    <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
+                    <p class="Texts">SUPPORT US</p>
+                </button>
+
+                <!-- Our pets button -->
+                <button id="ourpets-button" class="TopButton">
+                    <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
+                    <p class="Texts">OUR ANIMALS</p>
+                </button>
             
-            <!-- Our pets button -->
-            <button id="ourpets-button" class="TopButton">
-                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
-                <p class="Texts">OUR ANIMALS</p>
-            </button>
-        
-            <!-- Login button -->
-            <button id="logout-button" class="TopButton">
-                <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
-                <p class="Texts">LOG OUT</p>
-            </button>
-            
+                <!-- Login button -->
+                <button id="logout-button" class="TopButton">
+                    <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
+                    <p class="Texts">LOG OUT</p>
+                </button>
+            </div>
             <!-- END Top Menu -->
         </div>   
-        <!-- Account logo -->
-        <div>
-            <div id="Account">
-                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
-            </div>
-        </div>
+       
 
         <div id="search-bar">
             <!-- Search bar -->
-            <input type="text" id="search-input" placeholder="Wyszukaj zwierzaka" />
+            <input type="text" id="search-input" placeholder="Search up animal" />
             <div id="search-background">
                 <button id="search-button">
                     <img id="search-icon" src="{{ url_for('static', filename='images/Search.png') }}" />
@@ -59,6 +55,11 @@
         
         <div id="SidePannelMenu">
             <!-- Side panel menu -->
+            <!-- Account logo -->
+
+            <div id="Account">
+                <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
+            </div>
             <!-- Food button -->
             <div id="FoodButton">
                 <button id="food-button" >
@@ -77,6 +78,7 @@
                     <img id="SheltersIMG" src="{{ url_for('static', filename='images/Sidebar/Beds.png') }}" >
                 </button>
             </div>
+            
             <!-- END Side panel menu -->
         </div>
         
@@ -131,6 +133,12 @@
                 <img id="ContactinfoLineEmailPic"   class="Pictu" src="{{ url_for('static', filename='images/Contactinfo_line_Email_pic.png') }}" />
                 <div id="KatowiceUlBogucicka534"    class="Text">Katowice Ul. Bogucicka 5&3/4</div>
                 <img id="ContactinfoLineAddressPic" class="Pictu" src="{{ url_for('static', filename='images/Contactinfo_line_Address_pic.png') }}" />
+            <!-- Infowrap -->
+                <div class="Infowrap" style="bottom: 30px;left: 0px; position: inherit; z-index: 5    ;">
+                    <div class="Infowrapbg" style="width: 100px; height: 30px; left: 0px; top: 0px; position: absolute; background:  #7469B6 "></div>
+                    <div class="Info" style="width: 45px; height: 30px; left: 25px; top: 0px; position: absolute; text-align: center; color: #E0E0E0; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word">Info</div>
+                    <img class="InfoIMG" src="{{ url_for('static', filename='images/Sidebar/OpenerArrow.png') }}" style="width: 10px; height: 13px; left: 80px; top: 7px; position: absolute">
+                </div>
             </div>
         <!-- END Contact info -->
     </div>

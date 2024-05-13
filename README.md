@@ -47,7 +47,7 @@ To get a local copy up and running follow these simple steps.
 git clone https://github.com/your_username_/TestingDoggos.git
 ```
     
-3. Install the required packages
+2. Install the required packages
 
 ```bash
 pip install -r requirements.txt
