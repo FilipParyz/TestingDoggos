@@ -1,87 +1,81 @@
+"use strict";
 // Fetch and display food data
 const loadFood = async () => {
     try {
         const response = await fetch(`{{ url_for('handle_foods') }}`);
         const data = await response.json();
-
-        const foodList = document.getElementById("foodList") as HTMLElement;
-        foodList.innerHTML = "";
-
-        const foodOptions = document.getElementById("foodId") as HTMLSelectElement;
+        const foodOptions = document.getElementById("foodId");
         foodOptions.innerHTML = "";
-
+        const foodList = document.getElementById("foodList");
+        foodList.innerHTML = "";
         const defaultOption = document.createElement("option");
         defaultOption.value = "-1";
         defaultOption.textContent = "Choose food";
         foodOptions.appendChild(defaultOption);
-
-        data.forEach((food: { id: string; name: string; amount: number; weight: number }) => {
+        data.forEach((food) => {
             const foodItem = document.createElement("li");
             foodItem.textContent = `Name: ${food.name}, Amount: ${food.amount}, Weight: ${food.weight}`;
             foodList.appendChild(foodItem);
-
             const foodOption = document.createElement("option");
             foodOption.value = food.id;
             foodOption.textContent = food.name;
             foodOptions.appendChild(foodOption);
         });
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Error:', error);
     }
 };
-
 // Handle action change (add, edit, delete)
 const handleActionChangeFd = () => {
-    const action = (document.getElementById("action") as HTMLSelectElement).value;
-    const addFoodForm = document.getElementById("addFoodForm") as HTMLFormElement;
-    const editFoodForm = document.getElementById("editFoodForm") as HTMLFormElement;
-    const deleteFoodForm = document.getElementById("deleteFoodForm") as HTMLFormElement;
-    const existingFood = document.getElementById("existingFood") as HTMLDivElement;
-
+    const action = document.getElementById("action").value;
+    const addFoodForm = document.getElementById("addFoodForm");
+    const editFoodForm = document.getElementById("editFoodForm");
+    const deleteFoodForm = document.getElementById("deleteFoodForm");
+    const existingFood = document.getElementById("existingFood");
     if (action === "add") {
         addFoodForm.style.display = "block";
         editFoodForm.style.display = "none";
         deleteFoodForm.style.display = "none";
         existingFood.style.display = "none";
-    } else {
+    }
+    else {
         existingFood.style.display = "block";
         if (action === "edit") {
             addFoodForm.style.display = "none";
             editFoodForm.style.display = "block";
             deleteFoodForm.style.display = "none";
             loadSelectedFoodData();
-        } else if (action === "delete") {
+        }
+        else if (action === "delete") {
             addFoodForm.style.display = "none";
             editFoodForm.style.display = "none";
             deleteFoodForm.style.display = "block";
         }
     }
 };
-
 // Load data for the selected food item for editing
 const loadSelectedFoodData = async () => {
-    const selectedFoodId = (document.getElementById("foodId") as HTMLSelectElement).value;
+    const selectedFoodId = document.getElementById("foodId").value;
     if (selectedFoodId !== "-1") {
         try {
             const response = await fetch(`{{ url_for('handle_foods') }}/${selectedFoodId}`);
             const data = await response.json();
-
-            (document.getElementById("editName") as HTMLInputElement).value = data.name;
-            (document.getElementById("editAmount") as HTMLInputElement).value = data.amount;
-            (document.getElementById("editWeight") as HTMLInputElement).value = data.weight;
-        } catch (error) {
+            document.getElementById("editName").value = data.name;
+            document.getElementById("editAmount").value = data.amount;
+            document.getElementById("editWeight").value = data.weight;
+        }
+        catch (error) {
             console.error('Error:', error);
         }
     }
 };
-
 // Add new food item
-const addFood = async (event: Event) => {
+const addFood = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    let jsonObject: { [key: string]: any } = {};
-    formData.forEach((value, key) => { jsonObject[key] = value });
-
+    const formData = new FormData(event.target);
+    let jsonObject = {};
+    formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
         const response = await fetch(`{{ url_for('handle_foods') }}`, {
             method: 'POST',
@@ -93,33 +87,32 @@ const addFood = async (event: Event) => {
         const data = await response.json();
         console.log(data);
         loadFood();
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Error:', error);
     }
 };
-
 // Delete food item
 const deleteFood = async () => {
-    const foodId = (document.getElementById("foodId") as HTMLSelectElement).value;
+    const foodId = document.getElementById("foodId").value;
     try {
         const response = await fetch(`{{ url_for('handle_foods') }}/${foodId}`, {
             method: 'DELETE'
         });
         console.log(response);
         loadFood();
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Error:', error);
     }
 };
-
 // Edit food item
-const editFood = async (event: Event) => {
+const editFood = async (event) => {
     event.preventDefault();
-    const foodId = (document.getElementById("foodId") as HTMLSelectElement).value;
-    const formData = new FormData(event.target as HTMLFormElement);
-    let jsonObject: { [key: string]: any } = {};
-    formData.forEach((value, key) => { jsonObject[key] = value });
-
+    const foodId = document.getElementById("foodId").value;
+    const formData = new FormData(event.target);
+    let jsonObject = {};
+    formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
         const response = await fetch(`{{ url_for('handle_foods') }}/${foodId}`, {
             method: 'PUT',
@@ -132,23 +125,22 @@ const editFood = async (event: Event) => {
         console.log(data);
         loadFood();
         clearEditFormFd();
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Error:', error);
     }
 };
-
 // Clear the edit form fields
 const clearEditFormFd = () => {
-    (document.getElementById("editName") as HTMLInputElement).value = "";
-    (document.getElementById("editAmount") as HTMLInputElement).value = "";
-    (document.getElementById("editWeight") as HTMLInputElement).value = "";
+    document.getElementById("editName").value = "";
+    document.getElementById("editAmount").value = "";
+    document.getElementById("editWeight").value = "";
 };
-
 // Event listeners for action change and form submissions
 document.getElementById("action")?.addEventListener("change", handleActionChangeFd);
 document.getElementById("addFoodForm")?.addEventListener("submit", addFood);
 document.getElementById("editFoodForm")?.addEventListener("submit", editFood);
-document.getElementById("deleteFoodForm")?.addEventListener("submit", (event: Event) => {
+document.getElementById("deleteFoodForm")?.addEventListener("submit", (event) => {
     event.preventDefault();
     deleteFood();
 });

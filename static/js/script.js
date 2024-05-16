@@ -3,12 +3,7 @@ onload = function() {
 };
 
 function loadOnClicks(){
-  /* Commented out code is for future use in index.html
-      // let homeUrl = "{{ url_for('home') }}"; - for future use in index.html
-      // let logoutUrl = "{{ url_for('logout') }}"; - for future use in index.html
-      // window.location.href = logoutUrl; // Redirect to logout
-      
-  */
+  
     // Top menu \\
   // Logout 
   const logoutButton = document.getElementById('logout-button');
@@ -17,10 +12,7 @@ function loadOnClicks(){
   });
   
   // Home(redirecting to index.html)
-  /*const homeButton = document.getElementById('home-button');
-  homeButton.addEventListener('click', () => {
-    window.location.href = homeUrl;
-  }); */
+  
 
   // Support us
   const supportButton = document.getElementById('supportus-button');
@@ -56,6 +48,7 @@ function loadOnClicks(){
   // Food Management
   const foodButton = document.getElementById('food-button');
   foodButton.addEventListener('click', () => {
+    console.log('Food');
     window.location.href = manageFoodUrl;
   });
 

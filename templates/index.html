@@ -21,19 +21,19 @@
         <!-- BEGINNING Top Menu -->
         <div class="MenuTop">
             <div class="TopContainer">
-                <button id="supportus-button" class="TopButton">
+                <button id="supportus-button" class="TopButton" title="support-ico">
                     <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Charity.png') }}" />
                     <p class="Texts">SUPPORT US</p>
                 </button>
 
                 <!-- Our pets button -->
-                <button id="ourpets-button" class="TopButton">
+                <button id="ourpets-button" class="TopButton" title="ourpets-ico">
                     <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Heartwithdogpaw.png') }}" />
                     <p class="Texts">OUR ANIMALS</p>
                 </button>
             
                 <!-- Login button -->
-                <button id="logout-button" class="TopButton">
+                <button id="logout-button" class="TopButton" title="logout-ico">
                     <img class="TopImage" src="{{ url_for('static', filename='images/TopSidebar/Login.png') }}" />
                     <p class="Texts">LOG OUT</p>
                 </button>
@@ -46,7 +46,7 @@
             <!-- Search bar -->
             <input type="text" id="search-input" placeholder="Search up animal" />
             <div id="search-background">
-                <button id="search-button">
+                <button id="search-button" title="search-ico"> 
                     <img id="search-icon" src="{{ url_for('static', filename='images/Search.png') }}" />
                 </button>
                 <!-- END Search bar -->
@@ -62,19 +62,19 @@
             </div>
             <!-- Food button -->
             <div id="FoodButton">
-                <button id="food-button" >
+                <button id="food-button" title="food-ico" >
                     <img id="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
                 </button>
             </div>
             <!-- Pets button -->
             <div id="PetsButton">
-                <button id="pets-button" >
+                <button id="pets-button" title="pets-ico">
                     <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
                 </button> 
             </div>
             <!-- Shelters button -->
             <div id="SheltersButton">
-                <button id="shelters-button" >
+                <button id="shelters-button" title="shelter-ico">
                     <img id="SheltersIMG" src="{{ url_for('static', filename='images/Sidebar/Beds.png') }}" >
                 </button>
             </div>
@@ -88,7 +88,7 @@
         {% for animal in animals %}
         {% if loop.index <= 12 %}
             <div id="PictureProfile{{loop.index}}" class="PictureProfile">
-                <button id="Animal{{loop.index}}" class="Picture">
+                <button id="Animal{{loop.index}}" class="Picture" title="animal{{loop.index}}-ico">
                     <img class="Pic"  src="{{ url_for('static', filename='images/profiles/5MP_buttonpair_pic.png') }}" />
                 </button>
                 <div class="container">
