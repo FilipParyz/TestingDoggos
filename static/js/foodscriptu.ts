@@ -79,7 +79,9 @@ const loadSelectedFoodData = async () => {
 const addFood = async (event: Event) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
-    let jsonObject: { [key: string]: any } = {};
+    let jsonObject: { [key: string]: any } = {} as JSON; ;
+    // Convert jsonObject to JSON object
+    
     formData.forEach((value, key) => { jsonObject[key] = value });
 
     try {
@@ -117,7 +119,7 @@ const editFood = async (event: Event) => {
     event.preventDefault();
     const foodId = (document.getElementById("foodId") as HTMLSelectElement).value;
     const formData = new FormData(event.target as HTMLFormElement);
-    let jsonObject: { [key: string]: any } = {};
+    let jsonObject: { [key: string]: any } = {} as JSON;
     formData.forEach((value, key) => { jsonObject[key] = value });
 
     try {
