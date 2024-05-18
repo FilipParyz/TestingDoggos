@@ -280,6 +280,12 @@ def manage_shelters():
 
     ### Here are the tests###
 
+# Routing dla podstrony "Error"
+@app.route('/error.html')
+def error():
+    """Renders the error page."""
+    return render_template('error.html')
+    
 # Routing dla podstrony "MP_button"
 @app.route('/MP_button.html')
 def mp_button():

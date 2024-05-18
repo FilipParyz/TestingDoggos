@@ -11,19 +11,20 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <button id="closeBtn" class="popup-close">
-                <img src="{{ url_for('static', filename='static/images/popup/CloseIcon.png') }}" alt="Close Icon">
+                <img src="{{ url_for('static', filename='images/popup/CloseIcon.png') }}" alt="Close Icon">
             </button>
-            <div class="popup-BG" style="background: #D9D9D9"></div>
             <div class="popup-spacer"></div>
-            <img src="{{ url_for('static', filename='static/images/popup/WarningIcon.png') }}" alt="Warning Icon">
+            <img id="warningIcon" src="{{ url_for('static', filename='images/popup/WarningIcon.png') }}" alt="Warning Icon">
+            <div class="popup-BG">
             <div class="popup-message">
                 <p>Warning: This is an important message. Please read it carefully.</p>
             </div>
-            <div class="popup-spacer"></div>
-            <button id="acceptBtn" class="popup-button">Accept
-                <img src="{{ url_for('static', filename='static/images/popup/Submiot button.png') }}" alt="Check Icon">
-            </button>
         </div>
+            <div class="popup-spacer"></div>
+            <button id="acceptBtn" class="popup-button">
+                <p id="acceptTxt">Accept</p>
+                <img id="understand" src="{{ url_for('static', filename='images/popup/Submit button.png') }}" alt="Check Icon">
+            </button>
     </div>
 </body>
 </html>
