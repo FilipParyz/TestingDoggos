@@ -2,7 +2,7 @@
 // Fetch and display shelters data
 const loadShelters = async () => {
     try {
-        const response = await fetch(`{{ url_for('handle_shelters') }}`);
+        const response = await fetch(`shelters`);
         const data = await response.json();
         const sheltersList = document.getElementById("sheltersList");
         sheltersList.innerHTML = "";
@@ -49,7 +49,7 @@ const loadSelectedShelterData = async () => {
     const selectedShelterId = document.getElementById("shelterId").value;
     if (selectedShelterId !== "-1") {
         try {
-            const response = await fetch(`{{ url_for('handle_shelters') }}/${selectedShelterId}`);
+            const response = await fetch(`shelters/${selectedShelterId}`);
             const data = await response.json();
             document.getElementById("editName").value = data.name;
             document.getElementById("editAmount").value = data.amount;
@@ -67,7 +67,7 @@ const addShelter = async (event) => {
     let jsonObject = {};
     formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
-        const response = await fetch(`{{ url_for('handle_shelters') }}`, {
+        const response = await fetch(`shelters`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const addShelter = async (event) => {
 const deleteShelter = async () => {
     const shelterId = document.getElementById("shelterId").value;
     try {
-        const response = await fetch(`{{ url_for('handle_shelters') }}/${shelterId}`, {
+        const response = await fetch(`shelters/${shelterId}`, {
             method: 'DELETE'
         });
         console.log(response);
@@ -104,7 +104,7 @@ const editShelter = async (event) => {
     let jsonObject = {};
     formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
-        const response = await fetch(`{{ url_for('handle_shelters') }}/${shelterId}`, {
+        const response = await fetch(`shelters/${shelterId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -134,4 +134,11 @@ document.getElementById("deleteShelterForm")?.addEventListener("submit", (event)
     event.preventDefault();
     deleteShelter();
 });
-window.onload = loadShelters;
+window.onload = async () => {
+    await loadShelters();
+    const actionElement = document.getElementById("action");
+    if (actionElement) {
+        actionElement.value = "add";
+        handleActionChangeSh();
+    }
+};
