@@ -145,12 +145,9 @@ window.onload = async () => {
     await loadFood();
     let firstBool = true;
     // Set the action to "add" and handle the change
-    if (firstBool) {
-        const actionElement = document.getElementById("action");
-        if (actionElement) {
-            actionElement.value = "add";
-            handleActionChangeFd();
-        }
+    const actionElement = document.getElementById("action");
+    if (actionElement) {
+        actionElement.value = "add";
+        handleActionChangeFd();
     }
-    firstBool = false;
 };

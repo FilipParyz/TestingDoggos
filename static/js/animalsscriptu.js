@@ -2,7 +2,7 @@
 // Function to load animals from the server and populate the list and dropdown
 const loadAnimal = async () => {
     try {
-        const response = await fetch(`{{ url_for('handle_animals') }}`);
+        const response = await fetch(`/animals`);
         const data = await response.json();
         const animalList = document.getElementById("animalList");
         animalList.innerHTML = "";
@@ -28,7 +28,7 @@ const loadAnimal = async () => {
     }
 };
 // Function to handle action changes and display the corresponding form
-const handleActionChangeAm = () => {
+const handleActionChangeAn = () => {
     const action = document.getElementById("action").value;
     const addAnimalForm = document.getElementById("addAnimalForm");
     const editAnimalForm = document.getElementById("editAnimalForm");
@@ -48,7 +48,7 @@ const handleActionChangeAm = () => {
 // Function to fetch data of a selected animal for editing
 const fetchAnimalData = async (animalId) => {
     try {
-        const response = await fetch(`{{ url_for('handle_animals') }}/${animalId}`);
+        const response = await fetch(`/animals/${animalId}`);
         const data = await response.json();
         document.getElementById("editName").value = data.name;
         document.getElementById("editRace").value = data.race;
@@ -70,7 +70,7 @@ const addAnimal = async (event) => {
     const jsonObject = {};
     formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
-        const response = await fetch(`{{ url_for('handle_animals') }}`, {
+        const response = await fetch(`/animals`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ const deleteAnimal = async () => {
         return;
     }
     try {
-        const response = await fetch(`{{ url_for('handle_animals') }}/${animalId}`, {
+        const response = await fetch(`/animals/${animalId}`, {
             method: 'DELETE'
         });
         console.log(response);
@@ -116,7 +116,7 @@ const editAnimal = async (event) => {
     const jsonObject = {};
     formData.forEach((value, key) => { jsonObject[key] = value; });
     try {
-        const response = await fetch(`{{ url_for('handle_animals') }}/${animalId}`, {
+        const response = await fetch(`/animals/${animalId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -144,11 +144,19 @@ const clearEditAnimalForm = () => {
     document.getElementById("editWeight").value = "";
 };
 // Event listeners for form submissions and action changes
-document.getElementById("action")?.addEventListener("change", handleActionChangeAm);
+document.getElementById("action")?.addEventListener("change", handleActionChangeAn);
 document.getElementById("addAnimalForm")?.addEventListener("submit", addAnimal);
 document.getElementById("editAnimalForm")?.addEventListener("submit", editAnimal);
 document.getElementById("deleteAnimalForm")?.addEventListener("submit", (event) => {
     event.preventDefault();
     deleteAnimal();
 });
-window.onload = loadAnimal;
+window.onload = async () => {
+    await loadAnimal();
+    // Set the action to "add" and handle the change
+    const actionElement = document.getElementById("action");
+    if (actionElement) {
+        actionElement.value = "add";
+        handleActionChangeAn();
+    }
+}
