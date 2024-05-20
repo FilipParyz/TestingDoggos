@@ -281,10 +281,22 @@ def manage_shelters():
     ### Here are the tests###
 
 # Routing dla podstrony "Error"
-@app.route('/error.html')
+@app.route('/error')
 def error():
     """Renders the error page."""
     return render_template('error.html')
+
+# Routing dla podstrony "Info"
+@app.route('/info')
+def info():
+    """Renders the info page."""
+    return render_template('info.html')
+
+# Routing dla podstrony "Warning"
+@app.route('/warn')
+def warning():
+    """Renders the warning page."""
+    return render_template('warn.html')
     
 # Routing dla podstrony "MP_button"
 @app.route('/MP_button.html')

@@ -2,7 +2,8 @@ p { font-size: 16px; }
 .popup { position: absolute; z-index: 1000; }
 .popup-button:hover { background: #000060; }
 
-#acceptTxt { left: 35px; top: -8px; position: inherit; font-size: 16;}
+#acceptTxt { left: 35px; top: -8px; position: inherit; font-size: 16px; }
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +11,6 @@ body {
     background: #000;
     font-family: DM Sans, sans-serif;
 }
-
 
 .popup-close {
     top: 10px;
@@ -22,8 +22,9 @@ body {
 }
 
 .popup-button {
-    top: 160px;
-    left: 100px;
+    top: 180px;
+    left: 125px;
+    position: absolute;
     width: 100px;
     height: 32px;
     border: none;
@@ -32,6 +33,7 @@ body {
     align-items: left;
     border-radius: 5px;
     background: #000080;
+    position: absolute; 
 }
 
 #understand {
@@ -60,12 +62,6 @@ body {
     padding: 10px;
     text-align: center;
     border-radius: 22px;
-}
-
-#acceptBtn {
-    top: 180px;
-    left: 125px;
-    position: absolute;
 }
 
 .popup-BG {
@@ -97,7 +93,6 @@ body {
 .popup-button img {
     width: 20px;
     height: 20px;
-    margin-top: 5px;
+    margin-top: 5px; 
     position: absolute;
 }
-
