@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warning Popup</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/warnstyle.css') }}">
-    <script src="{{ url_for('static', filename='js/warnscriptu.js') }}" defer></script>
+    <style>
+        #warningIcon { top: 19px; left: 5px; width: 60px; height: 52px; position: absolute; }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/popupstyle.css') }}">
+    <script src="{{ url_for('static', filename='js/popupscriptu.js') }}" defer></script>
 </head>
 <body>
     <div id="popup" class="popup">

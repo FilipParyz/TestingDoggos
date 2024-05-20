@@ -77,14 +77,6 @@ body {
     background: #D9D9D9;
 }
 
-#warningIcon {
-    top: 19px;
-    left: 5px;
-    width: 60px;
-    height: 52px;
-    position: absolute;
-}
-
 .popup-close img {
     width: 16px;
     height: 16px;
