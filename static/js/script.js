@@ -48,7 +48,6 @@ function loadOnClicks(){
   // Food Management
   const foodButton = document.getElementById('food-button');
   foodButton.addEventListener('click', () => {
-    console.log('Food');
     window.location.href = manageFoodUrl;
   });
 

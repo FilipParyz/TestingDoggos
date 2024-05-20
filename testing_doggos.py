@@ -278,45 +278,36 @@ def manage_shelters():
     """Renders the manage shelters page."""
     return render_template('manage_shelters.html')
 
-    ### Here are the tests###
-
-# Routing dla podstrony "Error"
 @app.route('/error')
 def error():
-    """Renders the error page."""
+    """Renders the error popup."""
     return render_template('error.html')
 
-# Routing dla podstrony "Info"
 @app.route('/info')
 def info():
-    """Renders the info page."""
+    """Renders the info popup."""
     return render_template('info.html')
 
-# Routing dla podstrony "Warning"
 @app.route('/warn')
 def warning():
-    """Renders the warning page."""
+    """Renders the warning popup."""
     return render_template('warn.html')
     
-# Routing dla podstrony "MP_button"
+    ### Here are the tests###
+    
+# # Routing for subsite MP_button"
 @app.route('/MP_button.html')
 def mp_button():
     """Renders the MP button page."""
     return render_template('MP_button.html')
 
-# Routing dla podstrony "MF_button"
+# # Routing for subsite "MF_button"
 @app.route('/MF_button.html')
 def mf_button():
     """Renders the MF button page."""
     return render_template('MF_button.html')
    
     ### Here are the tests###
-
-# Routing for subsite manage_food
-@app.route('/manage_food')
-def manage_food():
-    """Returns the HTML content of the add food form."""
-    return render_template('manage_food.html')
 
 if __name__ == '__main__':
     with app.app_context():
