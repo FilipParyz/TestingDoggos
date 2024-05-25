@@ -289,9 +289,6 @@ def error():
     return render_template('error.html')
 
 
-<< << << < HEAD
-
-
 @app.route('/info')
 def info():
     """Renders the info popup."""
@@ -306,49 +303,6 @@ def warning():
     ### Here are the tests###
 
 
-# # Routing for subsite MP_button"
-== == == =
-# Routing dla podstrony "MP_button"
-
-
->>>>>> > main
-
-
-@app.route('/MP_button.html')
-def mp_button():
-    """Renders the MP button page."""
-    return render_template('MP_button.html')
-
-
-<< << << < HEAD
-# # Routing for subsite "MF_button"
-== == == =
-# Routing dla podstrony "MF_button"
-
-
->>>>>> > main
-
-
-@app.route('/MF_button.html')
-def mf_button():
-    """Renders the MF button page."""
-    return render_template('MF_button.html')
-
-    ### Here are the tests###
-
-
-<< << << < HEAD
-== == == =
-# Routing for subsite manage_food
-
-
-@app.route('/manage_food')
-def manage_food():
-    """Returns the HTML content of the add food form."""
-    return render_template('manage_food.html')
-
-
->>>>>> > main
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
