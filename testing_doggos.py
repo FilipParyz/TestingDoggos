@@ -282,33 +282,25 @@ def manage_shelters():
     """Renders the manage shelters page."""
     return render_template('manage_shelters.html')
 
+
+@app.route('/error')
+def error():
+    """Renders the error popup."""
+    return render_template('error.html')
+
+
+@app.route('/info')
+def info():
+    """Renders the info popup."""
+    return render_template('info.html')
+
+
+@app.route('/warn')
+def warning():
+    """Renders the warning popup."""
+    return render_template('warn.html')
+
     ### Here are the tests###
-
-# Routing dla podstrony "MP_button"
-
-
-@app.route('/MP_button.html')
-def mp_button():
-    """Renders the MP button page."""
-    return render_template('MP_button.html')
-
-# Routing dla podstrony "MF_button"
-
-
-@app.route('/MF_button.html')
-def mf_button():
-    """Renders the MF button page."""
-    return render_template('MF_button.html')
-
-    ### Here are the tests###
-
-# Routing for subsite manage_food
-
-
-@app.route('/manage_food')
-def manage_food():
-    """Returns the HTML content of the add food form."""
-    return render_template('manage_food.html')
 
 
 if __name__ == '__main__':

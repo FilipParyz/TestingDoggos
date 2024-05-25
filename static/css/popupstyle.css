@@ -1,0 +1,90 @@
+p { font-size: 16px; }
+.popup { position: absolute; z-index: 1000; }
+.popup-button:hover { background: #000060; }
+
+#acceptTxt { left: 35px; top: -8px; position: inherit; font-size: 16px; }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: DM Sans, sans-serif;
+}
+
+.popup-close {
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+}
+
+.popup-button {
+    top: 180px;
+    left: 125px;
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: left;
+    border-radius: 5px;
+    background: #000080;
+    position: absolute; 
+}
+
+#understand {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.popup-content {
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    position: absolute;
+    border-radius: 22px;
+    background: white;
+}
+
+.popup-message {
+    width: 200px;
+    height: 125px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 22px;
+}
+
+.popup-BG {
+    top: 40px;
+    left: 75px;
+    width: 250px;
+    height: 125px;
+    display: flex;
+    position: absolute;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    background: #D9D9D9;
+}
+
+.popup-close img {
+    width: 16px;
+    height: 16px;
+}
+
+.popup-button img {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px; 
+    position: absolute;
+}

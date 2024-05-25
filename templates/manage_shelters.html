@@ -1,181 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manage shelters</title>
-    <script>
-        window.onload = function() {
-            loadShelters();
-        };
-
-        function loadShelters() {
-            fetch(`{{ url_for('handle_shelters') }}`)
-            .then(response => response.json())
-            .then(data => {
-                let sheltersList = document.getElementById("sheltersList");
-                sheltersList.innerHTML = "";
-                let sheltersOptions = document.getElementById("shelterId");
-                sheltersOptions.innerHTML = "";
-
-                // Add default option
-                let defaultOption = document.createElement("option");
-                defaultOption.value = -1;
-                defaultOption.textContent = "Select a shelter";
-                sheltersOptions.appendChild(defaultOption);
-
-                data.forEach(shelter => {
-                    let shelterItem = document.createElement("li");
-                    shelterItem.textContent = `Name: ${shelter.name}, Amount: ${shelter.amount}, Capacity: ${shelter.capacity}`;
-                    sheltersList.appendChild(shelterItem);
-
-                    let shelterOption = document.createElement("option");
-                    shelterOption.value = shelter.id;
-                    shelterOption.textContent = shelter.name;
-                    document.getElementById("shelterId").appendChild(shelterOption);
-                });
-            })
-            .catch(error => console.error('Error:', error));
+    <title>Manage Shelters</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/shelterstyle.css') }}">
+    <script src="{{ url_for('static', filename='js/shelterscriptu.js') }}"></script>
+    <style>
+        #addShelterForm, #editShelterForm, #deleteShelterForm {
+            display: none;
         }
-
-        function handleActionChange() {
-            var action = document.getElementById("action").value;
-            var addShelterForm = document.getElementById("addShelterForm");
-            var editShelterForm = document.getElementById("editShelterForm");
-            var deleteShelterForm = document.getElementById("deleteShelterForm");
-            var existingShelters = document.getElementById("existingShelters");
-
-            if (action === "add") {
-                addShelterForm.style.display = "block";
-                editShelterForm.style.display = "none";
-                deleteShelterForm.style.display = "none";
-                existingShelters.style.display = "none";
-            } else {
-                if (action === "edit") {
-                    addShelterForm.style.display = "none";
-                    editShelterForm.style.display = "block";
-                    deleteShelterForm.style.display = "none";
-                } else if (action === "delete") {
-                    addShelterForm.style.display = "none";
-                    editShelterForm.style.display = "none";
-                    deleteShelterForm.style.display = "block";
-                }
-                existingShelters.style.display = "block";
-            }
-        }
-
-        function addShelter(event) {
-            event.preventDefault();
-            let formData = new FormData(event.target);
-            let jsonObject = {};
-            for (const [key, value]  of formData.entries()) {
-                jsonObject[key] = value;
-            }
-            fetch(`{{ url_for('handle_shelters') }}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(jsonObject)
-            }).then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
-            loadShelters();
-        };
-
-        function deleteShelter() {
-            var shelterId = document.getElementById("shelterId").value;
-            fetch(`{{ url_for('handle_shelters') }}/`+shelterId, {
-                method: 'DELETE'
-            })
-            .then(response => console.log(response))
-            .then(data => {
-                console.log(data);
-                loadShelters();
-            })
-            .catch(error => console.error('Error:', error));
-            loadShelters();
-        }
-
-        function editShelter(event) {
-            event.preventDefault();
-            var shelterId = document.getElementById("shelterId").value;
-            let formData = new FormData(event.target);
-            let jsonObject = {};
-            for (const [key, value]  of formData.entries()) {
-                jsonObject[key] = value;
-            }
-            fetch(`{{ url_for('handle_shelters') }}/`+shelterId, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(jsonObject)
-            })
-            .then(response => console.log(response))
-            .then(data => {
-                console.log(data);
-                loadShelters();
-            })
-            .catch(error => console.error('Error:', error));
-            loadShelters();
-        }
-    </script>
+    </style>
 </head>
 <body>
-    <h1>Manage shelters</h1>
-    <h2>Select action:</h2>
-    <select id="action" onchange="handleActionChange()">
-        <option value="add">Add</option>
-        <option value="edit">Edit</option>
-        <option value="delete">Delete</option>
-    </select>
-
-    <div id="existingShelters" style="display: none;">
-        <h2>Choose a shelter:</h2>
-        <select id="shelterId">
-            <option value="">Select a shelter</option>
+    <div class="container">
+        <h1 id="mainText">Manage Shelters</h1>
+        <h2 id="actionSelect">Select action:</h2>
+        <select id="action" onchange="handleActionChange()">
+            <option value="add">Add</option>
+            <option value="edit">Edit</option>
+            <option value="delete">Delete</option>
         </select>
-    </div>
 
-    <div id="addShelterForm">
-        <form method="POST" onsubmit="addShelter(event)">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <div id="existingShelters" style="display: none;">
+            <h2 id="chooseShelterText">Choose a shelter:</h2>
+            <select id="shelterId">
+                <option value="">Select a shelter</option>
+            </select>
+        </div>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" required>
+        <div id="addShelterForm">
+            <form method="POST" onsubmit="addShelter(event)">
+                <label id="nameAdd" for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label id="amountAdd" for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
+        
+                <label id="capacityAdd" for="capacity">Capacity:</label>
+                <input type="text" id="capacity" name="capacity" required><br>
+        
+                <button id="addSubmit" type="submit">Add Shelter</button>
+            </form>
+        </div>
+        
+        <div id="editShelterForm" style="display: none;">
+            <h2 id="editShelterText">Edit Shelter</h2>
+            <form method="POST" onsubmit="editShelter(event)">
+                <label id="nameEdit" for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label id="amountEdit" for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
+        
+                <label id="capacityEdit" for="capacity">Capacity:</label>
+                <input type="text" id="capacity" name="capacity" required><br>
+        
+                <button id="editSubmit" type="submit">Edit Shelter</button>
+            </form>
+        </div>
 
-        <label for="capacity">Capacity:</label>
-        <input type="text" id="capacity" name="capacity" required>     
+        <div id="deleteShelterForm" style="display: none;">
+            <h2 id="deleteShelterText">Delete Shelter</h2>
+            <button id="deleteSubmit" onclick="deleteShelter()">Delete</button>
+        </div>
 
-        <button type="submit">Add shelter</button>
-        </form>
-    </div>
-
-    <div id="editShelterForm" style="display: none;">
-        <h2>Edit shelter</h2>
-        <form method="POST" onsubmit="editShelter(event)">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" required>
-
-        <label for="capacity">Capacity:</label>
-        <input type="text" id="capacity" name="capacity" required>     
-
-        <button type="submit">Edit shelter</button>
-        </form>
-    </div>
-
-    <div id="deleteShelterForm" style="display: none;">
-        <h2>Delete shelter</h2>
-        <button onclick="deleteShelter()">Delete</button>
-    </div>
-
-    <div></div>
-        <h2>All Shelters:</h2>
-        <ul id="sheltersList">
-        </ul>
+        <div>
+            <h2 id="allShelterText">All Shelters:</h2>
+            <ul id="sheltersList"></ul>
+        </div>
     </div>
 </body>
 </html>

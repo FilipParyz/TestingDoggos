@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",          // Target ECMAScript 2022
+      "module": "commonjs",        // Module system to use
+      "lib": ["ES2022", "DOM"],    // Include ES2022 and DOM libraries
+      "strict": true,              // Enable strict type-checking options
+      "esModuleInterop": true,     // Enable compatibility with CommonJS modules
+      "skipLibCheck": true         // Skip type checking of all declaration files (*.d.ts)
+    }
+  }
+  

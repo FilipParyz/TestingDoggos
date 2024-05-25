@@ -20,14 +20,14 @@
 .label {
     top: 0px;
     left: 100px;
-    color: black;
+    color: #e0e0e0;
     font-weight: 400;
     text-align: center;
     font-family: DM Sans;
     word-wrap: break-word;
 }
 
-.paragraph { font-size: 20px; }
+.paragraph { font-size: 20px; color: #e0e0e0;}
 
 #horizontal-line {
     top: 37px;

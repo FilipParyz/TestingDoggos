@@ -2,19 +2,19 @@
     height: 100vh;
     width: 100%;
     position: relative;
-    background-color: #524F4F; 
+    background-color: #594273; 
     overflow-y: scroll; 
 }
 .MainframeAdmin::-webkit-scrollbar-track {
     background-color: #404040; /* Track background */
-    border: 1px solid #000; /* Track border */
+    border: 2px solid #000; /* Track border */
   }
   
   /* Customizes the scrollbar's thumb */
   .MainframeAdmin::-webkit-scrollbar-thumb {
     background-color: #737272; /* Thumb background */
     border-radius: 10px; /* Thumb border radius */
-    border: 1px solid #000080 ; /* Thumb border */
+    border: 2px solid #000080 ; /* Thumb border */
   }
   
   /* Customizes the scrollbar itself */
@@ -26,6 +26,12 @@
     padding: 0px;
     margin-bottom: 75px;
     margin-left: 100px;
+}
+.TopContainer {
+    display: flex;
+    flex-flow: row wrap;
+    z-index: 5;
+    margin: 0px;
 }
 
 .Texts {
@@ -48,20 +54,17 @@
     height: 54px;
     font-size: 22px;
     position: relative;
-    background: #FFF7F7;
+    background: #b084f5;
 }
 
 .MenuTop {
     display: flex;
-    justify-content:right;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center; 
     z-index: 2;
     width: 100%;
     height: 75px;
     position: relative;
-    background: #7D7C7C;
+    background: #514A7F;
 }
 
 #supportus-button {
@@ -69,13 +72,16 @@
     left: 47%;
     width: 275px;
     height: 55px;    
+    display: flex;
+
 }
 
 #ourpets-button {
     top: 10px;
     left: 66%;
     width: 275px;
-    height: 55px;    
+    height: 55px;  
+    display: flex;   
 }
 
 #HeartWithDogPaw {
@@ -86,6 +92,7 @@
 }
 
 #logout-button {
+    display: flex;
     top: 10px;
     left: 84%;
     width: 250px;
@@ -93,21 +100,22 @@
 }
 
 #Account {
-    top: 45px;
-    left: 90%;
+    bottom: 5%;
+    left: 5px;
     z-index: 1;
-    width: 100px;
-    height: 100px;
-    position: relative;
+    width: 90px;
+    height:90px;
+    position: inherit;
     border-radius: 80px;
-    background: #D9D9D9;
+    background: #FFE8FF;
 }
+
 
 .CatProfile {
     top: 5px;
     left: 5px;
-    width: 90px;
-    height: 90px;
+    width:  81px;
+    height: 81px;
     position: absolute;
     pointer-events: none;
 }
@@ -115,12 +123,13 @@
 #search-bar {
     top: 115px;
     left: 25%;
+    width: 300px;
 }
 
 #search-background {
     width: 900px;
     height: 60px;
-    background: #FFF7F7;
+    background: #b084f5;
 }
 
 #search-icon {
@@ -148,17 +157,16 @@
     height: 100%;   
     position: fixed; 
     border-radius: 0px;
-    background: #D9D9D9;   
+    background: #7469B6;   
 }
-
-
 
 #food-button {
     top: 90%;
     width: 90px;
     height: 90px;
     position: relative;
-    border-radius: 42px;
+    border-radius: 16px;
+    background-color: #B085F5;
 }
 
 #Steak {
@@ -187,7 +195,8 @@
 #pets-button {
     width: 90px;
     height: 90px;
-    border-radius: 42px;
+    border-radius: 16px;
+    background-color: #B085F5;
 }
 
 #PetsIMG {
@@ -209,7 +218,9 @@
 #shelters-button {
     width: 90px;
     height: 90px;
-    border-radius: 42px;
+    border-radius: 16px;
+    background-color: #B085F5;
+
 }
 
 #SheltersIMG {
@@ -228,15 +239,14 @@
 }
 
 .TopButton {
-    display: flex;
     position: relative;
     width: 275px;
     height: 55px;
-    background: #FFF7F7;
+    background: #194BDC;
+    
 }
 
 .TopImage {
-    display: flex;
     top: 0px;
     pointer-events: none; 
     position: relative; 
@@ -249,12 +259,14 @@
     /*margin is crutial for sidebar buttons! withoud it
     them are not available!*/
     margin-left: 10%;
+    margin-top: 10%;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
     position: relative;
 }
+
 #PictureProfile1,#PictureProfile4,#PictureProfile7,#PictureProfile10{
     order: 1;
 }
@@ -270,18 +282,18 @@
     width: 400px;
     height: 250px;
     margin: 40px;
-    background-color: #778899;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    
-
 }
+
 .Picture {
     width: 400px;
     height: 250px;
+    background-color: #B085F5;
+    ;
 }
 
 .Pic {
@@ -292,7 +304,7 @@
     pointer-events: none;
 }
 
-#Ourpets p { left: 55px;   top: -10px;  color: red; }
-#LogUt p { left: 55px;   top: -10px;  color: green; }
-#SupportUs p { top: -10px;  color: blue; }
-.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.Pic,.Picture{ position: absolute; border-radius: 22px; }
+.TopButton#ourpets-button {  background-color: #DCC819; }
+.TopButton#logout-button {   background: #DC194B; }
+.TopButton#supportus-button {     background: #194BDC;  }
+.TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.Pic,.Picture{ position: absolute; border-radius: 24px; }

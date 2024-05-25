@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Food</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/foodstyle.css') }}">
+    <script src="{{ url_for('static', filename='js/foodscriptu.js') }}"></script>
+    <style>
+        #addFoodForm, #editFoodForm, #deleteFoodForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainText">Manage Food</h1>
+
+        <h2 id="actionSelect">Select action:</h2>
+        <select id="action" onchange="handleActionChangeFd()">
+            <option value="add">Add</option>
+            <option value="edit">Edit</option>
+            <option value="delete">Delete</option>
+        </select>
+    
+        <div id="existingFood" style="display: none;">
+            <h2 id="chooseFoodText">Choose a Food:</h2>
+            <select id="foodId">
+                <option value="">Select a Food</option>
+            </select>
+        </div>
+    
+        <div id="addFoodForm">
+            <form id="addForm" method="POST" onsubmit="addFood(event)">
+                <label id="nameAdd" for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label id="amountAdd" for="amount">Packs amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
+        
+                <label id="weightAdd" for="weight">Single item weight:</label>
+                <input type="number" id="weight" name="weight" step="0.1" required><br>
+        
+                <button id="addSubmit" title="addSubmit-ico" type="submit">
+                    <p>Add Food</p>
+                </button>
+            </form>
+        </div>
+    
+        <div id="editFoodForm">
+            <h2 id="editFoodText">Edit Food</h2>
+            <form id="editForm" method="POST" onsubmit="editFood(event)">
+                <label id="nameEdit" for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label id="amountEdit" for="amount">Packs amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
+        
+                <label id="weightEdit" for="weight">Single item weight:</label>
+                <input type="number" id="weight" name="weight" step="0.1" required><br>   
+    
+                <button id="editSubmit" title="editForm-ico" type="submit">
+                    <p>Edit Food</p>
+                </button>
+            </form>
+        </div>
+    
+        <div id="deleteFoodForm">
+            <h2 id="deleteFoodText">Delete Food</h2>
+            <button id="deleteSubmit" title="deleteForm-ico" onclick="deleteFood()">
+                <p>Delete</p>
+            </button>
+        </div>
+    
+        <div></div>
+            <h2 id="allFoodText">All Food:</h2>
+            <ul id="foodList"></ul>
+        </div>
+    </div>
+</body>
+</html>
