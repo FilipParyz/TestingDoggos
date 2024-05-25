@@ -289,7 +289,6 @@ def error():
     return render_template('error.html')
 
 
-
 @app.route('/info')
 def info():
     """Renders the info popup."""
@@ -302,6 +301,7 @@ def warning():
     return render_template('warn.html')
 
     ### Here are the tests###
+
 
 @app.route('/manage_food')
 def manage_food():
