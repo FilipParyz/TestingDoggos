@@ -1,12 +1,13 @@
 from locust import HttpUser, TaskSet, task, between
 import random
 
+
 class AnimalTasks(TaskSet):
-    
+
     @task(1)
     def get_animals(self):
         self.client.get("/animals")
-    
+
     @task(2)
     def post_animal(self):
         self.client.post("/animals", json={
@@ -41,7 +42,8 @@ class AnimalTasks(TaskSet):
                 else:
                     response.failure("No animal found to modify")
             else:
-                response.failure(f"Failed to get animals: {response.status_code}")
+                response.failure(
+                    f"Failed to get animals: {response.status_code}")
 
     @task(1)
     def delete_animal(self):
@@ -55,14 +57,16 @@ class AnimalTasks(TaskSet):
                 else:
                     response.failure("No animals found to delete")
             else:
-                response.failure(f"Failed to get animals: {response.status_code}")
+                response.failure(
+                    f"Failed to get animals: {response.status_code}")
+
 
 class FoodTasks(TaskSet):
 
     @task(1)
     def get_foods(self):
         self.client.get("/foods")
-    
+
     @task(2)
     def post_food(self):
         self.client.post("/foods", json={
@@ -87,7 +91,8 @@ class FoodTasks(TaskSet):
                 else:
                     response.failure("No food found to modify")
             else:
-                response.failure(f"Failed to get foods: {response.status_code}")
+                response.failure(
+                    f"Failed to get foods: {response.status_code}")
 
     @task(1)
     def delete_food(self):
@@ -101,14 +106,16 @@ class FoodTasks(TaskSet):
                 else:
                     response.failure("No food found to delete")
             else:
-                response.failure(f"Failed to get foods: {response.status_code}")
+                response.failure(
+                    f"Failed to get foods: {response.status_code}")
+
 
 class ShelterTasks(TaskSet):
 
     @task(1)
     def get_shelters(self):
         self.client.get("/shelters")
-    
+
     @task(2)
     def post_shelter(self):
         self.client.post("/shelters", json={
@@ -133,7 +140,8 @@ class ShelterTasks(TaskSet):
                 else:
                     response.failure("No shelter found to modify")
             else:
-                response.failure(f"Failed to get shelters: {response.status_code}")
+                response.failure(
+                    f"Failed to get shelters: {response.status_code}")
 
     @task(1)
     def delete_shelter(self):
@@ -147,7 +155,9 @@ class ShelterTasks(TaskSet):
                 else:
                     response.failure("No shelter found to delete")
             else:
-                response.failure(f"Failed to get shelters: {response.status_code}")
+                response.failure(
+                    f"Failed to get shelters: {response.status_code}")
+
 
 class WebsiteUser(HttpUser):
     tasks = [AnimalTasks, FoodTasks, ShelterTasks]
