@@ -300,10 +300,12 @@ def warning():
     """Renders the warning popup."""
     return render_template('warn.html')
 
+
 @app.route('/manage_food')
 def manage_food():
     """Returns the HTML content of the add food form."""
     return render_template('manage_food.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
