@@ -306,6 +306,7 @@ def manage_food():
     """Returns the HTML content of the add food form."""
     return render_template('manage_food.html')
 
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
