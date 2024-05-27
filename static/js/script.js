@@ -22,7 +22,7 @@ function loadOnClicks(){
 
 
   // Animal profiles
-  const animal = document.getElementById('Animal1');
+  const animal = document.getElementById('pets-button');
   animal.addEventListener('click', () => {
     console.log('Animal');
   });
