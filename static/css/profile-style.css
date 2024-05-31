@@ -78,3 +78,9 @@
 #paragraphType,#paragraphName,#paragraphRace,#paragraphAge  { bottom: 0px; left: 95px; position: absolute; }
 .container,.label,.line,#horizontal-line,#vertical-line,#info-box-Left,#info-box-Right { position: absolute; }
 #paragraphName { left: 50px; }
+
+.Pic{
+    opacity: 0.85;
+    border: 0.5px white solid;
+    border-radius: 50%;
+}
