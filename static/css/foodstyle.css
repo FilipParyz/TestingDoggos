@@ -132,3 +132,20 @@ p {
     border-radius: 8px;
     border: none;
   }
+
+  #backButton {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    background-color: #231E31;
+    color: #C431F5;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+  background-color: #433E51;
+}

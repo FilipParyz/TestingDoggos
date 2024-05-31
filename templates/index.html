@@ -60,25 +60,29 @@
             <div id="Account">
                 <img class="CatProfile" src="{{ url_for('static', filename='images/CatProfile.png') }}" />
             </div>
-            <!-- Food button -->
-            <div id="FoodButton">
-                <button id="food-button" title="food-ico" >
-                    <img id="Steak" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
-                </button>
-            </div>
-            <!-- Pets button -->
-            <div id="PetsButton">
-                <button id="pets-button" title="pets-ico">
-                    <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
-                </button> 
-            </div>
-            <!-- Shelters button -->
-            <div id="SheltersButton">
-                <button id="shelters-button" title="shelter-ico">
-                    <img id="SheltersIMG" src="{{ url_for('static', filename='images/Sidebar/Beds.png') }}" >
-                </button>
-            </div>
             
+            <!-- Sidepanel buttons -->
+            <div class="SidepanelButtons">
+                
+                <!-- Food button -->
+                <div id="FoodButton">
+                    <button id="food-button" title="food-ico" >
+                        <img id="FoodIMG" src="{{ url_for('static', filename='images/Sidebar/KawaiiSteak.png') }}" />
+                    </button>
+                </div>
+                <!-- Pets button -->
+                <div id="PetsButton">
+                    <button id="pets-button" title="pets-ico">
+                        <img id="PetsIMG" src="{{ url_for('static', filename='images/Sidebar/Pets.png') }}" >
+                    </button> 
+                </div>
+                <!-- Shelters button -->
+                <div id="SheltersButton">
+                    <button id="shelters-button" title="shelter-ico">
+                        <img id="SheltersIMG" src="{{ url_for('static', filename='images/Sidebar/Beds.png') }}" >
+                    </button>
+                </div>
+            </div>
             <!-- END Side panel menu -->
         </div>
         

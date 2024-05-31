@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="container">
+        
         <h1 id="mainText">Manage Animals</h1>
 
         <h2 id="actionSelect">Select action:</h2>
@@ -27,7 +28,10 @@
                 <option value="">Select an Animal</option>
             </select>
         </div>
-    
+        <button id="backButton" onclick="window.location.href = '/';">
+            <p>Back</p>
+        </button>
+        
         <div id="addAnimalForm">
             <form id="addForm" method="POST" onsubmit="addAnimal(event)">
                 <label id="nameAdd" for="name">Name:</label>
