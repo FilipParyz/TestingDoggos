@@ -1,6 +1,9 @@
 name: Autopep8
 
-on: [pull_request]
+on:
+  push:
+    branches-ignore:
+      - main
 
 permissions:
   contents: write
@@ -9,7 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:

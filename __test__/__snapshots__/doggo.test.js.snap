@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API Response Comparison should match the snapshot for localhost and remote server: Local Response 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/contact-style.css">
+    <link rel="stylesheet" href="/static/css/profile-style.css">
+    <link rel="icon" type="image/png" href="/static/images/Icon/favicon.ico" sizes="16x16" />
+   <script>
+        let supportUsUrl = "/support_us";
+        let manageAnimalsUrl = "/manage_animals";
+        let manageSheltersUrl = "/manage_shelters";
+        let manageFoodUrl = "/manage_foods";     
+    </script>
+    <script src="/static/js/script.js"></script>
+</head>
+<body style="margin: 0;">
+    <div class="MainframeAdmin">
+        <!-- BEGINNING Top Menu -->
+        <div class="MenuTop">
+            <div class="TopContainer">
+                <button id="supportus-button" class="TopButton" title="support-ico">
+                    <img class="TopImage" src="/static/images/TopSidebar/Charity.png" />
+                    <p class="Texts">SUPPORT US</p>
+                </button>
+
+                <!-- Our pets button -->
+                <button id="ourpets-button" class="TopButton" title="ourpets-ico">
+                    <img class="TopImage" src="/static/images/TopSidebar/Heartwithdogpaw.png" />
+                    <p class="Texts">OUR ANIMALS</p>
+                </button>
+            
+                <!-- Login button -->
+                <button id="logout-button" class="TopButton" title="logout-ico">
+                    <img class="TopImage" src="/static/images/TopSidebar/Login.png" />
+                    <p class="Texts">LOG OUT</p>
+                </button>
+            </div>
+            <!-- END Top Menu -->
+        </div>   
+       
+
+        <div id="search-bar">
+            <!-- Search bar -->
+            <input type="text" id="search-input" placeholder="Search up animal" />
+            <div id="search-background">
+                <button id="search-button" title="search-ico"> 
+                    <img id="search-icon" src="/static/images/Search.png" />
+                </button>
+                <!-- END Search bar -->
+            </div>
+        </div>
+        
+        <div id="SidePannelMenu">
+            <!-- Side panel menu -->
+            <!-- Account logo -->
+
+            <div id="Account">
+                <img class="CatProfile" src="/static/images/CatProfile.png" />
+            </div>
+            <!-- Food button -->
+            <div id="FoodButton">
+                <button id="food-button" title="food-ico" >
+                    <img id="Steak" src="/static/images/Sidebar/KawaiiSteak.png" />
+                </button>
+            </div>
+            <!-- Pets button -->
+            <div id="PetsButton">
+                <button id="pets-button" title="pets-ico">
+                    <img id="PetsIMG" src="/static/images/Sidebar/Pets.png" >
+                </button> 
+            </div>
+            <!-- Shelters button -->
+            <div id="SheltersButton">
+                <button id="shelters-button" title="shelter-ico">
+                    <img id="SheltersIMG" src="/static/images/Sidebar/Beds.png" >
+                </button>
+            </div>
+            
+            <!-- END Side panel menu -->
+        </div>
+        
+             
+        <!-- BEGINNING Profiles Content -->
+        <div class="Profiles-container">
+        
+        
+            <div id="PictureProfile1" class="PictureProfile">
+                <button id="Animal1" class="Picture" title="animal1-ico">
+                    <img class="Pic"  src="/static/images/profiles/5MP_buttonpair_pic.png" />
+                </button>
+                <div class="container">
+                    <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
+                        <div class="label" id="label-weight">Weight</div>
+                            <label class="paragraph" id="paragraphWeight">125.0</label><div></div>
+                        <div class="label" id="label-status">Status</div>
+                            <label class="paragraph" id="paragraphStatus">not ready</label><div></div>
+                        <div class="label" id="label-sex">Sex</div>
+                            <label class="paragraph" id="paragraphlSex">no sex :(</label><div></div>                        
+                        <div class="line" id="linyline1"></div><div class="line" id="linyline2"></div><div class="line" id="linyline3"></div>
+                    </div>
+                    <div id="info-box-Left">
+                        <div class="label" id="label-type">With us
+                            <label class="paragraph" id="paragraphType">months</label></div><div></div>
+                        <div class="label" id="label-name">Name: 
+                            <label class="paragraph" id="paragraphName">Mariusz Borczuk</label></div><div></div>
+                        <div class="label" id="label-race">Race
+                            <label class="paragraph" id="paragraphRace">dog</label></div><div></div>
+                        <div class="label" id="label-age">Age
+                            <label class="paragraph" id="paragraphAge">1</label></div><div></div>
+                        <div class="line" id="linyline4"></div><div class="line" id="linyline5"></div><div class="line" id="linyline6"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+            
+        <!-- END Profiles Content -->
+       
+        <!-- BEGINNING Contact info -->
+            <div class="ContactinfoLine">
+                <div id="SeperatelineBg"></div>
+                <div id="Seperateline3rd" class="Line"></div>
+                <div id="Seperateline2nd" class="Line"></div>
+                <div id="Seperateline1st" class="Line"></div>
+                <div id="Seperateline0th" class="Line"></div>
+                <div id="Tel48491825420"  class="Text">Tel:+48 491-825-420</div>
+                <img id="ContactinfoLineCallPic"    class="Pictu"  src="/static/images/TopSidebar/Call.png" />
+                <div id="DoggosProductionGmailCom"  class="Text">Doggos.production@gmail.com</div>
+                <img id="ContactinfoLineEmailPic"   class="Pictu" src="/static/images/Contactinfo_line_Email_pic.png" />
+                <div id="KatowiceUlBogucicka534"    class="Text">Katowice Ul. Bogucicka 5&3/4</div>
+                <img id="ContactinfoLineAddressPic" class="Pictu" src="/static/images/Contactinfo_line_Address_pic.png" />
+            <!-- Infowrap -->
+                <div class="Infowrap" style="bottom: 30px;left: 0px; position: inherit; z-index: 5    ;">
+                    <div class="Infowrapbg" style="width: 100px; height: 30px; left: 0px; top: 0px; position: absolute; background:  #7469B6 "></div>
+                    <div class="Info" style="width: 45px; height: 30px; left: 25px; top: 0px; position: absolute; text-align: center; color: #E0E0E0; font-size: 25px; font-family: Inter; font-weight: 400; word-wrap: break-word">Info</div>
+                    <img class="InfoIMG" src="/static/images/Sidebar/OpenerArrow.png" style="width: 10px; height: 13px; left: 80px; top: 7px; position: absolute">
+                </div>
+            </div>
+        <!-- END Contact info -->
+    </div>
+</body>
+</html>"
+`;
+
+exports[`API Response Comparison should match the snapshot for localhost and remote server: Remote Response 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/contact-style.css">
+    <link rel="stylesheet" href="/static/css/profile-style.css">
+    <link rel="icon" type="image/png" href="/static/images/Icon/favicon.ico" sizes="16x16" />
+    <script>
+        var supportUsUrl = "/support_us";
+        var manageAnimalsUrl = "/manage_animals";
+        var manageSheltersUrl = "/manage_shelters";
+        var manageFoodUrl = "/manage_food";
+    </script>
+    <script src="/static/js/script.js"></script>
+</head>
+<body style="margin: 0;">
+    <div class="MainframeAdmin">
+        <!-- BEGINNING Top Menu -->
+        <div class="MenuTop">
+            <button id="supportus-button" class="TopButton">
+                <img class="TopImage" src="/static/images/TopSidebar/Charity.png" />
+                <p class="Texts">SUPPORT US</p>
+            </button>
+            
+            <!-- Our pets button -->
+            <button id="ourpets-button" class="TopButton">
+                <img class="TopImage" src="/static/images/TopSidebar/Heartwithdogpaw.png" />
+                <p class="Texts">OUR ANIMALS</p>
+            </button>
+        
+            <!-- Login button -->
+            <button id="logout-button" class="TopButton">
+                <img class="TopImage" src="/static/images/TopSidebar/Login.png" />
+                <p class="Texts">LOG OUT</p>
+            </button>
+            
+            <!-- END Top Menu -->
+        </div>   
+        <!-- Account logo -->
+        <div>
+            <div id="Account">
+                <img class="CatProfile" src="/static/images/CatProfile.png" />
+            </div>
+        </div>
+
+        <div id="search-bar">
+            <!-- Search bar -->
+            <input type="text" id="search-input" placeholder="Wyszukaj zwierzaka" />
+            <div id="search-background">
+                <button id="search-button">
+                    <img id="search-icon" src="/static/images/Search.png" />
+                </button>
+                <!-- END Search bar -->
+            </div>
+        </div>
+        
+        <div id="SidePannelMenu">
+            <!-- Side panel menu -->
+            <!-- Food button -->
+            <div id="FoodButton">
+                <button id="food-button" >
+                    <img id="Steak" src="/static/images/Sidebar/KawaiiSteak.png" />
+                </button>
+            </div>
+            <!-- Pets button -->
+            <div id="PetsButton">
+                <button id="pets-button" >
+                    <img id="PetsIMG" src="/static/images/Sidebar/Pets.png" >
+                </button> 
+            </div>
+            <!-- Shelters button -->
+            <div id="SheltersButton">
+                <button id="shelters-button" >
+                    <img id="SheltersIMG" src="/static/images/Sidebar/Beds.png" >
+                </button>
+            </div>
+            <!-- END Side panel menu -->
+        </div>
+        
+             
+        <!-- BEGINNING Profiles Content -->
+        <div class="Profiles-container">
+        
+        
+            <div id="PictureProfile1" class="PictureProfile">
+                <button id="Animal1" class="Picture">
+                    <img class="Pic"  src="/static/images/profiles/5MP_buttonpair_pic.png" />
+                </button>
+                <div class="container">
+                    <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
+                        <div class="label" id="label-weight">Weight</div>
+                            <label class="paragraph" id="paragraphWeight">25.0</label><div></div>
+                        <div class="label" id="label-status">Status</div>
+                            <label class="paragraph" id="paragraphStatus">Ready</label><div></div>
+                        <div class="label" id="label-sex">Sex</div>
+                            <label class="paragraph" id="paragraphlSex">Male</label><div></div>                        
+                        <div class="line" id="linyline1"></div><div class="line" id="linyline2"></div><div class="line" id="linyline3"></div>
+                    </div>
+                    <div id="info-box-Left">
+                        <div class="label" id="label-type">With us
+                            <label class="paragraph" id="paragraphType">months</label></div><div></div>
+                        <div class="label" id="label-name">Name: 
+                            <label class="paragraph" id="paragraphName">Max</label></div><div></div>
+                        <div class="label" id="label-race">Race
+                            <label class="paragraph" id="paragraphRace">Terrier</label></div><div></div>
+                        <div class="label" id="label-age">Age
+                            <label class="paragraph" id="paragraphAge">9</label></div><div></div>
+                        <div class="line" id="linyline4"></div><div class="line" id="linyline5"></div><div class="line" id="linyline6"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+            <div id="PictureProfile2" class="PictureProfile">
+                <button id="Animal2" class="Picture">
+                    <img class="Pic"  src="/static/images/profiles/5MP_buttonpair_pic.png" />
+                </button>
+                <div class="container">
+                    <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
+                        <div class="label" id="label-weight">Weight</div>
+                            <label class="paragraph" id="paragraphWeight">42.0</label><div></div>
+                        <div class="label" id="label-status">Status</div>
+                            <label class="paragraph" id="paragraphStatus">Ready</label><div></div>
+                        <div class="label" id="label-sex">Sex</div>
+                            <label class="paragraph" id="paragraphlSex">Female</label><div></div>                        
+                        <div class="line" id="linyline1"></div><div class="line" id="linyline2"></div><div class="line" id="linyline3"></div>
+                    </div>
+                    <div id="info-box-Left">
+                        <div class="label" id="label-type">With us
+                            <label class="paragraph" id="paragraphType">months</label></div><div></div>
+                        <div class="label" id="label-name">Name: 
+                            <label class="paragraph" id="paragraphName">Betty</label></div><div></div>
+                        <div class="label" id="label-race">Race
+                            <label class="paragraph" id="paragraphRace">Golder Retriever</label></div><div></div>
+                        <div class="label" id="label-age">Age
+                            <label class="paragraph" id="paragraphAge">6</label></div><div></div>
+                        <div class="line" id="linyline4"></div><div class="line" id="linyline5"></div><div class="line" id="linyline6"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+            <div id="PictureProfile3" class="PictureProfile">
+                <button id="Animal3" class="Picture">
+                    <img class="Pic"  src="/static/images/profiles/5MP_buttonpair_pic.png" />
+                </button>
+                <div class="container">
+                    <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
+                        <div class="label" id="label-weight">Weight</div>
+                            <label class="paragraph" id="paragraphWeight">12.0</label><div></div>
+                        <div class="label" id="label-status">Status</div>
+                            <label class="paragraph" id="paragraphStatus">Loud AF</label><div></div>
+                        <div class="label" id="label-sex">Sex</div>
+                            <label class="paragraph" id="paragraphlSex">Female</label><div></div>                        
+                        <div class="line" id="linyline1"></div><div class="line" id="linyline2"></div><div class="line" id="linyline3"></div>
+                    </div>
+                    <div id="info-box-Left">
+                        <div class="label" id="label-type">With us
+                            <label class="paragraph" id="paragraphType">months</label></div><div></div>
+                        <div class="label" id="label-name">Name: 
+                            <label class="paragraph" id="paragraphName">Megan</label></div><div></div>
+                        <div class="label" id="label-race">Race
+                            <label class="paragraph" id="paragraphRace">White Highland White Terrier</label></div><div></div>
+                        <div class="label" id="label-age">Age
+                            <label class="paragraph" id="paragraphAge">5</label></div><div></div>
+                        <div class="line" id="linyline4"></div><div class="line" id="linyline5"></div><div class="line" id="linyline6"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+            
+        <!-- END Profiles Content -->
+       
+        <!-- BEGINNING Contact info -->
+            <div class="ContactinfoLine">
+                <div id="SeperatelineBg"></div>
+                <div id="Seperateline3rd" class="Line"></div>
+                <div id="Seperateline2nd" class="Line"></div>
+                <div id="Seperateline1st" class="Line"></div>
+                <div id="Seperateline0th" class="Line"></div>
+                <div id="Tel48491825420"  class="Text">Tel:+48 491-825-420</div>
+                <img id="ContactinfoLineCallPic"    class="Pictu"  src="/static/images/TopSidebar/Call.png" />
+                <div id="DoggosProductionGmailCom"  class="Text">Doggos.production@gmail.com</div>
+                <img id="ContactinfoLineEmailPic"   class="Pictu" src="/static/images/Contactinfo_line_Email_pic.png" />
+                <div id="KatowiceUlBogucicka534"    class="Text">Katowice Ul. Bogucicka 5&3/4</div>
+                <img id="ContactinfoLineAddressPic" class="Pictu" src="/static/images/Contactinfo_line_Address_pic.png" />
+            </div>
+        <!-- END Contact info -->
+    </div>
+</body>
+</html>"
+`;
