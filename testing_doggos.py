@@ -142,6 +142,7 @@ class Shelter(db.Model):
         self.amount = data['amount']
         self.capacity = data['capacity']
 
+
 def get_available_images():
     image_folder = 'static/images/Animals'
     available_images = set()
@@ -149,6 +150,7 @@ def get_available_images():
         if filename.endswith('.png'):
             available_images.add(filename)
     return available_images
+
 
 def get_available_images():
     image_folder = 'static/images/Animals'
@@ -164,8 +166,10 @@ def home():
     '''Renders the home page. With the list of animals and available images.'''
     animals = Animal.query.all()
     available_images = get_available_images()
-    return render_template('index.html', animals=animals, available_images=available_images)
-
+    return render_template(
+        'index.html',
+        animals=animals,
+        available_images=available_images)
 
 
 @app.route('/animals', methods=['GET', 'POST'])
