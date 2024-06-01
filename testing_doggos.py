@@ -144,10 +144,10 @@ class Shelter(db.Model):
 
 
 def get_available_images():
-    image_folder = 'static/images/Animals'
+    image_folder = './static/images/Animals/'
     available_images = set()
     for filename in os.listdir(image_folder):
-        if filename.endswith('.jpg'):
+        if filename.endswith('.jpeg'):
             available_images.add(filename)
     return available_images
 
