@@ -101,7 +101,7 @@
                                 {% set _ = race_count.update({race: 1}) %}
                             {% endif %}
                             {% set count = race_count[race] %}
-                            {% set img_filename =  race ~ count ~ '.png' %}
+                            {% set img_filename =  race ~ count ~ '.jpg' %}
                             {% if img_filename in available_images %}
                                 <img class="Pic" src="{{ url_for('static', filename='images/Animals/' ~ img_filename) }}" />
                             {% else %}
