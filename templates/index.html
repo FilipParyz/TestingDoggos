@@ -85,12 +85,25 @@
              
         <!-- BEGINNING Profiles Content -->
         <div class="Profiles-container">
-        {% for animal in animals %}
-        {% if loop.index <= 12 %}
-            <div id="PictureProfile{{loop.index}}" class="PictureProfile">
-                <button id="Animal{{loop.index}}" class="Picture" title="animal{{loop.index}}-ico">
-                    <img class="Pic"  src="{{ url_for('static', filename='images/profiles/5MP_buttonpair_pic.png') }}" />
-                </button>
+            {% set race_count = {} %}
+            {% for animal in animals %}
+                {% if loop.index <= 12 %}
+                    <div id="PictureProfile{{ loop.index }}" class="PictureProfile">
+                        <button id="Animal{{ loop.index }}" class="Picture" title="animal{{ loop.index }}-ico">
+                            {% set race = animal.race.lower() %}
+                            {% if race in race_count %}
+                                {% set _ = race_count.update({race: (race_count[race] + 1)}) %}
+                            {% else %}
+                                {% set _ = race_count.update({race: 1}) %}
+                            {% endif %}
+                            {% set count = race_count[race] %}
+                            {% set img_filename =  race ~ count ~ '.png' %}
+                            {% if img_filename in available_images %}
+                                <img class="Pic" src="{{ url_for('static', filename='images/Animals/' ~ img_filename) }}" />
+                            {% else %}
+                                <img class="Pic" src="{{ url_for('static', filename='images/Animals/default_pic.png') }}" />
+                            {% endif %}            
+                         </button>
                 <div class="container">
                     <div id="horizontal-line"></div><div id="vertical-line"></div><div id="info-box-Right">
                         <div class="label" id="label-weight">Weight</div>

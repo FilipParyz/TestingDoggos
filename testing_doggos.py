@@ -7,6 +7,7 @@ import json
 from socket import gethostname
 from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
@@ -142,10 +143,24 @@ class Shelter(db.Model):
         self.capacity = data['capacity']
 
 
+def get_available_images():
+    image_folder = 'static/images/Animals'
+    available_images = set()
+    for filename in os.listdir(image_folder):
+        if filename.endswith('.png'):
+            available_images.add(filename)
+    return available_images
+
+
 @app.route('/')
 def home():
-    """Renders the home page with a list of all animals."""
-    return render_template('index.html', animals=Animal.query.all())
+    '''Renders the home page. With the list of animals and available images.'''
+    animals = Animal.query.all()
+    available_images = get_available_images()
+    return render_template(
+        'index.html',
+        animals=animals,
+        available_images=available_images)
 
 
 @app.route('/animals', methods=['GET', 'POST'])
