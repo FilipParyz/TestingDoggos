@@ -1,3 +1,4 @@
+/*  MainFrames */
 .MainframeAdmin {
     height: 100vh;
     width: 100%;
@@ -5,57 +6,22 @@
     background-color: #594273; 
     overflow-y: scroll; 
 }
-.MainframeAdmin::-webkit-scrollbar-track {
-    background-color: #404040; /* Track background */
-    border: 2px solid #000; /* Track border */
-  }
+
+.MainframeAdmin::-webkit-scrollbar-track { background-color: #404040; border: 2px solid #000; }
   
-  /* Customizes the scrollbar's thumb */
-  .MainframeAdmin::-webkit-scrollbar-thumb {
-    background-color: #737272; /* Thumb background */
-    border-radius: 10px; /* Thumb border radius */
-    border: 2px solid #000080 ; /* Thumb border */
-  }
+.MainframeAdmin::-webkit-scrollbar-thumb { border-radius: 10px; border: 2px solid #000080; background-color: #737272; }
   
-  /* Customizes the scrollbar itself */
-  .MainframeAdmin::-webkit-scrollbar {
-    width: 10px; /* Scrollbar width */
-  }
+.MainframeAdmin::-webkit-scrollbar { width: 10px; }
+
+/* Main window */
 .MainWindow {
     height: 100%;
     padding: 0px;
     margin-bottom: 75px;
     margin-left: 100px;
 }
-.TopContainer {
-    display: flex;
-    flex-flow: row wrap;
-    z-index: 5;
-    margin: 0px;
-}
 
-.Texts {
-    top: -10px;
-    left: 75px;
-    color: black;
-    font-size: 22px;
-    text-wrap:nowrap;
-    font-weight: 800;
-    text-align: center;
-    pointer-events: none;
-    font-family: 'DM Sans';
-}
-
-#search-input {
-    top: 2px;
-    z-index: 1;
-    border: 0px;
-    width: 750px;
-    height: 54px;
-    font-size: 22px;
-    position: relative;
-    background: #b084f5;
-}
+/* Top menu */
 
 .MenuTop {
     display: flex;
@@ -67,14 +33,44 @@
     background: #514A7F;
 }
 
+.TopButton {
+    width: 275px;
+    height: 55px;
+    position: relative;
+    background: #194BDC;
+}
+
+.TopImage {
+    top: 0px;
+    pointer-events: none; 
+    position: relative; 
+}
+
+.TopContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    z-index: 5;
+    margin: 0px;
+}
+
+/* Support us */
+#SupportUs {
+    left: 50%;
+    top: 10px;
+    width: 275px;
+    height: 55px;    
+}
+
 #supportus-button {
     top: 10px;
     left: 47%;
     width: 275px;
     height: 55px;    
     display: flex;
-
 }
+
+/* Our pets */
 
 #ourpets-button {
     top: 10px;
@@ -91,6 +87,8 @@
     position: relative;    
 }
 
+/* Logout */
+
 #logout-button {
     display: flex;
     top: 10px;
@@ -98,6 +96,8 @@
     width: 250px;
     height: 55px;    
 }
+
+/* Account */
 
 #Account {
     bottom: 5%;
@@ -110,7 +110,6 @@
     background: #FFE8FF;
 }
 
-
 .CatProfile {
     top: 5px;
     left: 5px;
@@ -119,6 +118,8 @@
     position: absolute;
     pointer-events: none;
 }
+
+/* Search */
 
 #search-bar {
     top: 115px;
@@ -141,6 +142,17 @@
     position: absolute;
 }
 
+#search-input {
+    top: 2px;
+    z-index: 1;
+    border: 0px;
+    width: 750px;
+    height: 54px;
+    font-size: 22px;
+    position: relative;
+    background: #b084f5;
+}
+
 #search-button {
     top: 5px;
     left: 86%;
@@ -160,8 +172,9 @@
     background: #7469B6;   
 }
 
+/* Food */
+
 #food-button {
-    top: 90%;
     width: 90px;
     height: 90px;
     position: relative;
@@ -169,7 +182,7 @@
     background-color: #B085F5;
 }
 
-#Steak {
+#FoodIMG {
     top: 20px;
     left: 20px;
     width: 50px;
@@ -178,14 +191,14 @@
 }
 
 #FoodButton {
-    top: 40%;
     left: 5px;
     width: 90px;
     height: 90px;
 }
 
+/* Pets */
+
 #PetsButton {
-    top: 35%;
     left: 5px;
     width: 90px;
     height: 90px;
@@ -207,12 +220,14 @@
     pointer-events: none;
 }
 
+/* Shelters */
+
 #SheltersButton {
-    top: 65%;
     left: 5px;
     width: 90px;
     height: 90px;
-    position:inherit ;
+    position: inherit 
+    
 }
 
 #shelters-button {
@@ -220,7 +235,6 @@
     height: 90px;
     border-radius: 16px;
     background-color: #B085F5;
-
 }
 
 #SheltersIMG {
@@ -231,25 +245,27 @@
     pointer-events: none;
 }
 
-#SupportUs {
-    left: 50%;
-    top: 10px;
-    width: 275px;
-    height: 55px;    
-}
 
-.TopButton {
+.SidepanelButtons {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100%;
+    justify-content:space-evenly;
     position: relative;
-    width: 275px;
-    height: 55px;
-    background: #194BDC;
-    
+    background: #7469B6;
 }
 
-.TopImage {
-    top: 0px;
-    pointer-events: none; 
-    position: relative; 
+#food-button:hover,#pets-button:hover,#shelters-button:hover {
+    background-color: #C292FF;
+}
+
+.TopContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    z-index: 5;
+    margin: 0px;
 }
 
 /* Profile Pictures */
@@ -267,33 +283,26 @@
     position: relative;
 }
 
-#PictureProfile1,#PictureProfile4,#PictureProfile7,#PictureProfile10{
-    order: 1;
-}
-#PictureProfile2,#PictureProfile5,#PictureProfile8,#PictureProfile11{
-  order: 2;
-}
-#PictureProfile3,#PictureProfile6,#PictureProfile9,#PictureProfile12{
-    order: 3;
-}
+#PictureProfile1,#PictureProfile4,#PictureProfile7,#PictureProfile10,#PictureProfile13,#PictureProfile16 { order: 1; }
+#PictureProfile2,#PictureProfile5,#PictureProfile8,#PictureProfile11,#PictureProfile14,#PictureProfile17 { order: 2; }
+#PictureProfile3,#PictureProfile6,#PictureProfile9,#PictureProfile12,#PictureProfile15,#PictureProfile18 { order: 3; }
     
 .PictureProfile{
     display: flex;
     width: 400px;
     height: 250px;
     margin: 40px;
+    position: relative;
     border-radius: 20px;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    justify-content: center;
 }
 
 .Picture {
     width: 400px;
     height: 250px;
     background-color: #B085F5;
-    ;
 }
 
 .Pic {
@@ -304,7 +313,22 @@
     pointer-events: none;
 }
 
+.Texts {
+    top: -10px;
+    left: 75px;
+    color: black;
+    font-size: 22px;
+    text-wrap:nowrap;
+    font-weight: 800;
+    text-align: center;
+    pointer-events: none;
+    font-family: 'DM Sans';
+}
+
 .TopButton#ourpets-button {  background-color: #DCC819; }
-.TopButton#logout-button {   background: #DC194B; }
-.TopButton#supportus-button {     background: #194BDC;  }
+#ourpets-button:hover { background-color: #C6B416; }
+.TopButton#logout-button { background: #DC194B; }
+#logout-button:hover { background: #C61644; }
+.TopButton#supportus-button { background: #194BDC;  }
+#supportus-button:hover { background: #1644C6;  }
 .TopButton,.Texts,#search-input,.CatProfil,#search-bar,#search-background,#search-button,.CatProfile,#FoodButton,.PetsButton,.PetsButton,#PetsIMG,.Pic,.Picture{ position: absolute; border-radius: 24px; }

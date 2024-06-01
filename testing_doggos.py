@@ -147,7 +147,7 @@ def get_available_images():
     image_folder = 'static/images/Animals'
     available_images = set()
     for filename in os.listdir(image_folder):
-        if filename.endswith('.png'):
+        if filename.endswith('.jpg'):
             available_images.add(filename)
     return available_images
 
