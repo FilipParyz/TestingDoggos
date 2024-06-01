@@ -4,6 +4,7 @@ It defines the routes for handling HTTP requests,
 as well as the models for animals, food, and shelters.
 """
 import json
+from socket import gethostname
 from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -273,53 +274,53 @@ def support_us():
     """Renders the support us page."""
     return render_template('support_us.html')
 
+
 @app.route('/manage_animals')
 def manage_animals():
     """Renders the manage animals page."""
     return render_template('manage_animals.html')
+
 
 @app.route('/manage_foods')
 def manage_foods():
     """Renders the manage foods page."""
     return render_template('manage_foods.html')
 
+
 @app.route('/manage_shelters')
 def manage_shelters():
     """Renders the manage shelters page."""
     return render_template('manage_shelters.html')
+
 
 @app.route('/error')
 def error():
     """Renders the error popup."""
     return render_template('error.html')
 
+
 @app.route('/info')
 def info():
     """Renders the info popup."""
     return render_template('info.html')
 
+
 @app.route('/warn')
 def warning():
     """Renders the warning popup."""
     return render_template('warn.html')
-    
-    ### Here are the tests###
-    
-# # Routing for subsite MP_button"
-@app.route('/MP_button.html')
-def mp_button():
-    """Renders the MP button page."""
-    return render_template('MP_button.html')
 
-# # Routing for subsite "MF_button"
-@app.route('/MF_button.html')
-def mf_button():
-    """Renders the MF button page."""
-    return render_template('MF_button.html')
-   
-    ### Here are the tests###
+
+@app.route('/manage_food')
+def manage_food():
+    """Returns the HTML content of the add food form."""
+    return render_template('manage_food.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    if 'liveconsole' not in gethostname():
+        app.run()
+    else:
+        app.run(debug=True)
