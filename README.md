@@ -9,6 +9,11 @@ Learn testing principles with doggos 🐶
 ![Javascript --version](https://img.shields.io/badge/Javascript-3776AB?style=flat&logo=javascript&logoColor=yellow&labelColor=gray&color=yellow) 
 ![CSS --version](https://img.shields.io/badge/CSS-3776AB?style=flat&logo=css3&logoColor=black&labelColor=darkblue&color=darkorange)
 ![Pylint --version](https://img.shields.io/badge/Pylint-3776AB%253F?style=flat&logo=Pypi&logoColor=gray&labelColor=yellow&color=blue)
+![React](https://img.shields.io/badge/React-3776AB?style=flat&logo=React&logoColor=lightblue&labelColor=gray)
+![Typescript](https://img.shields.io/badge/Typescript-3776AB?style=flat&logo=Typescript&logoColor=blue&labelColor=gray)
+![NPM](https://img.shields.io/badge/NPM-3776AB?style=flat&logo=NPM&logoColor=white&labelColor=gray&color=red)
+
+
 
 ## About The Project
 
